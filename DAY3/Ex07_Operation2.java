@@ -1,5 +1,5 @@
 
-public class Ex07_Operation {
+public class Ex07_Operation2 {
 
 	public static void main(String[] args) {
 		// 대입연산자
