@@ -15,7 +15,8 @@
 <br>
 
 * ### if 문제 풀이
-![이미지링크](https://ifh.cc/g/QCAoXo.png)
+
+![이미지링크](https://ifh.cc/g/f8GXcX.png)
 <br>
 
 :arrow_right: _삼항연산자 이용_
