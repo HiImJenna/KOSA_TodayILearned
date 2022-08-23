@@ -1,30 +1,29 @@
-# 2022.08.23.Mon //
+# 2022.08.23.Mon :books:
+<br>
 
-#제어문
+# ✔제어문
 --------------
 ![이미지링크](https://ifh.cc/g/ncthAn.png)
+<br>
 
 ## 1. if문
 -----
-
-
+<br>
 ![이미지링크](https://ifh.cc/g/hKfPKo.png)
 ![이미지링크](https://ifh.cc/g/tJf09f.png)
-
-
+<br>
 * ### if 문제 풀이
 ![이미지링크](https://ifh.cc/v-XLZXm0)
 :arrow_right: _삼항연산자 이용_
-
+<br>
 
 ## 2. switch/case문
 -----------------
 ![이미지링크](https://ifh.cc/g/oDZy8F.jpg)
 ![이미지링크](https://ifh.cc/g/8jn7VD.png)
 ![이미지링크](https://ifh.cc/g/Dm5d7M.png)
+<br>
 
-
-![이미지링크]()
 ## 3. for문
 -----------------------
 ![이미지링크](https://ifh.cc/g/klfKoK.png)
