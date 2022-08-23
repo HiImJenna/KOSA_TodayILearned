@@ -9,9 +9,11 @@
 ## 1. if문
 -----
 <br>
+
 ![이미지링크](https://ifh.cc/g/hKfPKo.png)
 ![이미지링크](https://ifh.cc/g/tJf09f.png)
 <br>
+
 * ### if 문제 풀이
 ![이미지링크](https://ifh.cc/v-XLZXm0)
 :arrow_right: _삼항연산자 이용_
