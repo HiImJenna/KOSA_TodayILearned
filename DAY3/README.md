@@ -49,4 +49,7 @@
 
    ## 4. printf_format
    :arrow_right: System.out.printf("출력 서식",출력할 내용);
+
+   <bar>
+   
          💥 출력 후 줄바꿈을 하지 않기에 줄바꿈을 하려면 지시자 '%n'을 넣어줘야 한다.
