@@ -15,6 +15,3 @@ public class Ex01 {
 		
 	}
 }
-
-
-//Ex01 ex01 = new Ex01();
