@@ -13,7 +13,7 @@ public class Ex08_printf_format {
 		int num = 100;
 		System.out.println(num);
 		System.out.println("num값은" + num + " 입니다.");
-		
+		                                                                                        
 		//형식 format
 		System.out.printf("num 값은 %d입니다.", num);
 		System.out.printf("num 값은 [d%] 입니다. 또 [%d]도 있습니다. \n" , num, 12345);

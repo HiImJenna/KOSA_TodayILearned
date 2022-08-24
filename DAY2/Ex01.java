@@ -1,4 +1,3 @@
-import kr.or.kosa.Emp;
 
 public class Ex01 {
 	public static void main(String[] args) {
