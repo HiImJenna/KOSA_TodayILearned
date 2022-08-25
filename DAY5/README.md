@@ -13,3 +13,8 @@
 ## 2. method
 ---------------
 ![이미지링크](https://media.geeksforgeeks.org/wp-content/uploads/methods-in-java.png)
+<br>
+
+## 3. getter / setter
+---------------------
+ ### 캡슐화시 read, write 함수 필요 >> 표준화 >> setter, getter
