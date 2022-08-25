@@ -45,7 +45,7 @@
 
 <br>
 
-   * #### break lable문
+* ### break lable문
     ✨ break label문은 앞에서 배운 하나의 반복문을 빠져나가는 break문과는 달리 중첩된 여러 개의 반복문을 탈출할 때 사용한다.
 
 ![이미지링크](https://dthumb-phinf.pstatic.net/?src=%22http%3A%2F%2Fcafeptthumb3.phinf.naver.net%2F20140523_98%2Fvenus0720_1400848435178wV26N_PNG%2Fbreak_label1.png%3Ftype%3Dw740%22&type=cafe_wa740)
