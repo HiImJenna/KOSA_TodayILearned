@@ -2,7 +2,7 @@
 <br>
 
 # 제어문 ✔
---------------
+=============
 ▪ 조건문 : if (3가지), switch(조건) {case : ...break}
 ▪ 반복문 : for(반복 횟수가 명확), while(진위){}, do {} ~ while ()
 ▪ 분기분 : break(블럭탈출), continue(아래구문 skip)
@@ -23,7 +23,8 @@
  * ### continue & break
     #### for + (분기문) continue, break
 
-	''''''' for(int i =2; i<=9; i++ ) {
+	'''java
+       for(int i =2; i<=9; i++ ) {
 		for (int j = 0; j <= 9; j++) {
 			if(i == j) {
 				continue; //아래 구문 스킵
@@ -31,7 +32,8 @@
 			
 			System.out.printf("[%d]*[%d]=[%d]\t", i, j, i*j);
 		}
-		System.out.println();'''
+		System.out.println();
+        '''
 
     
 
@@ -57,7 +59,8 @@
 ![이미지링크](https://dthumb-phinf.pstatic.net/?src=%22http%3A%2F%2Fpostfiles14.naver.net%2F20130420_13%2Fjavaking75_1366386553628N8kWb_PNG%2F2013-04-20_004909.png%3Ftype%3Dw2%22&type=cafe_wa740)
 
 
-''''''' import java.util.Scanner;
+'''java
+ import java.util.Scanner;
 
 public class Main{
  
@@ -92,5 +95,6 @@ public class Main{
  
 
     }
-}  ''''''
+}  
+'''
 
