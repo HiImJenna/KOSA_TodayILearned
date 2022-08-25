@@ -17,4 +17,4 @@
 
 ## 3. getter / setter
 ---------------------
- ### 캡슐화시 read, write 함수 필요 >> 표준화 >> setter, getter
+ #### 캡슐화시 read, write 함수 필요 >> 표준화 >> setter, getter
