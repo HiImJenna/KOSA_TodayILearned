@@ -27,13 +27,23 @@ public class NoteBook {
 	
 	public int getYear() { //간접적으로 year member field값을 return
 		return year;
-	
+	}
 		//year read 함수S
 //		public int readYear() { //간접적으로 year member field값을 return
 //			return year;
 //		}
 //		
+public int number;
 		
-		
+//노트북 필요에 따라서 마우스를 가질 수 있다.
+
+public void handle(Mouse m) {
+	// 
+	
+	m.x = 100;
+	m.y = 200;
 }
+//가진다 의미 : 생성된 객체의 주소를 가진다.
+
 }
+

@@ -1,37 +1,25 @@
 package DAY5;
 
-public class NoteBook {
-	public Mouse mouse = new Mouse(); //Mouse라는 타입은 클래스 >> 참조변수 mouse >> 주소값
-	
-	
-	
-	public String colour;
-	//객체 지향 언어 (캡슐화, 은닉화 : 직접적으로 값을 변경하고 쓰는 것 방지)
-	//year 마이너스값 넣지 말기로 -> 미리 막기 >> 사용불가 >> 간접적으로 사용 가능하도록 허용 ... >> 누군가 통해서 read, write
-	//간접 >> 개발자가 논리를 통해 제어하겠다
-    //public int year;
-	private int year;
-	
-	//약속 : 캡슐화시 read, write 함수 필요 >> 표준화 >> getYear.., setYear >> setter, getter
-	
-	
-	public void setYear (int data) { //간접할당의 장점 = 내가 원하는대로 )
-		if(data < 0 ) {
-			year = 1999;
-		} else {
-			year = data;
-		}
-	}
-	
-	public int getYear() { //간접적으로 year member field값을 return
-		return year;
-	
-		//year read 함수S
-//		public int readYear() { //간접적으로 year member field값을 return
-//			return year;
-//		}
-//		
-		
-		
-}
+/*
+     TV 설계도 요구사항 정의
+     TV는 채널 정보를 가지고 있다(예를 들면 1~200 값을 가질 수 있다)
+     TV는 브랜드 이름을 가지고 있다 (예를 들면 엘지 , 삼성)
+     TV는 채널 전환 기능을 가지고 있다 (채널은 한 채널 씩 이동이 가능하다)
+     ->채널을 증가 시키는 기능을 가지고 있다
+     ->채널을 감소 시키는 기능을 가지고 있다
+     TV의 채널정보와 브랜드 이름을 볼 수 (출력) 있는 기능을 가지고 있다.
+ */
+
+public class TV {
+    public int ch; //default >0
+    public String brandname; //default > null
+    public void Ch_up() {
+        ch++;
+    }
+    public void ch_down() {
+        ch--;
+    }
+    public void tvInfo() {
+        System.out.printf("[%s] , [%d] \n", brandname , ch);
+    }
 }
