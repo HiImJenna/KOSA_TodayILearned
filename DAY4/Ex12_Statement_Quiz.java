@@ -45,10 +45,9 @@ public class Ex12_Statement_Quiz {
 		
 		
 //		가위 , 바위 ,보 게임을 제어문을 통해서 작성하세요 (IF)
-//
-//		import java.util.Scanner;
 
-       Scanner sc = new Scanner(System.in);
+
+       Scanner sc2 = new Scanner(System.in);
 
        double result = (int)Math.random()*3 + 1;
 
