@@ -130,3 +130,63 @@ public class Ex08_Static_Card {
 
 }
 ```
+
+## 3. instance 변수 ✔
+---------------
+
+![image](https://user-images.githubusercontent.com/111114507/186840274-a05f6012-4271-4e95-9e73-3409d85eb4a2.png)
+![image](https://user-images.githubusercontent.com/111114507/186840845-1d5b9a6c-60bb-4b71-b312-56c9a953c296.png)
+<br>
+
+## 4. static 함수와 일반 함수 ✔
+---------------------
+<br>
+
+* static 함수가 항상 우선 ▶ 후에 일반 함수 생성
+* 그렇기에 일반 함수는 static 함수 제어 가능, static 함수는 일반 함수 제어 불가능
+
+<br>
+
+```java
+class StaticClass{
+	int iv;
+	
+	static int cv;
+	
+	void m() {
+		//일반함수
+		//new heap > 사용
+		//1. iv 제어 가능
+		cv = 100;
+		//why: 생성 시점(static 자원은 객체 생성 이전에 메모리에 로드된다)
+	}
+	
+	
+	static void print() {
+		//static 함수
+		//1. cv 제어 가능
+		//2. 일반변수 iv를 제어 가능할까 안될까 -> static이 항상 우선이기에 iv가 생성되기 전에 static이 생성되어있음. static 실행 시점에 iv가 없는거니까 제어 불가능(static자원은 일반 자원보다 우선)
+		
+		//결과 : 일반함수는 static 제어가능, static함수는 static 함수끼리만 제어 가능
+		cv = 100000;
+		
+		
+	}
+	
+	
+}
+public class Ex10_Static_Method {
+
+	public static void main(String[] args) {
+		StaticClass.print(); //new 없이 함수 사용
+		System.out.println(StaticClass.cv);
+		
+		//일반 자원을 가지고 놀기 위해선 객체 생성 필요
+		StaticClass sc = new StaticClass();
+		sc.print();
+
+	}
+
+}
+```
+
