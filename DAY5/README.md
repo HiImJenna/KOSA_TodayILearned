@@ -19,8 +19,10 @@
 ---------------------
  #### 캡슐화시 read, write 함수 필요 >> 표준화 >> setter, getter ❕
 
+<br>
 
 ## 4. 메모리 구조
 --------------------
+ 
  ![image](https://user-images.githubusercontent.com/111114507/186838487-9cabb587-f701-4c48-8620-45319927d261.png)
  ![이미지링크](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FGOzbk%2FbtrvoQ9iNTS%2FZyNZyKk0KtupwDq8V2GJ31%2Fimg.png)
