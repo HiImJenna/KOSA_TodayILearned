@@ -65,6 +65,9 @@ public class Ex07_Static_AirPlane {
 
 }
 ```
+💥설계도를 메모리 구조로 그려보기
+![image](https://user-images.githubusercontent.com/111114507/186837680-fd67bc77-82ea-4e82-8ffc-1adfadad0212.png)
+<br>
 
  ## 2.Card 설계✔
  -----------------
