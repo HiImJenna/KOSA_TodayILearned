@@ -40,7 +40,7 @@ public class AirPane {
     ```
 
 
-> main 함수
+> main
 ``` java
 public class Ex07_Static_AirPlane {
 
@@ -104,7 +104,7 @@ public class Ex07_Static_AirPlane {
 	}
  }
  ```
-> main 함수
+> main
 ``` java
 public class Ex08_Static_Card {
 
