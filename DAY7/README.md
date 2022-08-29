@@ -93,8 +93,11 @@ public class Ex14_Method_Overloading {
   ```
 
   ### 1. 문제 풀이
+  ----------------
+  ### Q1 )
+  
   ![image](https://user-images.githubusercontent.com/92353613/187064414-f667b7cc-a35a-463e-8490-a9a9d41dcdd9.png)
-   + 누적 대수 (count) 표시하도록
+   추가 -> 누적 대수 (count) 표시하도록
   ```java
   public class Main {
     public static void main(String[] args) {
@@ -130,4 +133,41 @@ public class Ex14_Method_Overloading {
    }
 
 
+```
+
+### Q2)
+
+```
+<요구사항>
+1. 책은 책 이름과 가격 정보를 가지고 있다.
+2. 책이 출판되면 반드시 책 이름과 책의 가격 정보를 가지고 있어야한다. >> default constructor
+3. 책의 이름과 가격 정보는 특정 기능을 통해서만 볼 수 있고, 출판된 이후에는 수정할 수 없다.(책의 가격, 이름) >> private
+4. 책 이름과 가격 정보는 각각 확인할 수 있다. >> getter 사용
+
+```
+
+```java
+public class Book {
+	
+	private String name;
+	private int price;
+	
+	//public Book() {} 요구사항 (x)
+	public Book (String a, int b) {
+		name = a;
+		price = b;
+	}
+
+	public void BookInfo() {
+		System.out.printf("책 이름은 [%d], 책 가격은 [%s]입니다", name, price);
+	}
+	
+	public String getname() {
+		return name;
+	}
+	
+	public int getprice() {
+		return price;
+	}
+}	
 ```
