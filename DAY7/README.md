@@ -5,7 +5,7 @@
 --------------
  ![image](https://user-images.githubusercontent.com/111114507/187102683-0b9937a6-2466-40c9-b33e-b4e0162ecbf7.png)
  ▶메소드에 객체를 전달할 경우 메소드에서 객체의 객체변수(속성) 값을 변경할 수 있다.
- <br>ㄴㅇㄹㄴㅇㄹㅇ
+ <br>
  <br>
 
  ![image](https://user-images.githubusercontent.com/111114507/187105490-00839732-7029-49d2-b18d-c5af576782c0.png)
