@@ -93,7 +93,7 @@ public class Ex14_Method_Overloading {
    *** 생성자를 쓰는 가장 중요한 목적은 강제적 초기화 (member field) ***
   ```
 
-  ### 1. 문제 풀이
+  ### 문제 풀이
   ### Q1❓ )
   
   ![image](https://user-images.githubusercontent.com/92353613/187064414-f667b7cc-a35a-463e-8490-a9a9d41dcdd9.png)
@@ -172,7 +172,7 @@ public class Book {
 }	
 ```
 
-## Exception
+## 4. Exception ✔
 -------------
 ```java 
 try {
@@ -190,3 +190,5 @@ try 문안의 수행할 문장들에서 예외가 발생하지 않는다면 catc
 
 하지만 try 문안의 문장을 수행하는 도중에 예외가 발생하면 예외에 해당되는 catch문이 수행된다.
 ```
+
+## 5. do-while ✔
