@@ -2,7 +2,7 @@
 
 <br>
 
-## 1. call by value _vs_ call by ref ✔
+## 1. 'call by value' _vs_ 'call by ref' ✔
 --------------
  ![image](https://user-images.githubusercontent.com/111114507/187102683-0b9937a6-2466-40c9-b33e-b4e0162ecbf7.png)
  ▶메소드에 객체를 전달할 경우 메소드에서 객체의 객체변수(속성) 값을 변경할 수 있다.
@@ -36,4 +36,43 @@
 
  ![image](https://user-images.githubusercontent.com/111114507/187106351-a75af047-9a7a-4a54-8a51-145eb31d3f2d.png)
  ![image](https://4.bp.blogspot.com/-T_rzdCAe3p4/W8ni6-U1_1I/AAAAAAAAA2I/F5zh_qSmSgotYJoH2oH-lxeHAPW42J89QCLcBGAs/s640/Method%2BOverloading.png)
+ <br>
  
+```java
+class Human2 {
+	String name;
+	int age;
+}
+
+class Test2{
+	Human2 add(Human2 h) {
+		h.name = "아무개";
+		h.age = 200;
+		return h;
+//		return null; //human2는 주소를 가지고 있지 않아요
+		
+	}
+	
+	Human2 add(Human2 h, Human2 h2) {
+		
+		h2.name = h.name;
+		h2.age = h.age;
+		
+		return h2;
+	}
+}
+
+public class Ex14_Method_Overloading {
+
+	public static void main(String[] args) {
+
+		Test2 t = new Test2();
+		
+		Human2 man = new Human2 (); //man 0x123 주소
+		Human2 man2 = t.add(man); //man2 0x123주소
+		
+		System.out.println(man == man2); //true
+	}
+}
+```
+![image](https://user-images.githubusercontent.com/111114507/187110975-3f19ba9c-52ba-4d14-93fe-cf62292c559f.png)
