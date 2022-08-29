@@ -76,7 +76,8 @@ public class Ex14_Method_Overloading {
 ```
 ![image](https://user-images.githubusercontent.com/111114507/187110975-3f19ba9c-52ba-4d14-93fe-cf62292c559f.png)
 
-## 생성자함수 (constructor) ✔
+## 3. 생성자함수 (constructor) ✔
+---------------------
 ```
   1. 함수 (특수한 목적)
   2. 목적(member field 초기화)>> static {}, {초기자 블럭}
@@ -93,7 +94,6 @@ public class Ex14_Method_Overloading {
   ```
 
   ### 1. 문제 풀이
-  ----------------
   ### Q1 )
   
   ![image](https://user-images.githubusercontent.com/92353613/187064414-f667b7cc-a35a-463e-8490-a9a9d41dcdd9.png)
