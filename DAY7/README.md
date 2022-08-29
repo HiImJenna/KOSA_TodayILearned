@@ -94,7 +94,7 @@ public class Ex14_Method_Overloading {
   ```
 
   ### 문제 풀이
-  ### Q1❓ )
+  ### Q1)
   
   ![image](https://user-images.githubusercontent.com/92353613/187064414-f667b7cc-a35a-463e-8490-a9a9d41dcdd9.png)
    추가 -> 누적 대수 (count) 표시하도록
@@ -135,7 +135,7 @@ public class Ex14_Method_Overloading {
 
 ```
 
-### Q2❓)
+### Q2)
 
 ```
 <요구사항>
@@ -192,3 +192,10 @@ try 문안의 수행할 문장들에서 예외가 발생하지 않는다면 catc
 ```
 
 ## 5. do-while ✔
+--------------------
+
+
+## 6. this ✔
+---------------------
+* this : 생성자의 매개변수로 선언된 변수의 이름이 인스턴스 변수와 같을 때 인스턴스 변수와 지역변수를 구분하기 위해서 사용한다.
+* this() :  같은 클래스의 다른 생성자를 호출할 때 사용한다.

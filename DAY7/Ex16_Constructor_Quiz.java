@@ -59,8 +59,6 @@ public class Ex16_Constructor_Quiz {
 		Car myCar = new Car(5, yellow); //문 5개 색 yellow
 		carInfoPrint(); 
 	}
-
-  
 }
 
 class Car6{
