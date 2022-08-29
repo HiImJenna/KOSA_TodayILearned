@@ -94,7 +94,7 @@ public class Ex14_Method_Overloading {
   ```
 
   ### 1. 문제 풀이
-  ### Q1 )
+  ### Q1❓ )
   
   ![image](https://user-images.githubusercontent.com/92353613/187064414-f667b7cc-a35a-463e-8490-a9a9d41dcdd9.png)
    추가 -> 누적 대수 (count) 표시하도록
@@ -135,7 +135,7 @@ public class Ex14_Method_Overloading {
 
 ```
 
-### Q2)
+### Q2❓)
 
 ```
 <요구사항>
