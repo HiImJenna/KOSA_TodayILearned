@@ -1,5 +1,4 @@
 # 2022.08.29.Mon 📅
-
 <br>
 
 ## 1. 'call by value' _vs_ 'call by ref' ✔
@@ -37,7 +36,7 @@
  ![image](https://user-images.githubusercontent.com/111114507/187106351-a75af047-9a7a-4a54-8a51-145eb31d3f2d.png)
  ![image](https://4.bp.blogspot.com/-T_rzdCAe3p4/W8ni6-U1_1I/AAAAAAAAA2I/F5zh_qSmSgotYJoH2oH-lxeHAPW42J89QCLcBGAs/s640/Method%2BOverloading.png)
  <br>
- 
+
 ```java
 class Human2 {
 	String name;
@@ -76,3 +75,59 @@ public class Ex14_Method_Overloading {
 }
 ```
 ![image](https://user-images.githubusercontent.com/111114507/187110975-3f19ba9c-52ba-4d14-93fe-cf62292c559f.png)
+
+## 생성자함수 (constructor) ✔
+```
+  1. 함수 (특수한 목적)
+  2. 목적(member field 초기화)>> static {}, {초기자 블럭}
+  3. 일반함수와 다른점
+   1) 함수의 이름이 고정(class 이름과 동일하게)
+   2) return 타입이 없음 (객체 생성과 동시에 호출) (return을 받을 대상이 없다)
+   3) 실행 시점 >> new객체 생성 >> heap 공간 생성 >> member field 자리 >> 자동으로 생성자 함수 호출
+   4) return type(x) >> void >> public void(생략) 클래스 이름() {}
+  4. why : 생성되는 객체마다 강제적으로 member field 값을 [초기화] 할 수 있다
+  5. 생성자 함수 (overloading기법 적용 가능)
+  6. 생성자 오버로딩을 통해서 다양한 강제사항구현
+   
+   *** 생성자를 쓰는 가장 중요한 목적은 강제적 초기화 (member field) ***
+  ```
+
+  ### 1. 문제 풀이
+  ![image](https://user-images.githubusercontent.com/92353613/187064414-f667b7cc-a35a-463e-8490-a9a9d41dcdd9.png)
+   + 누적 대수 (count) 표시하도록
+  ```java
+  public class Main {
+    public static void main(String[] args) {
+        
+        TV myTV = new TV("SS", 2017, 32);
+        myTV.show();
+        TV myTV1 = new TV("SS", 2017, 32);
+        myTV1.show();
+        TV myTV2 = new TV("SS", 2015, 50);
+        myTV2.show();
+    }
+  }
+  ```
+
+  ``` java
+	class TV {
+    String brand;
+    int year;
+    int inch;
+    static int count;
+
+    public TV(String a, int b, int c) {
+        this.brand = a;
+        this.year = b;
+        this.inch = c;
+        count++;  //count = count + 1
+    }
+
+
+    public void show() {
+        System.out.println(brand + " " + year + " " + inch + " " + count);
+    }
+   }
+
+
+```
