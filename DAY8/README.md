@@ -17,7 +17,8 @@ int[] arr = new int[5]; //기본
 int[] arr2 = new int[] {100, 200, 300}; //초기값을 통해서 배열 개수를 정의하고 값을 할당
 int[] arr3 = {11, 22, 33}; //컴파일러에게 자동으로 new 부분 부탁 (0)
 ```
-        
+
+![image](https://user-images.githubusercontent.com/111114507/187435080-a84c56ee-8036-43a5-aee3-83f55faabf78.png)
 
  ### * 문제 풀이
  ### Q1) 
