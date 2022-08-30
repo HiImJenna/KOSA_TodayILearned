@@ -208,3 +208,38 @@ do {
 ---------------------
 * this : 생성자의 매개변수로 선언된 변수의 이름이 인스턴스 변수와 같을 때 인스턴스 변수와 지역변수를 구분하기 위해서 사용한다.
 * this() :  같은 클래스의 다른 생성자를 호출할 때 사용한다.
+
+```java
+class Zcar2 {
+		String colour;
+		String geartype;
+		int door;
+		
+		Zcar2(){ //기본옵션(red, 1, auto)
+			this("red", 1);
+			System.out.println("default");
+		} 
+		
+		Zcar2 (String colour, int door) {//옵션1 : colour, door 변경 (default auto)
+			this(colour, door, "auto");
+			System.out.println("overloading param 2개");
+		} 
+		
+		Zcar2 (String colour, int door, String geartype) { //옵션2 : colour, door, geartype
+			this.colour = colour;
+			this.geartype = geartype;
+			this.door = door;
+			System.out.println("overloading param 3개");
+		} 
+		
+		void print() {
+			System.out.println(this.colour + " , " + this.geartype + " , " + this.door);
+		}
+	}
+    ```
+```
+<코드 분석 - 시나리오>
+기본옵션 : colour = red / door = 1 / geartype = auto(default)
+옵션 1 : colour, door 변경 가능, geartype = auto(default)
+옵션 2 : colour, door, geartype 모두 변경 가능
+```
