@@ -237,7 +237,8 @@ class Zcar2 {
 		}
 	}
     ```
-```
+
+``` java
 <코드 분석 - 시나리오>
 기본옵션 : colour = red / door = 1 / geartype = auto(default)
 옵션 1 : colour, door 변경 가능, geartype = auto(default)
