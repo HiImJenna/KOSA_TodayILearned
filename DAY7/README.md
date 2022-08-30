@@ -210,6 +210,7 @@ do {
 * this() :  같은 클래스의 다른 생성자를 호출할 때 사용한다.
 
 ```java
+
 class Zcar2 {
 		String colour;
 		String geartype;
@@ -236,11 +237,10 @@ class Zcar2 {
 			System.out.println(this.colour + " , " + this.geartype + " , " + this.door);
 		}
 	}
-    ```
 
-``` java
 <코드 분석 - 시나리오>
 기본옵션 : colour = red / door = 1 / geartype = auto(default)
 옵션 1 : colour, door 변경 가능, geartype = auto(default)
 옵션 2 : colour, door, geartype 모두 변경 가능
+
 ```
