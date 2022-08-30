@@ -19,7 +19,7 @@ int[] arr3 = {11, 22, 33}; //컴파일러에게 자동으로 new 부분 부탁 (
 ```
         
 
- ### 문제 풀이
+ ### * 문제 풀이
  ### Q1) 
 ``` java
 어느 학생의 기말고사 시험 점수 (5과목)
@@ -91,6 +91,14 @@ public class Ex03_Array_Lotto_Main {
 ```
 
  ![image](https://user-images.githubusercontent.com/111114507/187410453-e81b7c95-2101-4680-8d99-c1404e9f4e78.png)
+<br>
 
- ### 2차원 배열
+ ### * 개선된 for문
+
+
+ ### * 2차원 배열
  ![image](http://www.tcpschool.com/lectures/img_java_array23.png)
+ ![image](https://dthumb-phinf.pstatic.net/?src=%22https%3A%2F%2Fcafeptthumb-phinf.pstatic.net%2FMjAxODAyMDFfMTYy%2FMDAxNTE3NDU0MTM2NzUy.pygwzGiOiPPv8ZGhLlkCHJhZp5kIOsEjuEPSwqurOtEg._jw-YEYCqL2x2AtovJIxeLdhPqZtku3igNpBC04zxlsg.PNG.i7027%2F1.PNG%3Ftype%3Dw740%22&type=cafe_wa740)
+ 
+
+ 
