@@ -94,11 +94,28 @@ public class Ex03_Array_Lotto_Main {
 <br>
 
  ### * 개선된 for문
+ ```java
+for문 >> 향상된 for문, 개선된 for문
+JAVA	: for(Type 변수명 : 배열 or Collection) (실행블럭)
+C#		: for(Type 변수명 in 배열 or Collection) (실행블럭)
+JS		: for(Type 변수명 in Collection) (실행블럭)
+    //일반 ...
+    int[] arr = {5,6,7,8,9};
+    
+    for (int i = 0; i < arr.length; i++) {
+        System.out.println(arr[i]);
+    }
+    
+    //개선된 ...
+    for(int value : arr) {
+        System.out.println(value);
+    }
+```
 
 
  ### * 2차원 배열
  ![image](http://www.tcpschool.com/lectures/img_java_array23.png)
  ![image](https://dthumb-phinf.pstatic.net/?src=%22https%3A%2F%2Fcafeptthumb-phinf.pstatic.net%2FMjAxODAyMDFfMTYy%2FMDAxNTE3NDU0MTM2NzUy.pygwzGiOiPPv8ZGhLlkCHJhZp5kIOsEjuEPSwqurOtEg._jw-YEYCqL2x2AtovJIxeLdhPqZtku3igNpBC04zxlsg.PNG.i7027%2F1.PNG%3Ftype%3Dw740%22&type=cafe_wa740)
- 
+
 
  
