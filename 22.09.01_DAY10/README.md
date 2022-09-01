@@ -36,8 +36,6 @@
 
 
 
-
-
 ```java
 public class Ex03_Inherit {
 	public static void main(String[] args) {
@@ -99,6 +97,30 @@ TvVcr2 tv2 = new TvVcr2();
 
 ## 2. super()
 ---------------
+
+```java
+this: 객체 자신을 가르키는 this(this.empno, this.ename)
+this: 생성자를 호출하는 this ( this(100,"red"))
+
+상속관계
+부모,자식
+
+super(현재 자식이 부모의 접근 주소값) : 상속관계에서의 부모에 접근(super 부모객체의 주소값)
+
+1. super >> 상속관계에서 부모자원에 접근
+2. super >> 상속관계에서 부모의 생성자를 호출(명시적으로)
+
+## 재정의 상태에서 부모 자원을 부를 수 있는 유일한 방법 = super ##
+
+Tip)
+C# : base()
+Java : super()
+
+super는 바로 한단계 위까지만 가는거이다.
+
+ex) 손자가 할아버지에게 가려면
+    손자에서 super(); 아빠 super(); 해야지 갈수있다
+```
 
 
 ## 3. Override ✔
