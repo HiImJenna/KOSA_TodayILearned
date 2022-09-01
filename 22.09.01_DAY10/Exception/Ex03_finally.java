@@ -32,11 +32,6 @@ public class Ex03_finally {
 			fileDelete(); 
 		}
 		
-		
-		
-		
-		
-		
 	}
 
 }
@@ -55,5 +50,3 @@ public class Ex03_finally {
 * >> 3. 정상 설치 >> C:\Temp 복사한 파일 삭제
 * >> 4. 비정상 설치 >> 강제 종료 >> 복사한 파일 삭제
 */
-	
-	
