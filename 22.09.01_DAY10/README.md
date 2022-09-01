@@ -54,6 +54,7 @@ class Point{좌표값} >> 포함관계 (부품)
 ```
 
 ![image](http://www.tcpschool.com/lectures/img_java_inheritance_diagram.png)
+![image](https://dthumb-phinf.pstatic.net/?src=%22http%3A%2F%2Fcafeptthumb2.phinf.naver.net%2F20160722_256%2Fi7027_1469158489785sypBV_PNG%2F3.PNG%3Ftype%3Dw740%22&type=cafe_wa740)
 
 <br>
 
@@ -144,7 +145,7 @@ TvVcr2 tv2 = new TvVcr2();
 ## 3. Annotation ✔
 -----------------
 🔔 Annotation은 Java code만으로 전달할 수 없는 부가적인 정보를 컴파일러나 개발툴로 전달할 수 있다.  
-🔔 @Override
+🔔 @Override :  method위에 정의 Override가 제대로 되었는지 체크
 ```java
 //*재정의(검증)
 	@Override
