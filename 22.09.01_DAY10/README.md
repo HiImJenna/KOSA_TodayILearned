@@ -165,7 +165,18 @@ ex) 손자가 할아버지에게 가려면
 
 ## 5. toString() ✔
 -----------------
+```java
+Emp emp = new Emp(1000, "홍길동");
+System.out.println(emp);
+System.out.println(emp.toString());
 
+// emp 출력하면 사실은 emp.toString() 동일한 효과
+// toString()은 Object의 자원 ... 주소값 return
+
+// toString() 재정의 했다면 결과는 재정의 된 내용으로 출력됨 
+// Emp [empno=1000, ename = "홍길동"]
+// Emp [empno=1000, ename = "홍길동"]
+```
 <br>
 
 ## 6. Final ✔
@@ -233,5 +244,9 @@ try{
 ```
 <br>
 
-### * throw
+### * throw & throws
+
+>> throw : 에러를 고의로 발생시킬 때 사용합니다.
+>> throws : 자신을 호출한 상위 메소드로 에러를 던지는 역할을 합니다.
+
 
