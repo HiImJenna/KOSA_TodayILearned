@@ -84,7 +84,7 @@ class Point{좌표값} >> 포함관계 (부품)
 <br>
 
 ## 3. Annotation
-------------------
+-----------------
 🔔 Annotation은 Java code만으로 전달할 수 없는 부가적인 정보를 컴파일러나 개발툴로 전달할 수 있다.
 🔔 @Override
 ```java
