@@ -10,6 +10,7 @@ class Test2{
 class Test3 extends Test2 {
 	int x = 300; // 부모 무시하기
 	
+	
 	//재정의(검증)
 	@Override
 	void print() {
