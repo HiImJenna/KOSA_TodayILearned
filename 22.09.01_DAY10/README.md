@@ -115,7 +115,7 @@ TvVcr2 tv2 = new TvVcr2();
 
 <br>
 
-## 2. Override
+## 2. Override ✔
 ------------------
 ```java
  <Today's Point>
@@ -141,9 +141,9 @@ TvVcr2 tv2 = new TvVcr2();
 
 <br>
 
-## 3. Annotation
+## 3. Annotation ✔
 -----------------
-🔔 Annotation은 Java code만으로 전달할 수 없는 부가적인 정보를 컴파일러나 개발툴로 전달할 수 있다.
+🔔 Annotation은 Java code만으로 전달할 수 없는 부가적인 정보를 컴파일러나 개발툴로 전달할 수 있다.  
 🔔 @Override
 ```java
 //*재정의(검증)
@@ -155,12 +155,32 @@ TvVcr2 tv2 = new TvVcr2();
 
 <br>
 
-## 4. toString()
+## 4. toString() ✔
 -----------------
 
 <br>
 
-## 5. Final
+## 5. Final ✔
 ----------------
 
 <br>
+
+```java
+변수 <-> 상수
+ 상수 : 한번 값이 [초기화]되면 변경 불가
+ 상수자원 : 고유갑(주민번호)수학 : PI = 3.12159..., 시스템 번호 (버전번호)
+ 상수는 관용적으로 [대문자]
+  
+ java : final int NUM = 10;
+ c# : const integer NUM = 10;
+  
+ <final 키워드>
+ 1.  final class Car { } > 클래스 final > 상속 금지 >
+ public final class Math
+ extends Object
+ 
+ 2. public final void print() {} > 함수 final > 상속 관계에서 재정의 금지(override) 금지
+
+```
+
+![image](https://dotnettutorials.net/wp-content/uploads/2020/08/What-is-Java-Final-Keyword.png)
