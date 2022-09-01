@@ -57,6 +57,64 @@ class Point{좌표값} >> 포함관계 (부품)
 
 <br>
 
+```java
+public class Ex03_Inherit {
+	public static void main(String[] args) {
+		TvVcr tv = new TvVcr();
+		tv.t.power();
+		tv.v.power();
+		
+		System.out.println(tv.t.power);
+		//////////////////////////////
+		TvVcr2 tv2 = new TvVcr2();
+		tv2.power();
+		System.out.println("Tv전원 : "+ tv2.power);
+		tv2.chUp();
+		
+		tv2.vcr.power();
+		System.out.println("비디오 전원 : " + tv2.vcr.power);
+		tv2.vcr.play();
+	}
+
+}
+
+class TvVcr2 extends Tv{
+	Vcr vcr;
+	
+	public TvVcr2(){
+		vcr = new Vcr();		
+	}
+}
+
+class Tv{
+	boolean power; //default = false
+	int ch;
+	
+	void power() {
+		
+		this.power = !this.power;
+	}
+	
+	void chUp() {
+		this.ch++;
+		
+	}
+	
+	void chDown() {
+		this.ch--;
+	}
+}
+```
+▶
+```java 
+TvVcr2 tv2 = new TvVcr2(); 
+```
+ ### 해당 부분 메모리 구조로 그려보기
+
+![image](https://user-images.githubusercontent.com/111114507/187879739-9dae329c-70d3-41ba-9b8f-b7aac7e8f136.png)
+
+<br>
+
 ## 2. Override
 ------------------
 ```java
