@@ -9,6 +9,7 @@ public class Cinema_Main {
 
     static final int row = 4;
     static final int col = 5;
+    // static x 
 
     /**
      * 생성자
