@@ -27,6 +27,8 @@
 >>* 원과 점 관계 ▶ 원은 점이다 (x) / 원은 점을 가지고 있다 (0) = class 원 {점이라는 부품이 member field}
 >>* 경찰 권총 관계 ▶ 경찰은 권총이다 (x) / 경찰은 권총을 가지고 있다 (0) = class 권총 {} , class 경찰 {권총 member field}
 
+<br>
+
 ![image](http://www.tcpschool.com/lectures/img_java_inheritance_diagram.png)
 ![image](https://dthumb-phinf.pstatic.net/?src=%22http%3A%2F%2Fcafeptthumb2.phinf.naver.net%2F20160722_256%2Fi7027_1469158489785sypBV_PNG%2F3.PNG%3Ftype%3Dw740%22&type=cafe_wa740)
 
@@ -56,7 +58,8 @@ public class Ex03_Inherit {
 	}
 
 }
-
+```
+```java
 class TvVcr2 extends Tv{
 	Vcr vcr;
 	
@@ -64,7 +67,8 @@ class TvVcr2 extends Tv{
 		vcr = new Vcr();		
 	}
 }
-
+```
+```java
 class Tv{
 	boolean power; //default = false
 	int ch;
@@ -88,15 +92,16 @@ class Tv{
 ```java 
 TvVcr2 tv2 = new TvVcr2(); 
 ```
- 
 
 ![image](https://user-images.githubusercontent.com/111114507/187879739-9dae329c-70d3-41ba-9b8f-b7aac7e8f136.png)
 
 <br>
 
- ### super()
+## 2. super()
+---------------
 
-## 2. Override ✔
+
+## 3. Override ✔
 ------------------
 ```java
  <Today's Point>
@@ -122,7 +127,7 @@ TvVcr2 tv2 = new TvVcr2();
 
 <br>
 
-## 3. Annotation ✔
+## 4. Annotation ✔
 -----------------
 🔔 Annotation은 Java code만으로 전달할 수 없는 부가적인 정보를 컴파일러나 개발툴로 전달할 수 있다.  
 🔔 @Override :  method위에 정의 Override가 제대로 되었는지 체크
@@ -136,12 +141,12 @@ TvVcr2 tv2 = new TvVcr2();
 
 <br>
 
-## 4. toString() ✔
+## 5. toString() ✔
 -----------------
 
 <br>
 
-## 5. Final ✔
+## 6. Final ✔
 ----------------
 
 <br>
@@ -167,5 +172,5 @@ TvVcr2 tv2 = new TvVcr2();
 ![image](https://dotnettutorials.net/wp-content/uploads/2020/08/What-is-Java-Final-Keyword.png)
 
 
-## 6. fianlly / throw
+## 7. fianlly / throw
 -----------------------------
