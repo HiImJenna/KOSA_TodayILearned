@@ -32,7 +32,7 @@
 2. [class 설계](https://github.com/HiImJenna/KOSA/tree/main/22.08.26_DAY6#2card-%EC%84%A4%EA%B3%84)
 3. [instance 변수](https://github.com/HiImJenna/KOSA/tree/main/22.08.26_DAY6#3-instance-%EB%B3%80%EC%88%98-)
 4. [static함수와 일반함수](https://github.com/HiImJenna/KOSA/tree/main/22.08.26_DAY6#4-static-%ED%95%A8%EC%88%98%EC%99%80-%EC%9D%BC%EB%B0%98-%ED%95%A8%EC%88%98-)
-
+ 
 
 ###  DAY7
 1. [call by value / call by ref](https://github.com/HiImJenna/KOSA/tree/main/22.08.29_DAY7#1-call-by-value-vs-call-by-ref-)
