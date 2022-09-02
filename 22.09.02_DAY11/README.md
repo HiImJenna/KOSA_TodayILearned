@@ -89,7 +89,10 @@ System.out.println(result3);
 
 result3 = str.replace("A", "a");
 System.out.println(result3);
-    ```
+```
+
 ```
 출력값 : ABC오늘은 금요일EFG, aBCDDDDDEFG
 ```
+### * str.equalsIgnoreCase( ) : 대소문자 무시
+### * str.split( ) : parameter를 기준으로 분리
