@@ -48,9 +48,9 @@
 3. [2차원배열](https://github.com/HiImJenna/KOSA/tree/main/22.08.30_DAY8#-2%EC%B0%A8%EC%9B%90-%EB%B0%B0%EC%97%B4)
 
 
-
 ###  DAY9
-
+1. [Lotto 시나리오](https://github.com/HiImJenna/KOSA/tree/main/22.08.31_DAY9#1-lotto-%EC%8B%9C%EB%82%98%EB%A6%AC%EC%98%A4)
+2. [Cinema 시나리오](https://github.com/HiImJenna/KOSA/tree/main/22.08.31_DAY9#2-cinema-%EC%8B%9C%EB%82%98%EB%A6%AC%EC%98%A4-)
 
 ###  DAY10
 1. [상속 Inherit / 포함 Composition](https://github.com/HiImJenna/KOSA/tree/main/22.09.01_DAY10#1-%EC%83%81%EC%86%8D-inherit--%ED%8F%AC%ED%95%A8-composition-)
