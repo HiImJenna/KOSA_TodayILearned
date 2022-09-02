@@ -26,7 +26,7 @@
 2. [method](https://github.com/HiImJenna/KOSA/tree/main/22.08.25_DAY5#2-method)
 3. [getter / setter](https://github.com/HiImJenna/KOSA/tree/main/22.08.25_DAY5#3-getter--setter)
 4. [메모리구조](https://github.com/HiImJenna/KOSA/tree/main/22.08.25_DAY5#4-%EB%A9%94%EB%AA%A8%EB%A6%AC-%EA%B5%AC%EC%A1%B0)
-
+  
 ###  DAY6
 1. [Airplane 설계](https://github.com/HiImJenna/KOSA/tree/main/22.08.26_DAY6#1-airplane-%EC%84%A4%EA%B3%84-)
 2. [class 설계](https://github.com/HiImJenna/KOSA/tree/main/22.08.26_DAY6#2card-%EC%84%A4%EA%B3%84)
