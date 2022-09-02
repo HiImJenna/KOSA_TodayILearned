@@ -96,3 +96,8 @@ System.out.println(result3);
 ```
 ### * str.equalsIgnoreCase( ) : 대소문자 무시
 ### * str.split( ) : parameter를 기준으로 분리
+
+
+
+
+protected
