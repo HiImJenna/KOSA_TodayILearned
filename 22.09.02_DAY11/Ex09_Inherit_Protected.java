@@ -22,7 +22,7 @@ class Ostrich extends Bird {
 		run();
 	}
 }
-
+ 
 public class Ex09_Inherit_Protected {
 
 	public static void main(String[] args) {
