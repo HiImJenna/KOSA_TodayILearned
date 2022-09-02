@@ -154,7 +154,3 @@ protected : 양면성(박쥐) >> default , public
 * 접근제어자가 protected로 설정되었다면 protected가 붙은 변수, 메소드는 동일 패키지의 클래스 또는 해당 클래스를 상속받은 다른 패키지의 클래스에서만 접근이 가능하다.
 
 ![image](https://lh3.googleusercontent.com/-UFlhzuxwShg/YPUwhoHlxiI/AAAAAAAAozM/QMBNLidwB3ISagmKKcyq1evkhdsgsMq3wCLcBGAsYHQ/w406-h268/image.png)
-
-
-## 4. 정규표현식 ✔
----------------
