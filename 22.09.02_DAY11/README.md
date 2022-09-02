@@ -13,4 +13,42 @@
 
 ## 2. String method ✔
 -----------------------------
+### * str.concat( ) : 문자열 붙이기
+```java
+String str = "hello";
+String concatstr = str.concat("world");
+System.out.println(concatstr);
+```
 
+```java
+출력값 : hello world
+```
+
+### * str.contains( ) : 문자열 포함 여부 확인
+```java
+boolean bo = str.contains("ell");
+System.out.println(bo);
+```
+
+``` java
+출력값 : true
+```
+### * str.length( ) : 문자열 길이
+```java
+String str2 = "a b c d"; //[a] [ ] [b] [ ] [c] ...공백도 문자
+System.out.println(str2.length());
+```
+```
+출력값 : 7
+```
+### * str.contains( ) : 문자열 포함 여부 확인
+```java
+String filename = "hello java world";
+System.out.println(filename.indexOf("h")); //몇번째에 있는지
+System.out.println(filename.indexOf("java")); //단어 시작 위치
+System.out.println(filename.indexOf("으악")); //-1을 return (없는 값을 배열에서 찾을 때)
+```
+
+```
+출력값 : 0 , 6, -1
+```
