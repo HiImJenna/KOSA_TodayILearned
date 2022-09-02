@@ -96,8 +96,65 @@ System.out.println(result3);
 ```
 ### * str.equalsIgnoreCase( ) : 대소문자 무시
 ### * str.split( ) : parameter를 기준으로 분리
+### * str.trim( ) : 앞 뒤 공백 제거
+```java
+String str8 = "     홍길동      ";
+System.out.println(">" + str8 + "<");
+System.out.println(">" + str8.trim() + "<");
+```
+<br>
 
+### Quiz)
+```java
+String jumin="123456-1234567";
+//위 주민번호의 합을 구하세요_1
+int sum2=0;
+for(int i = 0 ; i < jumin.length() ; i++) {
+String numstr =jumin.substring(i, i+1);
+if(numstr.equals("-")) continue;
+sum2+= Integer.parseInt(numstr);
+} 
+System.out.println("주민번호 합:" + sum2);
 
+//위 주민번호의 합을 구하세요_2
+//String jumin="123456-1234567";
+String[] numarr2 = jumin.replace("-","").split("");
+int sum3=0;
+for(String i : numarr2) {
+sum3+= Integer.parseInt(i);
+}
+System.out.println("주민번호 합2:" + sum3);
 
+//위 주민번호의 합을 구하세요_3
+String jumin4 = jumin.replace("-", "");
+int sum4=0;
+for(int i = 0 ; i < jumin4.length() ;i++) {
+sum4+=Integer.parseInt(String.valueOf(jumin4.charAt(i)));
+}
+System.out.println("주민번호 합4:" + sum4);
+}
+```
 
+## 3. Protected 접근제한자 ✔
+-----------------
+
+```java
+상속관계에서 ... 접근자 : protected
+
+public 
+private
+default (같은 폴더)
 protected
+
+protected : 양면성(박쥐) >> default , public 
+>>상속이 없는 클래스 안에서 protected >> default 동일 
+>>결국 상속관계에서만 의미를 가진다 >> public ㅍ
+```
+* public과 default 그 사이 어딘가..❓
+* 접근제어자가 protected로 설정되었다면 protected가 붙은 변수, 메소드는 동일 패키지의 클래스 또는 해당 클래스를 상속받은 다른 패키지의 클래스에서만 접근이 가능하다.
+
+![image](https://lh3.googleusercontent.com/-UFlhzuxwShg/YPUwhoHlxiI/AAAAAAAAozM/QMBNLidwB3ISagmKKcyq1evkhdsgsMq3wCLcBGAsYHQ/w406-h268/image.png)
+
+
+## 4. 정규표현식 ✔
+---------------
