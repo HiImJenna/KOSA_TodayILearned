@@ -3,6 +3,9 @@
 
 ## 💙 Daily Study
 ---------------------
+<details>
+<summary>JAVA</summary>
+
 ###  DAY1
 1. [DAY1](https://github.com/HiImJenna/KOSA/tree/main/22.08.19_DAY1)  
 
@@ -65,3 +68,5 @@
 1. [String class](https://github.com/HiImJenna/KOSA/tree/main/22.09.02_DAY11#1-string-class-)
 2. [String method](https://github.com/HiImJenna/KOSA/tree/main/22.09.02_DAY11#2-string-method-)
 3. [Protected 접근자](https://github.com/HiImJenna/KOSA/tree/main/22.09.02_DAY11#3-protected-%EC%A0%91%EA%B7%BC%EC%A0%9C%ED%95%9C%EC%9E%90-)
+
+<details>
