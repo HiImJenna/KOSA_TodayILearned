@@ -25,7 +25,7 @@
 1. [class](https://github.com/HiImJenna/KOSA/tree/main/22.08.25_DAY5#1-class)
 2. [method](https://github.com/HiImJenna/KOSA/tree/main/22.08.25_DAY5#2-method)
 3. [getter / setter](https://github.com/HiImJenna/KOSA/tree/main/22.08.25_DAY5#3-getter--setter)
-4. [메모리구조] (https://github.com/HiImJenna/KOSA/tree/main/22.08.25_DAY5#4-%EB%A9%94%EB%AA%A8%EB%A6%AC-%EA%B5%AC%EC%A1%B0)
+4. [메모리구조](https://github.com/HiImJenna/KOSA/tree/main/22.08.25_DAY5#4-%EB%A9%94%EB%AA%A8%EB%A6%AC-%EA%B5%AC%EC%A1%B0)
 
 ###  DAY6
 1. [Airplane 설계](https://github.com/HiImJenna/KOSA/tree/main/22.08.26_DAY6#1-airplane-%EC%84%A4%EA%B3%84-)
@@ -37,8 +37,8 @@
 ###  DAY7
 1. [call by value / call by ref](https://github.com/HiImJenna/KOSA/tree/main/22.08.29_DAY7#1-call-by-value-vs-call-by-ref-)
 2. [overloading](https://github.com/HiImJenna/KOSA/tree/main/22.08.29_DAY7#2-overloading-)
-3. [생성자함수] (https://github.com/HiImJenna/KOSA/tree/main/22.08.29_DAY7#3-%EC%83%9D%EC%84%B1%EC%9E%90%ED%95%A8%EC%88%98-constructor-)
-4. [Exception] (https://github.com/HiImJenna/KOSA/tree/main/22.08.29_DAY7#4-exception-)
+3. [생성자함수](https://github.com/HiImJenna/KOSA/tree/main/22.08.29_DAY7#3-%EC%83%9D%EC%84%B1%EC%9E%90%ED%95%A8%EC%88%98-constructor-)
+4. [Exception](https://github.com/HiImJenna/KOSA/tree/main/22.08.29_DAY7#4-exception-)
 5. [do-while](https://github.com/HiImJenna/KOSA/tree/main/22.08.29_DAY7#5-do-while-)
 6. [this](https://github.com/HiImJenna/KOSA/tree/main/22.08.29_DAY7#6-this-)
 
