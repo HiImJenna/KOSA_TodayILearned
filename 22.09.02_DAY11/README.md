@@ -47,8 +47,6 @@ boolean bo = str.contains("ell");
 System.out.println(bo);
 ```
 
-### * str.length( ) : 문자열 길이
-
 ### * str.substring( ) : 문자열 자르기
 ```java
 String result = "superman";
@@ -56,7 +54,7 @@ System.out.println(result.substring(0)); //시작 index ~
 System.out.println(result.substring(1)); //uperman
 System.out.println(result.substring(1, 2)); //u
 ```
-### * str.indexOf( ) : 문자열 자르기
+### * str.indexOf( ) : 특정 문자 찾기
 ``` java
 String filename = "hello java world";
 System.out.println(filename.indexOf("h")); //몇번째에 있는지
