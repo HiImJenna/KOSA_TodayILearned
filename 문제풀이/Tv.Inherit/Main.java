@@ -1,4 +1,4 @@
-package 문제풀이.Tv_Inherit;
+package 문제풀이.Tv.Inherit;
 class TV {
     private int size;
     public TV(int size) {this.size = size;}
@@ -19,7 +19,15 @@ class ColourTv extends TV {
 }
 
 class IPTV extends ColourTv {
-    String address;
+    private String address;
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
     
     public IPTV (String address, int size, int colour) {
         super(size, colour);
@@ -28,7 +36,7 @@ class IPTV extends ColourTv {
 
     @Override
     public void printProperty(){
-        System.out.printf("나의 IPTV는 %d 주소의 %d인치 %d컬러", getSize(), colour);
+        System.out.printf("나의 IPTV는 %d 주소의 %d인치 %d컬러", address, getSize(), colour);
     }
 }
 
