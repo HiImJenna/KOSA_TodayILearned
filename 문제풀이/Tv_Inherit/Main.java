@@ -1,4 +1,4 @@
-package 문제풀이;
+package 문제풀이.Tv_Inherit;
 class TV {
     private int size;
     public TV(int size) {this.size = size;}
