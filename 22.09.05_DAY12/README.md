@@ -27,6 +27,11 @@ JAVA : [상속관계]에서 [하나의 참조변수]가 여러개의 타입을 �
 
 ![image](https://user-images.githubusercontent.com/111114507/188424957-f6dc33d0-eebe-4bb0-b107-13dac3a45326.png)
 ![image](https://user-images.githubusercontent.com/111114507/188425073-0154b578-0ca2-4c03-8c39-1a295a1011b8.png)
+![image](https://user-images.githubusercontent.com/111114507/188432562-ea359f95-ea66-4471-ad55-ca472e1186c6.png)
+![image](https://user-images.githubusercontent.com/111114507/188432627-518e7a09-e61b-4511-9860-33bb24281469.png)
+![image](https://user-images.githubusercontent.com/111114507/188432701-f3574217-bf56-4eb1-87d6-d625bd76a495.png)
+![image](https://user-images.githubusercontent.com/111114507/188432777-1118ed26-6187-4049-87a6-cfea44348fc0.png)
+![image](https://user-images.githubusercontent.com/111114507/188432837-77af0cd1-e5bd-4d21-95e3-441e53888db6.png)
 <br>
 
 ### Q1)
@@ -261,4 +266,3 @@ public class Singleton {
   >> 의도 >> 반드시 재정의 해라 >> 강제적 구현을 목적으로 (믿지 못하니까)
  ```
 
- 
