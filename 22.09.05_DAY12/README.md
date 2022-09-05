@@ -27,11 +27,9 @@ JAVA : [상속관계]에서 [하나의 참조변수]가 여러개의 타입을 �
 
 ![image](https://user-images.githubusercontent.com/111114507/188424957-f6dc33d0-eebe-4bb0-b107-13dac3a45326.png)
 ![image](https://user-images.githubusercontent.com/111114507/188425073-0154b578-0ca2-4c03-8c39-1a295a1011b8.png)
-![image](https://user-images.githubusercontent.com/111114507/188432562-ea359f95-ea66-4471-ad55-ca472e1186c6.png)
-![image](https://user-images.githubusercontent.com/111114507/188432627-518e7a09-e61b-4511-9860-33bb24281469.png)
-![image](https://user-images.githubusercontent.com/111114507/188432701-f3574217-bf56-4eb1-87d6-d625bd76a495.png)
-![image](https://user-images.githubusercontent.com/111114507/188432777-1118ed26-6187-4049-87a6-cfea44348fc0.png)
-![image](https://user-images.githubusercontent.com/111114507/188432837-77af0cd1-e5bd-4d21-95e3-441e53888db6.png)
+
+
+
 <br>
 
 ### Q1)
@@ -154,6 +152,8 @@ void kttvBuy(KtTv n) { //함수의 parameter 제품객체의 주소를 받아서
 		System.out.println("구매한 물건은 : " + n.toString());
 	}
 ```
+![image](https://user-images.githubusercontent.com/111114507/188432627-518e7a09-e61b-4511-9860-33bb24281469.png)
+![image](https://user-images.githubusercontent.com/111114507/188432701-f3574217-bf56-4eb1-87d6-d625bd76a495.png)
 ### ▶ 새로운 제품이 추가될 시 문제 발생, 하나씩 다시 추가!
 <br>
 
@@ -215,6 +215,8 @@ void Buy(Product n) { //함수의 parameter 제품객체의 주소를 받아서 
 		System.out.println("구매한 물건은 : " + n.toString());
 	}
 ```
+![image](https://user-images.githubusercontent.com/111114507/188432777-1118ed26-6187-4049-87a6-cfea44348fc0.png)
+![image](https://user-images.githubusercontent.com/111114507/188432837-77af0cd1-e5bd-4d21-95e3-441e53888db6.png)
 <br>
 
 ![image](https://dthumb-phinf.pstatic.net/?src=%22http%3A%2F%2Fcafeptthumb2.phinf.naver.net%2F20160726_294%2Fi7027_1469495777487LaI6p_PNG%2F%25BA%25AF%25C8%25AF.PNG%3Ftype%3Dw740%22&type=cafe_wa740)
