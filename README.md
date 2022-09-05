@@ -68,3 +68,8 @@
 1. [String class](https://github.com/HiImJenna/KOSA/tree/main/22.09.02_DAY11#1-string-class-)
 2. [String method](https://github.com/HiImJenna/KOSA/tree/main/22.09.02_DAY11#2-string-method-)
 3. [Protected 접근자](https://github.com/HiImJenna/KOSA/tree/main/22.09.02_DAY11#3-protected-%EC%A0%91%EA%B7%BC%EC%A0%9C%ED%95%9C%EC%9E%90-)
+
+### DAY12
+1. [다형성 Polymorphism](https://github.com/HiImJenna/KOSA/tree/main/22.09.05_DAY12#1-%EB%8B%A4%ED%98%95%EC%84%B1-polymorphism-)
+2. [디자인패턴 Singleton](https://github.com/HiImJenna/KOSA/tree/main/22.09.05_DAY12#2-%EB%94%94%EC%9E%90%EC%9D%B8%ED%8C%A8%ED%84%B4-singleton-)
+3. [추상 클래스 abstract class](https://github.com/HiImJenna/KOSA/tree/main/22.09.05_DAY12#3-%EC%B6%94%EC%83%81-%ED%81%B4%EB%9E%98%EC%8A%A4-abstract-class-)
