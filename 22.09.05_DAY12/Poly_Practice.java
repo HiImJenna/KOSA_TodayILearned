@@ -64,7 +64,7 @@ class Radio extends Product{
 }
 class Xbox extends Product{
     Xbox() {
-        super(600);
+        super(600); 
     }
 
     public String toString(){
