@@ -210,6 +210,11 @@ void Buy(Product n) { //함수의 parameter 제품객체의 주소를 받아서 
 		System.out.println("구매한 물건은 : " + n.toString());
 	}
 ```
+<br>
+
+![image](https://dthumb-phinf.pstatic.net/?src=%22http%3A%2F%2Fcafeptthumb2.phinf.naver.net%2F20160726_294%2Fi7027_1469495777487LaI6p_PNG%2F%25BA%25AF%25C8%25AF.PNG%3Ftype%3Dw740%22&type=cafe_wa740)
+![image](https://dthumb-phinf.pstatic.net/?src=%22https%3A%2F%2Fcafeptthumb-phinf.pstatic.net%2FMjAxNzAyMTVfMTQ2%2FMDAxNDg3MTQyMTg3MzI4.XqSLR5LiAFizQobeS4K88mhYwZ9F0AhX1v7QKd5n8kgg.0xliiei7AfnmMsoNFP3L1fpRx54icE_9wXbbJkRZBYQg.PNG.i7027%2Finstanceof.PNG%3Ftype%3Dw740%22&type=cafe_wa740)
+<br>
 
 ## 2. 디자인패턴 (Singleton) ✔
 ----------------------
