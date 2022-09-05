@@ -190,22 +190,7 @@ public class Ex12_Inherit_keyPoint_Poly {
 		NoteBook notebook = new NoteBook();
 		
 		Buyer buyer = new Buyer();
-		/*
-		buyer.kttvBuy(kt);
-		buyer.kttvBuy(kt);
-		buyer.NoteBookBuy(notebook);
-		buyer.kttvBuy(kt);
-		buyer.kttvBuy(kt);
-		buyer.kttvBuy(kt);
-		buyer.kttvBuy(kt);
-		buyer.kttvBuy(kt);
-		buyer.kttvBuy(kt);
-		buyer.kttvBuy(kt);
-		buyer.kttvBuy(kt);
-		buyer.kttvBuy(kt);
-		buyer.kttvBuy(kt);
-		buyer.kttvBuy(kt);
-		*/
+	
 		buyer.Buy(kt);
 		buyer.Buy(kt);
 		buyer.Buy(notebook);
