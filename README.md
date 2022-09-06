@@ -75,6 +75,5 @@
 3. [추상 클래스 abstract class](https://github.com/HiImJenna/KOSA/tree/main/22.09.05_DAY12#3-%EC%B6%94%EC%83%81-%ED%81%B4%EB%9E%98%EC%8A%A4-abstract-class-)
 
 ### DAY13
-1. []()
-2. []()
-3. []()
+1. [추상 클래스 abstract class](https://github.com/HiImJenna/KOSA/tree/main/22.09.06_DAY13#1-%EC%B6%94%EC%83%81-%ED%81%B4%EB%9E%98%EC%8A%A4-abstract-class-)
+2. [인터페이스 Interface](https://github.com/HiImJenna/KOSA/tree/main/22.09.06_DAY13#2-%EC%9D%B8%ED%84%B0%ED%8E%98%EC%9D%B4%EC%8A%A4-interface-)
