@@ -47,7 +47,7 @@
   	     class Car implements Ia{}
   	   => 둘다 추상자원을 가지고 있다 >> extends, implements >> 강제적 구현 목적 (재정의)
 
-<br>
+<br> 
 
 
 #### <초급개발자의 시선으로>
