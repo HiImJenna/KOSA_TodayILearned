@@ -79,14 +79,14 @@
 <br>
 
 ### 5) 집합 Aggregation
-- whole(전체)와 part(부분)의 관계를 나타낸다.
+- whole(전체)와 part(부분)의 관계를 나타낸다.  
    ▶part가 whole에 독립적이기에 whole이 part를 빌려쓰는 것과 비슷하다.
 ![image](https://www.nextree.co.kr/content/images/2021/01/--16-Aggregation.png)
 <br>
 
 ### 6) 합성 Composition
-- Aggregation과 비슷하게 whole(전체)와 part(부분)의 관계를 나타지만 개념적으로 Aggregation보다 더 강한 집합을 의미한다.
-   ▶ part가 whole에 종속적이기에 part가 whole의 소유이다.!
+- Aggregation과 비슷하게 whole(전체)와 part(부분)의 관계를 나타지만 개념적으로 Aggregation보다 더 강한 집합을 의미한다.  
+   ▶ part가 whole에 종속적이기에 part가 whole의 소유이다.
 ![image](https://www.nextree.co.kr/content/images/2021/01/--19-Composition1.png)
 <br>
 
