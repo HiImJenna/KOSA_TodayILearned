@@ -90,4 +90,87 @@
 ![image](https://www.nextree.co.kr/content/images/2021/01/--19-Composition1.png)
 <br>
 
-출처 : https://www.nextree.co.kr/p6753/   
+출처 : https://www.nextree.co.kr/p6753/ 
+
+<br>
+
+### <시나리오 실습>
+### Q1)
+![image](https://user-images.githubusercontent.com/111114507/188814839-c83f0314-5786-4eb1-8e58-cdb550282888.png)
+```java
+interface Unit {
+	void InitPosition(); // 초기 좌표값
+
+	void move(); // 이동 위치
+}
+
+class King implements Unit {
+
+	@Override
+	public void InitPosition() {
+		// TODO Auto-generated method stub
+		System.out.println("정해진 왕의 위치");
+	}
+
+	@Override
+	public void move() {
+		// TODO Auto-generated method stub
+		System.out.println("모든 방향으로 한칸 움직입니다.");
+	}
+
+	public void endgame() {
+		System.out.println("킹이 죽어서 게임이 종료됩니다.");
+	}
+
+}
+
+class Queen implements Unit {
+
+	@Override
+	public void InitPosition() {
+		// TODO Auto-generated method stub
+		System.out.println("정해진 여왕의 위치");
+	}
+
+	@Override
+	public void move() {
+		// TODO Auto-generated method stub
+		System.out.println("어디든 팔방으로 거리제한 없이 이동 가능");
+	}
+}
+
+class Pawn implements Unit {
+
+	@Override
+	public void InitPosition() {
+		System.out.println("정해진 폰의 위치");
+	}
+
+	@Override
+	public void move() {
+		// TODO Auto-generated method stub
+		System.out.println("앞으로 한칸 이동 가능");
+	}
+}
+
+class Player {
+
+	String color;
+	Unit[] unit;
+
+	public Player(String color, Unit[] unit) {
+		this.color = color;
+		this.unit = unit;
+	}
+
+	void play(Unit ut) {
+		ut.move();
+	}
+}
+```
+![image](https://user-images.githubusercontent.com/111114507/188814428-e665a95e-f9ad-40e9-9cfb-3994544e4e04.png)
+<br>
+
+### Q2) Ex12_Inherit_Keypoint 시나리오
+![image](https://cafeptthumb-phinf.pstatic.net/MjAyMjA5MDdfMzQg/MDAxNjYyNTIwODg3MDc0.jQCpJdO2VBiwjQdIcWxilsbE6UuRqo_AeJWeZ5sEJqcg.ShG0a4OyK9g6MYEs3URs9scbSehXiqC4JAxCj4jSoqcg.PNG/2.PNG?type=w1600)
+
