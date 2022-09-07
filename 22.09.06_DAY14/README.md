@@ -50,11 +50,21 @@
 ![image](https://dthumb-phinf.pstatic.net/?src=%22http%3A%2F%2Fcfile8.uf.tistory.com%2Fimage%2F135576465051426D26333D%22&type=cafe_wa740)
 <br>
 
-###     1) 일반화 Generalization
+### 1) 일반화 Generalization
+![image](https://www.nextree.co.kr/content/images/2021/01/--7-Generalization1.png)
+- 부모클래스와 자식클래스 간의 상속 관계를 나타낸다.
+- 부모클래스가 추상클래스인 경우에는 추상 메서드를 반드시 오버라이딩 하여 구현해야 한다.
+<br>
 
-###     2) 실체화 Realisation
+### 2) 실체화 Realisation
+![image](https://www.nextree.co.kr/content/images/2021/01/--8-Realization.png)
+- interface의 정의만 있는 메서드를 오버라이딩 하여 실제 기능으로 구현하는 것을 말한다.
+<br>
 
-###     3) 의존 Dependency
 
-###     4) 연관 Association & 방향성 있는 연관 Directed Association
+### 3) 의존 Dependency
+![image](https://www.nextree.co.kr/content/images/2021/01/--9-Dependency.png)
+- 클래스 다이어그램에서 일반적으로 제일 많이 사용되는 관계로서, 어떤 클래스가 다른 클래스를 참조하는 것을 말합니다.
+
+### 4) 연관 Association & 방향성 있는 연관 Directed Association
 
