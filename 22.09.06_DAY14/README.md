@@ -64,7 +64,12 @@
 
 ### 3) 의존 Dependency
 ![image](https://www.nextree.co.kr/content/images/2021/01/--9-Dependency.png)
-- 클래스 다이어그램에서 일반적으로 제일 많이 사용되는 관계로서, 어떤 클래스가 다른 클래스를 참조하는 것을 말합니다.
+- 클래스 다이어그램에서 일반적으로 제일 많이 사용되는 관계로서, 어떤 클래스가 다른 클래스를 참조하는 것을 말한다.
+<br>
+
+<Dependency Stereo Type>
+
+![image](https://www.nextree.co.kr/content/images/2021/01/--10-Dependency2.png)
 
 ### 4) 연관 Association & 방향성 있는 연관 Directed Association
-
+- Association : 보통 다른 객체의 참조를 가지는 필드를 의미한다
