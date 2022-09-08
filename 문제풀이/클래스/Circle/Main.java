@@ -35,8 +35,10 @@ public class Main {
        for (int j = 0; j < c.length; j++)
         c[j].show(); //모든 Circle 객체 출력
 
+       int max = 0;
+
        for (int i = 0; i < c.length; i++) {
-        if(Math.max(c[i].getRadius) == c[i].getRadius) {
+        if(Math.max(c[i].radius) == c[i].getRadius) {
             System.out.print("가장 면적이 큰 원은 ");
             c[i].show();
         }
