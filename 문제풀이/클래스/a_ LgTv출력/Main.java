@@ -1,4 +1,5 @@
-package 문제풀이.Tv.Inherit;
+package 클래스.a_LgTv출력;
+
 class TV {
     private int size;
     public TV(int size) {this.size = size;}

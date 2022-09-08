@@ -1,4 +1,4 @@
-package 클래스.Grade;
+
 
 import java.util.Scanner;
 

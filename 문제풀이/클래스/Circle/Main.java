@@ -2,6 +2,7 @@ package 클래스.Circle;
 import java.util.Scanner;
 
 class Circle {
+    public static Object getRadius;
     private double x, y;
     private int radius;
     public Circle(double x, double y, int radius) {
@@ -41,6 +42,6 @@ public class Main {
         }
        }
 
-       scanner.close();
+       sc.close();
     }
 }
