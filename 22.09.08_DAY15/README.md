@@ -30,4 +30,15 @@
 - #### 일반 배열과 동일하게 연속된 메모리 공간을 사용하며 인덱스는 0부터 시작
 - #### 배열이 크기가 고정인 반면 ArrayList는 크기가 가변적으로 변함
 
+<br>
+
+>>ArrayList 부모타입은 List 이다 (OK) >> 다형성
+>>Collection 은 ArrayList의 부모타입이다.(OK) >> 다형성
+<br>
+
+- .add(Object) : ArrayList의 마지막에 데이터 추가 / .add(int index, Object) : index 에 데이터 추가
+- .set(int index, Object) : 값 변경
+- .clear( ) : 모든 값 삭제
+- .remove( ) : 값을 하나씩 제거
+- .size( ) : 크기
 
