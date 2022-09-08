@@ -32,7 +32,7 @@
 
 <br>
 
->>ArrayList 부모타입은 List 이다 (OK) >> 다형성
+>>ArrayList 부모타입은 List 이다 (OK) >> 다형성  
 >>Collection 은 ArrayList의 부모타입이다.(OK) >> 다형성
 <br>
 
