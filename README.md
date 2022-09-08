@@ -3,7 +3,6 @@
 
 ## 💙 Daily Study
 ---------------------
-[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fgjbae1212%2Fhit-counter&count_bg=%2369B3EA&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
 
 <details>
 <summary>JAVA</summary>
@@ -81,6 +80,7 @@
 2. [인터페이스 Interface](https://github.com/HiImJenna/KOSA/tree/main/22.09.06_DAY13#2-%EC%9D%B8%ED%84%B0%ED%8E%98%EC%9D%B4%EC%8A%A4-interface-)
 
 ### DAY14
+<<<<<<< HEAD
 1. [UML](https://github.com/HiImJenna/KOSA/tree/main/22.09.06_DAY14#1-uml-)
 2. [클래스다이어그램](https://github.com/HiImJenna/KOSA/tree/main/22.09.06_DAY14#2-%ED%81%B4%EB%9E%98%EC%8A%A4-%EB%8B%A4%EC%9D%B4%EC%96%B4%EA%B7%B8%EB%9E%A8-class-diagram-)
 3. [UCASE](https://github.com/HiImJenna/KOSA/tree/main/22.09.06_DAY14#3-%EC%9C%A0%EC%BC%80%EC%9D%B4%EC%8A%A4-ucase-)
@@ -90,3 +90,8 @@
 1.
 2.
 3.
+=======
+1. 
+2. 
+3. 
+>>>>>>> 5760221f98d3c2cfce91b142328a34a81066a420
