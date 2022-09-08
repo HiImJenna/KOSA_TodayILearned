@@ -11,7 +11,7 @@
 - 라이브러리는 사용자가 흐름에 대해 제어를 하며 필요한 상황에 가져다 쓴다.  
 ![image](https://images.velog.io/images/tjdud0123/post/cf64f995-0315-442a-928e-0c3a2a68d64b/framework-vs-library.png)
 <br>
-
+  
 ### 🔔 컬렉션 프레임워크
 ![image](https://mblogthumb-phinf.pstatic.net/MjAyMDAyMjVfMTI5/MDAxNTgyNjMyMjMwMTk1.9IMMEVLeWF7uPIWChIgZSKyhKrdP-UEwQNfLU8_n28kg.eqdEvrAEPmnYmlFG_xq8LkH-tS53QpteMU_XLwSwJRQg.PNG.tptptpduf/image.png?type=w800)
 - #### List : 순서가 있는 데이터의 집합, 데이터의 중복을 허용한다.
