@@ -48,10 +48,10 @@ public class Main {
 
        for (int i = 0; i < c.length; i++) {
         if(max == c[i].getRadius())
-        System.out.println("가장 큰  원은" + max);
+        System.out.println("가장 큰 원은");
         c[i].show();
        }
-       }
 
-    }
-
+       sc.close();
+     }  
+ }

@@ -40,7 +40,9 @@ class Rectangle{
 
     //boolean contains(Rectangle r)
     boolean contains(Rectangle r){
-        for (int i = 0; i < array.length; i++) {
-            if(r.z * )
-        }
+        if(x < r.x && y < r.y)
+            if((z + x) > (r.x + r.z) && (q + y) > (r.yß + r.q))
+                return true;
+        return false;
     }
+}
