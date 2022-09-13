@@ -43,10 +43,17 @@ System.arraycopy(elementData, index, elementData, index + 1, size - index);eleme
 - arraylist 같은경우에는 내부적으로 remove 해야되는 item을 제외하고 삽입처럼 arraycopy를 시도한다. 반면 linkedlist는 삽입과 마찬가지로 해당 item을 찾아 제거하고, 앞뒤 원소의 위치값만 조정해주면 된다.
 <br>
 
-<해당 함수들의 실제 수행시간>
+<해당 함수들의 실제 수행시간>  
 ![image](https://dthumb-phinf.pstatic.net/?src=%22http%3A%2F%2Fwww.programcreek.com%2Fwp-content%2Fuploads%2F2013%2F03%2Farraylist-vs-linkedlist1.png%22&type=cafe_wa740)
 
 조회시에는 arraylist가 우위지만, 삽입/삭제 시에는 linkedlist가 뛰어난 성능을 보여준다.  
 즉 대량의 삽입삭제가 빈번하게 발생하는 곳에서는 linkedlist를 db에서 단순히 조회만 할 경우에는 arraylist를 사용하면 된다.
 
-출처 : 
+출처 : https://cafe.naver.com/kosait
+<br>
+
+## 2. Stack & Queue ✔
+-----------------------------
+<br>
+
+![image](https://user-images.githubusercontent.com/111114507/189794365-dbdcc147-dda7-4f3f-92a4-ff5a0329dde7.png)
