@@ -9,9 +9,6 @@
 ![image](https://dthumb-phinf.pstatic.net/?src=%22http%3A%2F%2Fi.stack.imgur.com%2FskN72.png%22&type=cafe_wa740)
 
 ▶ linkedlist와 arraylist의 가장큰 차이는 inkedlist 는 각 원소마다 앞,뒤 원소의 위치값을 가지고 있고,arraylist 는 index가 있다.
-
-
-
 <br>
 
 #### 🔔 조회(get) 
@@ -57,6 +54,20 @@ System.arraycopy(elementData, index, elementData, index + 1, size - index);eleme
 <br>
 
 ![image](https://user-images.githubusercontent.com/111114507/189794365-dbdcc147-dda7-4f3f-92a4-ff5a0329dde7.png)
+<br>
+
+### <Stack의 실생활 속 예>
+- 쌓아놓은 물건은 아래서부터 뺄수없다.  
+- 인터넷을 하다가 뒤로가기를 누르면 방문한 순서대로 뒤로 간다.  
+- 한글문서를 작성하다가 되돌리기를 누르면 방금전에 수행한 동작을 원래대로 되돌린다.  
+<br>
+
+### <Queue의 실생활 속 예>
+- 버스정류장에서 사람들이 줄을 선대로 버스에 탄다.  
+- 음식점에서 주문한 순서대로 음식을 받는다.  
+<br>
+
+출처 : https://github.com/Bamjong
 <br>
 
 ### 🔔push(), pop(), boolean empty(), boolean full() 구현하기
