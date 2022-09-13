@@ -80,7 +80,7 @@
 2. [인터페이스 Interface](https://github.com/HiImJenna/KOSA/tree/main/22.09.06_DAY13#2-%EC%9D%B8%ED%84%B0%ED%8E%98%EC%9D%B4%EC%8A%A4-interface-)
 
 ### DAY14
-<<<<<<< HEAD
+
 1. [UML](https://github.com/HiImJenna/KOSA/tree/main/22.09.06_DAY14#1-uml-)
 2. [클래스다이어그램](https://github.com/HiImJenna/KOSA/tree/main/22.09.06_DAY14#2-%ED%81%B4%EB%9E%98%EC%8A%A4-%EB%8B%A4%EC%9D%B4%EC%96%B4%EA%B7%B8%EB%9E%A8-class-diagram-)
 3. [UCASE](https://github.com/HiImJenna/KOSA/tree/main/22.09.06_DAY14#3-%EC%9C%A0%EC%BC%80%EC%9D%B4%EC%8A%A4-ucase-)
@@ -94,8 +94,8 @@
 ### DAY16
 1. [ArrayList](https://github.com/HiImJenna/KOSA/tree/main/22.09.13_DAY16#1-arraylist-)
 2. [Stack & Queue](https://github.com/HiImJenna/KOSA/tree/main/22.09.13_DAY16#2-stack--queue-)
-3. [Generic] (https://github.com/HiImJenna/KOSA/tree/main/22.09.13_DAY16#3-generic-)
-4. [Interator] (https://github.com/HiImJenna/KOSA/tree/main/22.09.13_DAY16#4-interator-)
-5. [HashSet] (https://github.com/HiImJenna/KOSA/tree/main/22.09.13_DAY16#5-hashset-)
-6. [TreeSet] (https://github.com/HiImJenna/KOSA/tree/main/22.09.13_DAY16#6-treeset-)
+3. [Generic](https://github.com/HiImJenna/KOSA/tree/main/22.09.13_DAY16#3-generic-)
+4. [Interator](https://github.com/HiImJenna/KOSA/tree/main/22.09.13_DAY16#4-interator-)
+5. [HashSet](https://github.com/HiImJenna/KOSA/tree/main/22.09.13_DAY16#5-hashset-)
+6. [TreeSet](https://github.com/HiImJenna/KOSA/tree/main/22.09.13_DAY16#6-treeset-)
 7. [Map](https://github.com/HiImJenna/KOSA/tree/main/22.09.13_DAY16#7-map-)
