@@ -87,11 +87,15 @@
 4. [정규표현식](https://github.com/HiImJenna/KOSA/tree/main/22.09.06_DAY14#4-%EC%A0%95%EA%B7%9C%ED%91%9C%ED%98%84%EC%8B%9D-)
 
 ### DAY15
-1.
-2.
-3.
+1. [라이브러리와 프레임워크](https://github.com/HiImJenna/KOSA/tree/main/22.09.08_DAY15#1-%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC%EC%99%80-%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC-)
+2. [ArrayList](https://github.com/HiImJenna/KOSA/tree/main/22.09.08_DAY15#2-arraylist-)
+
 
 ### DAY16
-1. 
-2. 
-3. 
+1. [ArrayList](https://github.com/HiImJenna/KOSA/tree/main/22.09.13_DAY16#1-arraylist-)
+2. [Stack & Queue](https://github.com/HiImJenna/KOSA/tree/main/22.09.13_DAY16#2-stack--queue-)
+3. [Generic] (https://github.com/HiImJenna/KOSA/tree/main/22.09.13_DAY16#3-generic-)
+4. [Interator] (https://github.com/HiImJenna/KOSA/tree/main/22.09.13_DAY16#4-interator-)
+5. [HashSet] (https://github.com/HiImJenna/KOSA/tree/main/22.09.13_DAY16#5-hashset-)
+6. [TreeSet] (https://github.com/HiImJenna/KOSA/tree/main/22.09.13_DAY16#6-treeset-)
+7. [Map](https://github.com/HiImJenna/KOSA/tree/main/22.09.13_DAY16#7-map-)
