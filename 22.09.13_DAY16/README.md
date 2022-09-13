@@ -57,3 +57,101 @@ System.arraycopy(elementData, index, elementData, index + 1, size - index);eleme
 <br>
 
 ![image](https://user-images.githubusercontent.com/111114507/189794365-dbdcc147-dda7-4f3f-92a4-ff5a0329dde7.png)
+``` java
+push(), pop(), boolean empty(), boolean full() 구현하기
+```
+```java
+public boolean empty() {
+		return(top == -1); //true
+	}
+	
+	public boolean full() {	
+		return (top == maxsize-1); //5개 방 [0] [1] [2] [3] [4]
+	}
+	
+	public void push(Object i) {
+		if(full()) {
+			System.out.println("stack full ... ");
+		} else {
+			//POINT
+			stackarr[++top] = i; //처음 top = -1 >> [0]
+		}
+		
+	}
+	
+	public Object pop() {
+		Object value = null;
+		if(empty()) {
+			System.out.println("stack empty ... ");
+		} else {
+			value = stackarr[top];
+			top--;
+		}
+		return value;
+	}
+```
+
+
+## 3. Generic ✔
+-----------------------------
+<br>
+
+## 4. Interator ✔
+-----------------------------
+<br>
+
+## 5. HashSet ✔
+-----------------------------
+<br>
+
+```java
+ Set  인터페이스 (원 안에 들어가세요) : 순서 보장x >> 중복 허락 x
+ 순서가 없고 중복을 허락하지 않는 데이터 집합
+ 구현하는 클래스
+ HashSet, TreeSet(자료구조)
+ ```
+
+```java
+//Quiz
+//HashSet을 사용해 1~45까지의 난수 6개를 넣으세요
+/* 예전 lotto class 활용
+    int[] lotto
+    lotto[i] = (int)(Math.random()*45 + 1);
+    
+for(int j = 0; j<i; j++) {
+    if(lotto[i] == lotto[j]) {
+    i--;
+    break;
+    }
+}
+```
+## (1)
+```java
+HashSet<Integer> lotto = new HashSet<Integer>();
+for (int j = 0; lotto.size()<6; j++) {
+    int num = (int)(Math.random()*45 + 1);
+    lotto.add(num);
+    System.out.println("i : " + j + " / num : " + num);
+}
+
+System.out.println(lotto.toString());
+```
+## (2)
+```java
+Set set2 = new HashSet();
+		int index = 0;
+		while(set2.size() < 6) {
+			int num = (int)(Math.random()*45 + 1);
+			set2.add(num); // add 추상 함수를 HashSet클래스가 재정의 
+		}
+		System.out.println(set2.toString());
+```
+
+## 6. TreeSet ✔
+-----------------------------
+<br>
+
+## 7. Map ✔
+-----------------------------
+<br>
+
