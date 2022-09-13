@@ -1,8 +1,7 @@
-package 클래스.Circle;
+package 클래스.ef_Circle;
 import java.util.Scanner;
 
 class Circle {
-    public static Object getRadius;
     private double x, y;
     private int radius;
     public Circle(double x, double y, int radius) {
@@ -14,6 +13,10 @@ class Circle {
     public void show(){
         System.out.printf("(%.1f,%.1f)%d", x, y, radius);
         System.out.println();
+    }
+
+    public int getRadius(){
+        return radius; 
     }
 }
 
@@ -38,12 +41,17 @@ public class Main {
        int max = 0;
 
        for (int i = 0; i < c.length; i++) {
-        if(Math.max(c[i].radius) == c[i].getRadius) {
-            System.out.print("가장 면적이 큰 원은 ");
-            c[i].show();
+        if(c[i].getRadius() > max) {
+            max = c[i].getRadius();
         }
        }
 
+       for (int i = 0; i < c.length; i++) {
+        if(max == c[i].getRadius())
+        System.out.println("가장 큰 원은");
+        c[i].show();
+       }
+
        sc.close();
-    }
-}
+     }  
+ }
