@@ -5,7 +5,23 @@
 -----------------------------
 <br>
 
-### ArrayList와 LinkedList의 차이점
+### <ArrayList의 단점> 
+#### 1.  크기를 변경할 수 없다 
+- 크기를 변경해야하는 경우 새로운 배열을 생성하고 데이터를 복사해야한다. (비용이 큰 작업)
+- 크기 변경을 피하기 위해 충분히 큰 배열을 생성하면 메모리 낭비가 심해진다
+
+#### 2. 비순차적인 데이터의 추가, 삭제에 시간이 많이 걸린다.
+- 데이터를 추가하거나 삭제하기 위해 많은 데이터를 옮겨야한다.
+- 그러나 순차적인 데이터 추가(마지막에 추가)와 순차적으로 데이터를 삭제하는 것(마지막부터 삭제)은 빠르다
+<br>
+
+### <LinkedList> :  배열의 단점을 보완
+![image](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fbygm8v%2Fbtq5lxMb2f7%2FUookpU9dnl1uKNZs6i4Bu0%2Fimg.png)
+- 배열과 달리 불연속적으로 존재하는 데이터를 연결(link)
+- 데이터의 삭제 : 단 한번의 참조 변경만으로 가능
+- 데이터의 추가 : 하나의 Node 객체 생성과 한번의 참조 변경만으로 가능
+
+### <ArrayList와 LinkedList의 차이점>
 ![image](https://dthumb-phinf.pstatic.net/?src=%22http%3A%2F%2Fi.stack.imgur.com%2FskN72.png%22&type=cafe_wa740)
 
 ▶ linkedlist와 arraylist의 가장큰 차이는 inkedlist 는 각 원소마다 앞,뒤 원소의 위치값을 가지고 있고,arraylist 는 index가 있다.
