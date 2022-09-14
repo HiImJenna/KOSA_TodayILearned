@@ -101,6 +101,7 @@
 7. [Map](https://github.com/HiImJenna/KOSA/tree/main/22.09.13_DAY16#7-map-)
 
 ### DAY17
-1. 
-2. 
-3. 
+1. [Map_Generic](https://github.com/HiImJenna/KOSA/tree/main/22.09.14_DAY17#1-map_generic-);
+2. [Properties](https://github.com/HiImJenna/KOSA/tree/main/22.09.14_DAY17#2-properties-)
+3. [wrapper class](https://github.com/HiImJenna/KOSA/tree/main/22.09.14_DAY17#3-wrapper-class-)
+4. [Calendar](https://github.com/HiImJenna/KOSA/tree/main/22.09.14_DAY17#4-calendar-)
