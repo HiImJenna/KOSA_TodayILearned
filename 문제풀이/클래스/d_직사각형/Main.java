@@ -41,7 +41,7 @@ class Rectangle{
     //boolean contains(Rectangle r)
     boolean contains(Rectangle r){
         if(x < r.x && y < r.y)
-            if((z + x) > (r.x + r.z) && (q + y) > (r.yß + r.q))
+            if((z + x) > (r.x + r.z) && (q + y) > (r.y + r.q))
                 return true;
         return false;
     }
