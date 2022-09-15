@@ -105,3 +105,9 @@
 2. [Properties](https://github.com/HiImJenna/KOSA/tree/main/22.09.14_DAY17#2-properties-)
 3. [wrapper class](https://github.com/HiImJenna/KOSA/tree/main/22.09.14_DAY17#3-wrapper-class-)
 4. [Calendar](https://github.com/HiImJenna/KOSA/tree/main/22.09.14_DAY17#4-calendar-)
+
+### DAY18
+1. [Date Format](https://github.com/HiImJenna/KOSA/tree/main/22.09.15_DAY18#1-date-format-)
+2. [Decimal Format](https://github.com/HiImJenna/KOSA/tree/main/22.09.15_DAY18#2-decimal-format-)
+3. [I/O Stream](https://github.com/HiImJenna/KOSA/tree/main/22.09.15_DAY18#3-io-stream-)
+4. [Reader & Writer](https://github.com/HiImJenna/KOSA/tree/main/22.09.15_DAY18#4-reader--writer-)
