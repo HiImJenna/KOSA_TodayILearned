@@ -93,7 +93,6 @@ System.out.println(df2.format(money));
 
 출력값 : 123457 (반올림)
 ```
-<br>
 
 ### <0.000...>
 ```java
@@ -149,3 +148,47 @@ System.out.println(df4.format(money));
  2. File : FileOutputStream
 
 ```
+<br>
+
+### 🔔 File Stream
+
+```java
+Byte 데이터를 read, write >> 그 대상이 >> File
+FileInputStream
+FileOutputStream
+
+(이미지, 엑셀파일) read, write
+
+File >> 1.txt, data.txt (데이터를 파일에 기록)
+
+
+FileInputStream fs = null; 굳이 이렇게 하는 이유
+
+I/O 클래스는 예외를 강제 해야하기 때문에 하는거임
+
+I/O 자원은 개발자가 직접적으로 자원에 해제 (여러 사용자들이 접근 사용 가능)
+>> close() 
+```
+<br>
+
+### 🔔 Buffer
+```java
+ File 처리 (DISK) : 입력 출력은 Byte 단위로 (한 Byte) read, write
+ 
+ 여러 학생을 모아서 하나의 버스에 태워서 목적지 ... 놀면
+ 버스 : buffer
+ 1. I/O 성능 개선 (접근 횟수 줄이기)
+ 2. Line 단위 (엔터)
+ 
+ BufferedInputStream(보조 스트림) >> 주 클래스에 의존
+
+```
+![image](https://user-images.githubusercontent.com/111114507/190366898-9cdb9209-2253-4b7d-90d2-31d4a25a276f.png)
+
+#### - 고정 값이 아니라 가변적인 값을 받음 -> 5개의 값을 받으면 5개의 공간, 10개의 값을 받으면 10개의 공간 생성  
+#### - 입력받은 값을 버퍼에 저장해두었다가 버퍼가 가득 차거나 개행 문자가 나타나면 한번에 전달
+
+
+## 4. Reader & Writer ✔
+-----------------------------
+<br>
