@@ -73,6 +73,8 @@ public class main {
 -----------------------------
 <br>
 
+![image](https://user-images.githubusercontent.com/111114507/190288732-914b74e3-f4b0-496d-9b49-c08460ddc5bd.png)
+
 ```java
 double money = 123456.5678;
 ```
@@ -93,9 +95,6 @@ System.out.println(df2.format(money));
 ```
 <br>
 
-![image](https://user-images.githubusercontent.com/111114507/190288732-914b74e3-f4b0-496d-9b49-c08460ddc5bd.png)
-
-
 ### <0.000...>
 ```java
 DecimalFormat df3 = new DecimalFormat("0.000000"); 
@@ -112,11 +111,41 @@ System.out.println(df4.format(money));
 ```
 <br>
 
-## 3. IO Stream ✔
+## 3. I/O Stream ✔
 -----------------------------
 <br>
 
 ![이미지](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbvH00I%2FbtqydR4e1Ju%2FDaCDExX0OKOaZquiHWzWLK%2Fimg.png)
 - 자바에서 데이터는 스트림을 통해 입출력됨
 
+![image](https://mblogthumb-phinf.pstatic.net/MjAxNzAzMDdfMzcg/MDAxNDg4ODc1NTU1NzYz.Jh8-r-RQcxjkX0W2LKMtVT-1BDD1kHl9MwLqEflkySgg.i0cmhOjAE8R72W9oY_VuQVCpsPAndzgmFDgnIGkDvYsg.PNG.mcm1092/%EB%B0%94%EC%9D%B4%ED%8A%B8%EC%8A%A4%ED%8A%B8%EB%A6%BC_%EB%AC%B8%EC%9E%90%EC%8A%A4%ED%8A%B8%EB%A6%BC.png?type=w800)
+![image](https://user-images.githubusercontent.com/111114507/190292594-a1a3c4a2-7d58-412f-a948-65a0761d5d39.png)
+- byte stream : 작은 빨대
+- 문자 stream : 큰 빨대
 
+### 🔔stream
+```java
+ Stream(종료)
+ 데이터 종류 : 이미지, 파일(바이너리) <> 문자
+ 
+ JAVA API
+ [Byte]단위의 데이터 IO
+ 
+ 추상클래스
+ InputStream, OutputStream
+ 
+ 당신이 Byte 데이터 작업을 할 때
+ [입력 InputStream] 상속 받는 클래스 사용하세요 : 대상
+ 
+ 대상
+ 1. Memory : ByteArrayInputStream ...
+ 2. File : FileInputStream
+ 
+  당신이 Byte 데이터 작업을 할 때
+ [출력 OutputStream] 상속 받는 클래스 사용하세요 : 대상
+ 
+ 대상
+ 1. Memory : ByteArrayOutputStream ...
+ 2. File : FileOutputStream
+
+```
