@@ -1,80 +1,55 @@
 package DOS;
 
 import java.util.Scanner;
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 
 public class Main {
-
-	static String defaultPath = "C:" + File.separator;
-	static String path = defaultPath;
-
 	public static void main(String[] args) {
 
-		System.out.println("Bitamp Microsoft Windows DOS 명령어 [Version 1.1]");
-		System.out.println("2020 Bitcamp. All rights reserved\n");
+    }
 
-		Scanner sc = new Scanner(System.in);
+    void readTextFile(String[] input){
 
-		String[] input = null;
+        FileReader fr = null;
+        BufferedReader br = null;        
 
-		while (true) {
-			System.out.print(path + ">");
-			input = sc.nextLine().trim().split(" "); // input배열에 띄어쓰기 기준으로 각 방에 저장, 첫 번째 방 전에 공란 방지
-
-			if (input[0].equalsIgnoreCase("exit")) { // 오직 exit로만 Dos 종료 가능
-				System.out.println("Exit");
-				System.exit(0);
-				return;
-			}
-
-			switch (input[0].toLowerCase()) {
-			case "dir":
-				searchDirectory();
-				break;
-			case "cd":
-			case "cd..":
-			case "cd\\":
-			case "cd/":
-				changeDirectory(input);
-				break;
-			case "md":
-			case "mkdir":
-				makeDirectory(input);
-				break;
-			case "rd":
-			case "rmdir":
-				removeDirectory(input);
-				break;
-			case "ren":
-			case "rename":
-				renameDirectory(input);
-				break;
-			case "type":
-				readTextFile(input);
-				break;
-			case "help":
-				displayHelp();
-				break;
-			default:
-			}
+        File f = new File(input[0]); //File f = new File("C:\\Temp);
+        
+		if(!f.exists() || !f.isFile()) {
+			//존재하지 않거나 또는 파일이 아니라면
+			System.out.println("유효하지 않은 파일");
+			System.exit(0);
 		}
-	}
 
-    void makeDirectory(){
-
+        for (int i = 1; i < input.length; i++) {
+            try {
+                fr = new FileReader(input[i]);
+                br = new BufferedReader(fr);
+                String line = "";
+    
+                for (int j = 0;  (line = br.readLine()) != null; j++) {
+                    System.out.println(line);
+                }
+                
+            } catch (Exception e) {
+                System.out.println("에러");
+            } catch (FileNotFoundException e) {
+                System.out.println("파일이 존재하지 않아요");
+            } catch (IOException e) {
+                System.out.println("파일을 읽을 수 없어요");
+            } catch (Exception e) {
+                System.err.println("나머지 예외");
+            } finally {
+                try {
+                    br.close();
+                    fr.close();
+                } catch (Exception e2) {
+                }
+            }
+        }
     }
-
-    void removeDirectory(){
-
-    }
-
-    void readTextFile(){
-
-    }
-
-    void displayHelp(){
-
-    }
-
-}    
-
+}

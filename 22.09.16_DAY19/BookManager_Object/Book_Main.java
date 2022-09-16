@@ -23,7 +23,7 @@ public class Book_Main {
             bos = new BufferedOutputStream(fos);
             out = new ObjectOutputStream(bos);
         } catch (Exception e) {
-            // TODO: handle exception
+
         }
     }
 }
