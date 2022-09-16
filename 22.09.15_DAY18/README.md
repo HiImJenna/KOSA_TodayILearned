@@ -299,9 +299,8 @@ public class Lotto_Main {
 
 ## 5. File_Dir 구현하기 ✔
 -----------------------------
-<br>
 
-### [1]
+### 🔔 1)
 [소스]
 ```java
 public static void main(String[] args) {
@@ -343,7 +342,7 @@ new.txt
 ```
 <br>
 
-### [2]
+### 🔔 2)
 [소스]
 ```java
 public static void main(String[] args) {
