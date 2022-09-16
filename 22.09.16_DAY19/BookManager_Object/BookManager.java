@@ -121,5 +121,9 @@ public class BookManager {
 			System.out.println(isbn);
 		}
 	}
+
+    void save(){
+        
+    }
 }
 
