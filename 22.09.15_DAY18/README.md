@@ -296,3 +296,91 @@ public class Lotto_Main {
 	}
 }
 ```
+
+## 5. File_Dir 구현하기 ✔
+-----------------------------
+<br>
+
+### [1]
+[소스]
+```java
+public static void main(String[] args) {
+    //System.out.println(args[0]);
+    if(args.length != 1) {
+        System.out.println("사용법 : java 파일명 [디렉토리명]");
+        System.exit(0);//강제종료
+    }
+    //java Ex08_File_Dir C:\\Temp
+    File f = new File(args[0]);
+    if(!f.exists() || !f.isDirectory()) {
+        //둘중에 하나라도 만족하지 않으면
+        //존재하지 않거나 또는 디렉토리가 아니라면
+        System.out.println("유효하지 않은 경로입니다");
+        System.exit(0);
+    }
+    
+    //실제 존재하는 경로이고 제시한것이 폴더라면
+    //POINT
+    File[] files = f.listFiles(); 
+    //C:\\Temp 안에 폴더나 파일을 배열에 담아서 ....
+    //[a.txt][b.txt][][]
+    //System.out.println(files.length);
+    for(int i = 0 ; i < files.length ;i++) {
+        String name= files[i].getName();
+        System.out.println(files[i].isDirectory() ? "[DIR]" + name : name);
+	}
+}
+```
+[CMD]
+```java
+C:\KOSA_IT\JAVA\Labs\Ex09_IO\bin>java Ex08_File_Dir ../../../../../Temp
+[DIR]a
+a.txt
+[DIR]b
+file.txt
+java.jpg
+new.txt
+```
+<br>
+
+### [2]
+[소스]
+```java
+public static void main(String[] args) {
+    File dir = new File("C:\\Temp");
+    File[] files = dir.listFiles();
+    
+    for(int i = 0 ; i < files.length ;i++) {
+        File file = files[i];
+        
+        String name = file.getName(); //폴더명 or 파일명 
+        SimpleDateFormat dt = new SimpleDateFormat("yyyy-MM-dd HH-mma");
+        String attribute="";
+        String size="";
+        
+        if(files[i].isDirectory()) { //폴더니 질문
+            attribute="<DIR>";
+        }else { //다 파일( 1.jpg, data.txt ...
+            size = file.length() + "byte";
+            attribute = file.canRead()   ? "R" :"";
+            attribute += file.canWrite() ? "W" :"";
+            attribute += file.isHidden() ? "H" :"";
+            
+        }
+        System.out.printf("%s  %3s  %10s  %s  \n",
+                            dt.format(new Date(file.lastModified())),
+                            attribute,
+                            size,
+                            name);
+    }
+}
+```
+[출력]
+```java
+2022-09-15 16-58오후  <DIR>              a  
+2022-09-15 11-10오전   RW       5byte  a.txt  
+2022-09-15 16-58오후  <DIR>              b  
+2022-09-15 16-29오후   RW       0byte  file.txt  
+2022-09-15 11-50오전   RW  229277byte  java.jpg  
+2022-09-15 12-22오후   RW       5byte  new.txt
+```
