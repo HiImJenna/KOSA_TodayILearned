@@ -93,3 +93,5 @@ public class Main {
         
     }
 }
+
+//whats the difference between sc.next / sc.nextLIne.. ?
