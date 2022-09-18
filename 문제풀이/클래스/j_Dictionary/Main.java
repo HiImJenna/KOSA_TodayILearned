@@ -5,24 +5,30 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         
-
-        
     }
 }
 
 class Dictionary{
+
     private static String [] kor = {"사랑", "아기", "돈", "미래", "희망"};
     private static String [] eng = {"love", "baby", "money", "future", "hope"};
-    public static String kor2Eng(String word) {
 
-        return "d";
+    public static String[] getKor() {
+        return kor;
+    }
+
+    public static String[] getEng() {
+        return eng;
+    }
+
+    public static String kor2Eng(String word) {
+        return null;
     }
 }
 
 class DicApp {
+    Dictionary dic = new Dictionary();
     Scanner sc = new Scanner(System.in);
-
-   
 
     void run(){
        
@@ -32,7 +38,7 @@ class DicApp {
         String kword = sc.nextLine();
 
             if(kword == "사랑"){
-
+                System.out.println(dic.getEng());
             } else if(kword == "아기") {
 
             } else if(kword == "돈") {
