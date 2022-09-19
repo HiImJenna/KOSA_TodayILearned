@@ -1,4 +1,4 @@
-package 클래스.k_calculator;
+package 클래스.k_Calculator;
 
 import java.util.Scanner;
 
@@ -93,5 +93,3 @@ public class Main {
         
     }
 }
-
-//whats the difference between sc.next / sc.nextLIne.. ?
