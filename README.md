@@ -116,9 +116,8 @@
 
 
 ### DAY20
-1. [Factory Pattern]()
-2. [Template Pattern]()
+1. [Factory Pattern 조별 과제](https://github.com/HiImJenna/KOSA/tree/main/JAVA/22.09.19_DAY20#-factory-pattern)
+2. [Template Pattern 조별 과제](https://github.com/HiImJenna/KOSA/tree/main/JAVA/22.09.19_DAY20#-template-pattern)
+3. [정규표현식 조별 과제](https://github.com/HiImJenna/KOSA/tree/main/JAVA/22.09.19_DAY20#2-%EC%A0%95%EA%B7%9C%ED%91%9C%ED%98%84%EC%8B%9D-%EC%A1%B0%EB%B3%84%EA%B3%BC%EC%A0%9C-)
+4. [[1차 프로젝트]주제 선정&usecase&시나리오 구성 초안]()
 
-### 1차 프로젝트
-1. 
-2. 
