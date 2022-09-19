@@ -149,3 +149,119 @@ public class TemplatePattern {
     }
 }
 ```
+
+<br>
+
+## 2. 정규표현식 조별과제 ✔
+-----------------------------
+### [1] 휴대폰번호📱
+```java
+ 정규표현식 : "^01(?:0|1|[6-9])-(?:\\d{3}|\\d{4})-\\d{4}$"
+
+- ^ : 문자열이나 행의 처음
+- ( ) - 하위식 : 여러 식을 하나로 묶을 수 있다.
+- ?: : 비캡쳐, 그룹화 할 때 사용되지만 문자열의 일치 / 캡처 된 부분으로 저장하지는 않는다.
+- | : 가능성 있는 항목들을 구별하여 선택한다.
+- [(공백)] : 가능한 문자열의 집합과 일치시킨다.
+- \\d{3} : 숫자 0~9가 3개
+- \\d{4} : 숫자 0~9가 4개 (d = 숫자를 의미)
+- $ : 문자열이나 행의 끝
+
+1) ^01(?:0|1|[6-9])
+ - ^ 으로  문자열 시작
+ - 01 + '0, 1, 6, 7, 8, 9 중 하나'
+
+2) (?:\\d{3}|\\d{4})
+ - 0~9 중의 숫자 3개(d{3}), 혹은 4개를 가진다.(d{4})
+
+3) \\d{4}$
+ - 0~9 중의 숫자 4개를 가진다.
+ - $로 문자열 끝
+ ```
+[유효성검사]
+ ![image](https://cafeptthumb-phinf.pstatic.net/MjAyMjA5MTNfNzkg/MDAxNjYzMDMxNTE5NjM5.udQD-_a55xH5M65QUkaWEGfc1Ea_hyoumAg0GnyXiykg.ijj4kNCdxoGlS3wnDM6dlXMZ7ClLqs_zadEPlZkMMeAg.PNG/image.png?type=w1600)
+ 
+ <br>
+
+ ### [2] 차량번호
+ ```java
+ 정규표현식 : "([가-힣]{2})?\\s?(\\d{1,3})\\s?([가-힣])\\s?(\\d{4})"
+
+1) ([가-힣]{2})?
+    [가-힣] : 모든 한글 문자를 찾음
+    {2} : 수량자, 앞 문자 2개, [가-힣]{2} 이면 한글 2자를 찾음
+    () : 그룹의 집합을 표현, ([가-힣]{2}) 한글 2자를 한 집합으로 인식하고 찾음
+    ? : 앞 문자가 없거나 하나 있음, ([가-힣]{2})? 한글 2자가 하나인 집합이 
+       있을 수도 있고 없을 수도 있음
+
+2) \\s?
+    \ : 이스케이프 문자
+    \s : 공백
+    공백이 있을 수도 있고 없을 수도 있음
+
+3) (\\d{1,3})
+    \d : 모든 숫자 == [0-9]
+    {1,3} : 수량자, \d{1,3} 숫자 1개 이상 3개 이하
+
+4) ([가-힣])
+    [가-힣] : 한글 1자
+
+5) (\\d{4})
+    \d{4} : 숫자 4자
+```
+[유효성검사]
+![image](https://cafeptthumb-phinf.pstatic.net/MjAyMjA5MTNfMTM2/MDAxNjYzMDMxNjQ2MTk0.YpbXmI72Yr-KY8-I310bWNLFZT8rzwZlRk5uds5J62Ag.CRDxDl31v2bqrQCKUm0U9tBb0VFf6pwljMfrIt2VK5Ug.PNG/image.png?type=w1600)
+
+<br>
+
+### [3] 우편번호
+```java
+정규표현식 : "^(6[0-3]|[0-5]\\d)\\d{3}$"
+
+1) '^' 문자열 시작, '$' 문자열 종료, [X-X]그 숫자의 범위, [0-9] == \\d , d뒤에{}에는 숫자의 개수 만약 d{3,4}일 경우 3자리 혹은 4자리 
+
+2) 앞자리가 6이면 두번째 수는 0-3까지만 or연산자를 걸어서 앞자리가 0-5이면 두번쨰 수는 0-9까지 그 뒤 3자리는 0-9 상관없이
+```
+[유효성검사]
+![image](https://cafeptthumb-phinf.pstatic.net/MjAyMjA5MTNfMTUz/MDAxNjYzMDMyMzY4ODgy.0LMXTV_XeCDAUW-BbivMoIpBecp6GfgWZwpbwlzM_log.iLe8nEzo41K2RS_oifBQ5nGNvhJ6nYUITB4xHFexZu8g.PNG/image.png?type=w1600)
+
+<br>
+
+### [4] 우편번호
+```java
+정규표현식 : "(http(s)?://)([a-z0-9]+\\.*)+([a-z0-9]{2,4})\\/?"
+
+1) / : 정규식 시작
+
+2) http(s) : http or https 를 찾음
+
+3) :// : '://' 찾음
+
+4) ([a-z0-9\\w]+\\.*)+ : a ~ z, 0 ~ 9 까지의 문자가 + 1 개 이상
+    끝에는 '\.' 있는 문자 감지하고 마지막으로 + 이것도 1개 이상
+
+5) [a-z0-9]{2,4} : ".com", ".co.kr", ".net" 등을 찾음 {2,4} 2이상 4이하
+
+6) / : 정규식 끝
+```
+[유효성검사]
+![image](https://cafeptthumb-phinf.pstatic.net/MjAyMjA5MTNfMjg0/MDAxNjYzMDMyNTg1ODcz.5uFDtMroxMeqLy4KJVq58ecFBlA_K-EVs_KWz1J4ktsg.U-MNRPfgm46vU0PbtgEX7ouU4ZIyDDUEaocN5U8Rh-Ug.PNG/image.png?type=w1600)
+
+<br>
+
+### [5] 이메일주소
+```java
+정규표현식 : "^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z]){0,63}\\@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*\\.[a-zA-Z]{2,3}$"
+
+1) 시작하는 문자는 [^]이고 숫자, 영대,소문자만 들어갈수 있다.
+
+2) () 소괄호 안의 문자를 하나의 문자로 인식하고,  &&  [-] 또는 [_] 또는[.] 문자가 [?]를 통해서 하나 있거나 없음을 나타낸다. && 나머지는 숫자 영 대소문자 나타낸다.
+
+3)  [*]는 앞 문자가 없을 수도 무한정 많을수도 있음을 나타낸다.   &&  [@]는 그냥 골뱅이 문자
+
+4)  [@]뒤에는 [] 로 숫자 영대소문자 나타낸다.  &&  [*] 앞에까지 위의 설명과 동일함 [.] 은 임의의 한문자 (문자의 종류 가리지 않음, 단 , \는 넣을수 없슴)
+
+5) 영대소문자 범위 내에서 사용가능하다.   &&   2개 또는 3개 << {}는 횟수 또는 범위를 나타낸다. 영문자 2개 또는 3개입력,  &&  [$]로 문자열의 종료
+```
+[유효성검사]
+![image](https://cafeptthumb-phinf.pstatic.net/MjAyMjA5MTNfMjA4/MDAxNjYzMDMyNjMxNDky.d-Js7OGsb57HLpgCWnEsJgziMGtFPRuj7jzlDYyFeTAg.5-m4_Li0d7Dp-G0MyxCG-rebzSuMpF7xborDnZI8zpMg.PNG/image.png?type=w1600)
