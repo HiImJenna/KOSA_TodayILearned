@@ -265,3 +265,9 @@ public class TemplatePattern {
 ```
 [유효성검사]
 ![image](https://cafeptthumb-phinf.pstatic.net/MjAyMjA5MTNfMjA4/MDAxNjYzMDMyNjMxNDky.d-Js7OGsb57HLpgCWnEsJgziMGtFPRuj7jzlDYyFeTAg.5-m4_Li0d7Dp-G0MyxCG-rebzSuMpF7xborDnZI8zpMg.PNG/image.png?type=w1600)
+<br>
+
+## 3. 1차 프로젝트 ✔
+-----------------------------
+
+ 1)[주제 선정, usecase, 시나리오 구성 초안](https://github.com/HiImJenna/KOSA/tree/main/%EC%A1%B0%EB%B3%84%EA%B3%BC%EC%A0%9C/1%EC%B0%A8%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8#1-%EC%A3%BC%EC%A0%9C-%EC%84%A0%EC%A0%95-%EB%B0%8F-usecase%EB%AA%85%EC%84%B8%EC%84%9C--usecase-%EB%8B%A4%EC%9D%B4%EC%96%B4%EA%B7%B8%EB%9E%A8--%EC%8B%9C%EB%82%98%EB%A6%AC%EC%98%A4-%EC%B4%88%EC%95%88)
