@@ -111,3 +111,14 @@
 2. [Decimal Format](https://github.com/HiImJenna/KOSA/tree/main/JAVA/22.09.15_DAY18#2-decimal-format-)
 3. [I/O Stream](https://github.com/HiImJenna/KOSA/tree/main/JAVA/22.09.15_DAY18#3-io-stream-)
 4. [Reader & Writer](https://github.com/HiImJenna/KOSA/tree/main/JAVA/22.09.15_DAY18#4-reader--writer-)
+
+### DAY19
+
+
+### DAY20
+1. [Factory Pattern]()
+2. [Template Pattern]()
+
+### 1차 프로젝트
+1. 
+2. 

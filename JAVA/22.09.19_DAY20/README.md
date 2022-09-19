@@ -227,7 +227,7 @@ public class TemplatePattern {
 
 <br>
 
-### [4] 우편번호
+### [4] 도메인주소
 ```java
 정규표현식 : "(http(s)?://)([a-z0-9]+\\.*)+([a-z0-9]{2,4})\\/?"
 
