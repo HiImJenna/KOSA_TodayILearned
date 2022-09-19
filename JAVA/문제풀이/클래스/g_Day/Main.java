@@ -18,11 +18,11 @@ class Day{
     }
 
     public void set(String work) { 
-            this.work = work; 
+        this.work = work; 
     }
 
     public String get() {
-         return work; 
+        return work; 
     }
 
     public void show() {
