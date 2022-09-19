@@ -119,5 +119,5 @@
 1. [Factory Pattern 조별 과제](https://github.com/HiImJenna/KOSA/tree/main/JAVA/22.09.19_DAY20#-factory-pattern)
 2. [Template Pattern 조별 과제](https://github.com/HiImJenna/KOSA/tree/main/JAVA/22.09.19_DAY20#-template-pattern)
 3. [정규표현식 조별 과제](https://github.com/HiImJenna/KOSA/tree/main/JAVA/22.09.19_DAY20#2-%EC%A0%95%EA%B7%9C%ED%91%9C%ED%98%84%EC%8B%9D-%EC%A1%B0%EB%B3%84%EA%B3%BC%EC%A0%9C-)
-4. [[1차 프로젝트]주제 선정&usecase&시나리오 구성 초안]()
+4. [[1차 프로젝트]주제 선정, usecase, 시나리오 구성 초안](https://github.com/HiImJenna/KOSA/blob/main/%EC%A1%B0%EB%B3%84%EA%B3%BC%EC%A0%9C/1%EC%B0%A8%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/use%20case%20%EB%AA%85%EC%84%B8%EC%84%9C%20%26%20%EC%8B%9C%EB%82%98%EB%A6%AC%EC%98%A4%20%EC%B4%88%EC%95%88.docx)
 
