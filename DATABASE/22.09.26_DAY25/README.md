@@ -129,15 +129,15 @@ commit;                                                     --COMMIT 해야 데�
 select * from emp;                                          --emp 테이블 출력
 ```
 [출력값] :   
-![image](![image](https://user-images.githubusercontent.com/111114507/192230088-19b8b3bc-adac-480d-a977-d8990df4e752.png)
+![image](https://user-images.githubusercontent.com/111114507/192230088-19b8b3bc-adac-480d-a977-d8990df4e752.png)  
 <br>
 
-#### - select * from dept;
-![image](https://user-images.githubusercontent.com/111114507/192231155-637ffa88-cac8-43ae-8eab-bb4f700b8377.png)
+#### - select * from dept;    
+![image](https://user-images.githubusercontent.com/111114507/192231155-637ffa88-cac8-43ae-8eab-bb4f700b8377.png)  
 <br>
 
-#### - select * from salgrade;
-![image](https://user-images.githubusercontent.com/111114507/192232257-1c91c83b-6860-4f31-825b-30ac7ed630ad.png)
+#### - select * from salgrade;  
+![image](https://user-images.githubusercontent.com/111114507/192232257-1c91c83b-6860-4f31-825b-30ac7ed630ad.png)  
 <br>
 
 
@@ -147,7 +147,6 @@ select * from emp;                                          --emp 테이블 출�
 select * from emp;
 SELECT * FROM emp;
 ```
-<br>
 
 #### - 특정 컬럼 데이터 출력하기
 ```sql
