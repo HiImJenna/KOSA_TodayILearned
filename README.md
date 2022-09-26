@@ -132,3 +132,13 @@
 
 #### DAY24
 - [1차프로젝트](https://github.com/HiImJenna/ConsoleProject_ParkingLot#220922-)
+
+</details>
+
+<details>
+<summary>DATABASE</summary>
+
+### DAY25
+- [Oracle이란?](https://github.com/HiImJenna/KOSA/tree/main/DATABASE/22.09.26_DAY25#2-oracle-)
+- [Oracle 문법](https://github.com/HiImJenna/KOSA/tree/main/DATABASE/22.09.26_DAY25#-%EB%AC%B8%EB%B2%95)
+
