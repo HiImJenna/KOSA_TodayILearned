@@ -212,10 +212,14 @@ select '사원의 이름은' || ename || '입니다' as "사원정보"
 from emp;
 ```
 ![image](https://user-images.githubusercontent.com/111114507/192239763-6a257c61-f004-4655-a2a8-6e7a7b51eb58.png)
+<br>
+
 ```sql
 desc emp;
 ```
 ▶ desc : 데이터 타입 보여주는거임!  
+<br>
+
 ![image](https://user-images.githubusercontent.com/111114507/192240023-e4c04d41-f1a6-4577-8e82-37a18431407e.png)   
 ▶ ENAME은 VARCHAR2(10)타입임을 보여주고 있다.    
 ▶ varchar2(10) : 10byte -> 한글 1자 2byte, 영문자&특수문자&공백 1byte (한글 5자, 영문 10자)   
@@ -236,6 +240,8 @@ select job from emp; --중복데이터를 거르지 않음
 ```
 출력값 : 
 ![image](https://user-images.githubusercontent.com/111114507/192241901-183e3564-8118-4e15-9d26-8317fe640abe.png)
+<br>
+
 
 ```sql
 select distinct job from emp;
@@ -250,8 +256,8 @@ select empno, ename, sal, sal+100 as "인상급여"
 from emp;
 desc emp;
 ```
-![image](https://user-images.githubusercontent.com/111114507/192242711-a754d3aa-11fd-4dbb-b8b7-60ec9bc3e20d.png)
-▶ sal에 100이 더해진 값이 출력
+![image](https://user-images.githubusercontent.com/111114507/192242711-a754d3aa-11fd-4dbb-b8b7-60ec9bc3e20d.png)  
+ ▶ sal에 100이 더해진 값이 출력
 <br>
 
 #### - [dual 임시 가상테이블]
