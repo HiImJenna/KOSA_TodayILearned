@@ -139,6 +139,6 @@
 <summary>DATABASE</summary>
 
 ### DAY25
-- [Oracle이란?](https://github.com/HiImJenna/KOSA/tree/main/DATABASE/22.09.26_DAY25#2-oracle-)
-- [Oracle 문법](https://github.com/HiImJenna/KOSA/tree/main/DATABASE/22.09.26_DAY25#-%EB%AC%B8%EB%B2%95)
+1. [Oracle이란?](https://github.com/HiImJenna/KOSA/tree/main/DATABASE/22.09.26_DAY25#2-oracle-)
+2. [Oracle 문법](https://github.com/HiImJenna/KOSA/tree/main/DATABASE/22.09.26_DAY25#-%EB%AC%B8%EB%B2%95)
 
