@@ -142,13 +142,13 @@ select * from emp;                                          --emp 테이블 출�
 
 
 ### 🔔 문법
-#### - 쿼리는 대소문자 구별 x
+#### - [쿼리는 대소문자 구별 x]
 ```sql
 select * from emp;
 SELECT * FROM emp;
 ```
 
-#### - 특정 컬럼 데이터 출력하기
+#### - [특정 컬럼 데이터 출력하기]
 ```sql
 select empno, ename, sal
 from emp;
@@ -159,7 +159,7 @@ select ename from emp;
 ![image](https://user-images.githubusercontent.com/111114507/192233496-d086cfc4-ae26-4493-8ea3-a6cb575f02c7.png)
 <br>
 
-#### - 컬럼명 가명칭(alias) 별칭 부여하기
+#### - [컬럼명 가명칭(alias) 별칭 부여하기]
 ```sql
 select empno 사번, ename 이름
 from emp;
@@ -177,7 +177,7 @@ from emp;
 ```
 ▶ SQL 표준문법 ( ANSI 문법 ) >> 표준 >> oracle or MS-sql or Mysql에서 사용 가능  
 
-#### - 문자열
+#### - [문자열]
 - Oracle 에서 문자열 데이터는 '' 사용해서 표현
 - Oracle 문자열 데이터 엄격하게 대소문자 구분 
 - JAVA : 문자 'A', 문자열 "AAA"
@@ -189,3 +189,24 @@ from emp
 where ename = 'KING'
 ```
 ▶ 'king'으로 하면 데이터 검색 안됨!
+
+#### - [연산자]
+- JAVA : + 숫자(산술연산)
+- JAVA : + 문자열(결합연산)
+<br>
+- Oracle 연산자는 결합과 산술 분리! 
+- Oracle 결합연산자 : ||
+- Oracle 산술연산자 : + (산술)
+
+```sql
+select '사원의 이름은' || ename || '입니다' as "사원정보"
+from emp;
+```
+![image](https://user-images.githubusercontent.com/111114507/192239763-6a257c61-f004-4655-a2a8-6e7a7b51eb58.png)
+```sql
+desc emp;
+```
+▶ desc : 데이터 타입 보여주는거임!  
+![image](https://user-images.githubusercontent.com/111114507/192240023-e4c04d41-f1a6-4577-8e82-37a18431407e.png)   
+▶ ENAME은 VARCHAR2(10)타입임을 보여주고 있다.    
+▶ varchar2(10) : 10byte -> 한글 1자 2byte, 영문자&특수문자&공백 1byte (한글 5자, 영문 10자)   
