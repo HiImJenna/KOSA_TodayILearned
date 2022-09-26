@@ -36,7 +36,7 @@
 
 ![image](https://user-images.githubusercontent.com/92353613/192213860-f591d60c-27a5-4d83-95e3-2a9580a34fb4.png)    
 ▶HR의 employees 더미데이터 출력  
-
+<br>
 
 ### 🔔 1일차 수업
 1. 오라클 소프트웨어 다운로드 : 
@@ -164,3 +164,28 @@ select ename from emp;
 select empno 사번, ename 이름
 from emp;
 ```
+![image](https://user-images.githubusercontent.com/111114507/192236926-ffa22a75-b91e-4435-820a-ea6393b74fe5.png)
+```sql
+select empno 사      번, ename 이     름
+from emp;
+```
+▶ ORA-00923: FROM keyword not found where expected 문제 발생    
+
+```sql
+select empno "사     번", ename "이     름"
+from emp;
+```
+▶ SQL 표준문법 ( ANSI 문법 ) >> 표준 >> oracle or MS-sql or Mysql에서 사용 가능  
+
+#### - 문자열
+- Oracle 에서 문자열 데이터는 '' 사용해서 표현
+- Oracle 문자열 데이터 엄격하게 대소문자 구분 
+- JAVA : 문자 'A', 문자열 "AAA"
+- Oracle : 문자열 'A', 'AA', 'AAA'
+- Oracle :  A, a >> 다른 문자
+```sql
+select empno, ename
+from emp
+where ename = 'KING'
+```
+▶ 'king'으로 하면 데이터 검색 안됨!
