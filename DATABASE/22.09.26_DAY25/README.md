@@ -170,12 +170,14 @@ select empno 사      번, ename 이     름
 from emp;
 ```
 ▶ ORA-00923: FROM keyword not found where expected 문제 발생    
+<br>
 
 ```sql
 select empno "사     번", ename "이     름"
 from emp;
 ```
 ▶ SQL 표준문법 ( ANSI 문법 ) >> 표준 >> oracle or MS-sql or Mysql에서 사용 가능  
+<br>
 
 #### - [문자열]
 - Oracle 에서 문자열 데이터는 '' 사용해서 표현
@@ -189,14 +191,21 @@ from emp
 where ename = 'KING'
 ```
 ▶ 'king'으로 하면 데이터 검색 안됨!
+<br>
 
 #### - [연산자]
+- <JAVA>
 - JAVA : + 숫자(산술연산)
 - JAVA : + 문자열(결합연산)
 <br>
+
+- <Oracle>
 - Oracle 연산자는 결합과 산술 분리! 
 - Oracle 결합연산자 : ||
 - Oracle 산술연산자 : + (산술)
+- java와 거의 동일  ( + - * / ) 나머지 %
+- Oracle 동일    ( + - * / ) 나머지 연산자는 없음 >> 함수를 통해서 Mod()
+- ename like '%김%'
 
 ```sql
 select '사원의 이름은' || ename || '입니다' as "사원정보"
@@ -210,3 +219,46 @@ desc emp;
 ![image](https://user-images.githubusercontent.com/111114507/192240023-e4c04d41-f1a6-4577-8e82-37a18431407e.png)   
 ▶ ENAME은 VARCHAR2(10)타입임을 보여주고 있다.    
 ▶ varchar2(10) : 10byte -> 한글 1자 2byte, 영문자&특수문자&공백 1byte (한글 5자, 영문 10자)   
+<br>
+
+#### -[형변환] : (내부적으로 숫자 (문자열로) 자동 형변환
+```sql
+select empno || ename -- 숫자 || 문자열
+from emp;
+
+select empno + ename --ORA-01722: invalid number
+from emp;
+```
+
+#### - [중복데이터] : distinct
+```sql
+select job from emp; --중복데이터를 거르지 않음
+```
+출력값 : 
+![image](https://user-images.githubusercontent.com/111114507/192241901-183e3564-8118-4e15-9d26-8317fe640abe.png)
+
+```sql
+select distinct job from emp;
+```
+출력값 : 
+![image](https://user-images.githubusercontent.com/111114507/192241816-9417f99a-0a3b-4206-addf-ed3fc0804382.png)
+<br>
+
+Q) 사원테이블에서 사원의 급여를 100달라 인상한 결과를 출력하세요 : 
+```sql
+select empno, ename, sal, sal+100 as "인상급여"
+from emp;
+desc emp;
+```
+![image](https://user-images.githubusercontent.com/111114507/192242711-a754d3aa-11fd-4dbb-b8b7-60ec9bc3e20d.png)
+▶ sal에 100이 더해진 값이 출력
+<br>
+
+#### - [dual 임시 가상테이블]
+```sql
+select 100 + 100 from dual; --dual에 있다고 가정하고..?!
+select 100 || 100 from dual; --100100
+select '100' + 100 from dual; --숫자형 문자(형변환가능) ****
+select 'A100' + 100 from dual; --Error 
+-- 안에 내용물이 숫자로 변경 가능하다면..!!
+```
