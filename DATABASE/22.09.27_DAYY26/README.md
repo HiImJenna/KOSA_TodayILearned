@@ -289,3 +289,168 @@ order by job asc, deptno desc;
 ```
 [출력값] :  
 ![image](https://user-images.githubusercontent.com/111114507/192437035-c6d6e0b7-19eb-49a9-9cbd-41ccb67450fd.png)
+<br>
+
+## 6. 합집합 ✔
+
+### 🔔 union & union all
+#### union : 테이블과 테이블의 데이터를 합치는 것(중복값 배제)
+- 대응되는 컬럼의 타입이 동일
+```sql
+select empno, ename from emp
+union
+select job, deptno from dept; --문자열, 숫자
+
+select empno, ename from emp
+union
+select deptno, ename from dept;
+```
+- 대응되는 컬럼의 개수가 동일
+```sql
+select empno, ename, job, sal from emp
+union
+select deptno, dname, loc, null from dept;
+```
+
+
+
+- union all : 중복값 허용
+
+## 7. 함수 ✔
+1) 문자형 함수 : 문자를 입력 받고 문자와 숫자 값 모두를 RETURN 할 수 있다.  
+2) 숫자형 함수 : 숫자를 입력 받고 숫자를 RETURN 한다.  
+3) 날짜형 함수 : 날짜형에 대해 수행하고 숫자를 RETURN 하는 MONTHS_BETWEEN 함수를   제외하고 모두 날짜 데이터형의 값을 RETURN 한다.  
+4) 변환형 함수 : 어떤 데이터형의 값을 다른 데이터형으로 변환한다.  
+5) 일반적인 함수 : NVL, DECODE  
+<br>
+
+### 🔔 문자열 함수
+#### [initcap]
+```sql
+--initcap
+select initcap('the super man') from dual; --The Super Man
+```
+#### [lower&upper]
+```sql
+select lower('AAA'), upper('aaa') from dual;
+select ename, lower(ename) as "ename" from emp;
+select * from emp where lower(ename) = 'king';
+```
+#### [length]
+```sql
+select length('abcd') from dual; --문자열의 개수 4
+select length('홍길동') from dual; --3개
+select length('       홍길동a') from dual; --공백도 문자
+```
+#### [concat]
+```sql
+select concat('a', 'b') from dual; --concat : parameter 2개
+--select concat('a', 'b', 'c') from dual;
+select 'a'||'b'||'c' from dual;
+select ename || '         ' || job from emp; --유연한 표현기능
+select concat(ename, job) from emp;
+```
+#### [substr]  
+```sql
+select substr('ABCDE', 2, 3) from dual; --BCD
+select substr('ABCDE', 1, 1) from dual; --A
+select substr('ABCDE', 3, 1) from dual; --C
+```
+### Q) 사원테이블에서 ename 칼럼의 데이터에 대해서 첫 글자는 소문자로 나머지 글자는 대문자로 출력하되 하나의 컬럼으로 만들어 출력하시고 컬럼의 별칭은 fullname, 첫 글자와 나머지 문자 사이에는 공백 하나 넣으세요. ex) SMITH >> s MITH
+```sql
+select lower(substr(ename, 1, 1)) || ' ' || substr(ename, 2) as fullname
+from emp;
+```
+![image](https://user-images.githubusercontent.com/111114507/192447703-3e513ab9-a7c0-418a-b928-b467763b11d4.png)
+<br>
+
+### Q) 사용자의 비번 : hong1007 >> ho******
+```sql
+select rpad(substr('hong1007',1, 2), length('hong1007'), '*') from dual;
+```
+<br>
+
+### Q) emp 테이블에서 ename 컬럼의 데이터를 출력하되 첫글자만 출력하고 나머지는 '*'로 출력
+```sql
+select rpad(substr(ename,1, 1), length(ename), '*') 
+from emp;
+```
+![image](https://user-images.githubusercontent.com/111114507/192451762-f5f8f6af-f33e-4ee8-9f48-8d281486f164.png)
+<br>
+
+### Q) 출력결과 : 100 : 123456-*******
+[문제] :  
+```sql
+create table member2(
+id number, 
+jumin variable2(14)
+);
+
+insert into member2(id, jumin) values(100, '123456-1234567');
+insert into member2(id, jumin) values(200, '234567-1234567');
+commit;
+
+select * from member2;
+```
+[정답] :   
+```sql
+select id || ' : ' || rpad(substr(jumin, 1, 7), length(jumin), '*') as juminnumber;
+```
+
+#### [trim]  
+- rtrim 함수 : 오른쪽문자 지워라
+```sql
+select rtrim('MILLER','ER') from dual; --MILL
+```
+
+- ltrim 함수 : 왼쪽문자지워라
+```sql
+select ltrim('MILLLLLLLLER'), 'MIL') from dual; --ER
+```
+
+- 공백제거
+```sql
+select '>' || rtrim('MILLER   ', ' ' ) || '<'  from dual;
+select '>' || ltrim('     MILLER   ', ' ' ) || '<'  from dual;
+```
+<br>
+
+### 🔔 숫자함수
+#### [round]
+```sql
+--  -3 -2 -1 0(정수) 1 2 3
+select round(12.345,0) as r from dual; -- >> 12
+select round(12.567,0) as r from dual; -- >> 13
+
+select round(12.345,1) as r from dual; -- >> 12.3
+select round(12.567,1) as r from dual; -- >> 12.6
+
+select round(12.345,-1) as r from dual; -- >> 10
+select round(12.345,-1) as r from dual; -- >> 10
+select round(12.345,-2) as r from dual; -- >> 0
+```
+<br>
+
+#### [trunc]
+```sql
+select trunc(12.345,0) as t from dual; -- >> 12
+select trunc(12.567,0) as t from dual; -- >> 12
+
+select trunc(12.345,1) as t from dual; -- >> 12.3
+select trunc(12.567,1) as t from dual; -- >> 12.5
+
+select trunc(12.345,-1) as t from dual; -- >> 10
+select trunc(12.345,-1) as t from dual; -- >> 10
+select trunc(12.345,-2) as t from dual; -- >> 0
+```
+<br>
+
+#### [mod]
+```sql
+select 12 / 10 from dual; --1.2
+
+select mod(12, 10) from dual; --2
+
+select mod(0,0) from dual; --0
+--0으로 나눌 수 있음
+```
