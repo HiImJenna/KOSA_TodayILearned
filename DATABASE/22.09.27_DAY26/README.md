@@ -454,3 +454,98 @@ select mod(12, 10) from dual; --2
 select mod(0,0) from dual; --0
 --0으로 나눌 수 있음
 ```
+<br>
+
+### 🔔 날짜함수
+#### <날짜연산>
+- DATE + Number >> DATE
+- DATE - Number >> DATE
+- DATE - DATE >> Number (일수)
+<br>
+
+```sql
+select sysdate + 100 from dual; --2023-01-05 16:04:31 
+select sysdate + 1000 from dual; --2025-06-23 16:05:27
+```
+```sql
+select months_between('2022.09.27','2020.09.27') from dual; --24
+select months_between(sysdate,'2000.03.16') from dual; 
+```
+<br>
+
+#### [변환함수 to_date()]
+```sql
+select to_date('2022-01-01') + 100 from dual; --2022-04-11 00:00:00
+```
+<br>
+
+#### Q1) 사원테이블에서 사원들의 입사일에서 현재날짜까지의 근속월수를 구하세요.
+- 사원이름, 입사일, 근속월수 출력
+- 단, 근속월수는 정수부분만 출력
+
+```sql
+select ename, hiredate, trunc(months_between(sysdate, hiredate)), 0 
+from emp;
+```
+#### Q2) 한달이 31일이라는 기준에서 근속월수를 구하세요
+- 뱐올림x, 함수사용x >> 날짜 - 날짜 >> 150일
+```sql
+select ename, hiredate, trunc((sysdate, hiredate)/31, 0) as "근속월수"
+from emp;
+```
+<br>
+
+### 🔔 변환함수
+- Oracle 데이터 : 문자열, 숫자, 날짜
+- to_char() : 숫자 -> 문자(1000 -> $100,000) >> format 출력 형식 정의
+              날짜 -> 문자('2022-09-29' -> 2022년 09월29일)
+- to_date() : 문자 -> 날짜 (select to_date('2022-01-01') + 100 from dual)
+- to_number() : 문자 -> 숫자 >> 자동형변환
+```sql
+ select '100' + 100 from dual;
+ select to_number('100') + 100 from dual;
+```
+<br>
+
+```sql
+select '1' + 1 from dual; --'1'문자 -> 숫자(형변환)
+--원칙
+select to_number('1') + 1 from dual;
+```
+```sql
+select sysdate, to_char(sysdate, 'YYYY') || '년' as "YYYY",
+to_char(sysdate, 'YEAR') || '년' as "YEAR",
+to_char(sysdate, 'MM') ||  as "MM",
+to_char(sysdate, 'DD') ||  as "DD",
+to_char(sysdate, 'DAY') ||  as "DAY",
+to_char(sysdate, 'DY') ||  as "DY",
+from dual;
+```
+
+#### Q) 입사일이 12월인 사원의 사번, 이름, 입사일, 입사년도, 입사월을 출력하세요.
+```sql
+select empno, ename, hiredate, 
+  to_char(hiredate, 'YYYY') as YYYY
+, to_char(hiredate,'MM') as MM
+from emp
+where to_char(hredate, 'MM') = '12';
+```
+[출력값] :  
+![image](https://user-images.githubusercontent.com/111114507/192469657-8d40c076-3b30-4f77-b3e4-1902840017a0.png)
+<br>
+
+#### Q) 사원테이블(employees)에서 사원의 이름은 last_name , first_name 합쳐서 fullname 별칭 부여해서 출력하고, 입사일은  YYYY-MM-DD 형식으로 출력하고, 연봉(급여 *12)을 구하고 연봉의 10%(연봉 * 1.1)인상한 값을 출력하고, 그 결과는 1000단위 콤마 처리해서 출력하세요. 단 2005년 이후 입사자들만 출력하세요 그리고 연봉이 높은 순으로 출력하세요.
+```sql
+select 
+last_name || first_name as fullname,
+hire_date as "입사일",
+to_char(salary * 12) as "연봉", 
+to_char((salary * 12) * 1.1, '999,999,999') as "인상급여"
+from employees
+where to_char(hire_date, 'YYYY') >= '2005'
+order by (salary * 12) desc;
+-- = order by 연봉 desc; 
+-- -> select 다음에 실행 >> select 된 결과 컬럼값을 사용 가능
+```
+![image](https://cafeptthumb-phinf.pstatic.net/MjAyMjA5MjdfMjg1/MDAxNjY0MjY3MjU0MDUw.1omRfzeXXTy-uhu0gR85J2-uO3F5G5vGHP0NipR0nGcg.WR8iUB-bz-v4bCROxfPAvzA-PQU0cqIIlqbWtDckZCog.PNG/image.png?type=w1600)
+
