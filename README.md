@@ -144,7 +144,7 @@
 
 ### DAY26
 1. [Oracle 연산자](https://github.com/HiImJenna/KOSA/tree/main/DATABASE/22.09.27_DAY26#1-%EC%97%B0%EC%82%B0%EC%9E%90-)
-2. [날짜]https://github.com/HiImJenna/KOSA/tree/main/DATABASE/22.09.27_DAY26#2-%EB%82%A0%EC%A7%9C-
+2. [날짜](https://github.com/HiImJenna/KOSA/tree/main/DATABASE/22.09.27_DAY26#2-%EB%82%A0%EC%A7%9C-)
 3. [Creat Tabe](https://github.com/HiImJenna/KOSA/tree/main/DATABASE/22.09.27_DAY26#3-creat-table--)
 4. [문자열 검색](https://github.com/HiImJenna/KOSA/tree/main/DATABASE/22.09.27_DAY26#4-%EB%AC%B8%EC%9E%90%EC%97%B4-%EA%B2%80%EC%83%89-)
 5. [정렬](https://github.com/HiImJenna/KOSA/tree/main/DATABASE/22.09.27_DAY26#5-%EC%A0%95%EB%A0%AC-)
