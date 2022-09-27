@@ -160,7 +160,7 @@ commit; --명령(insert, update, delete) 실제 반영
 ```
 <br>
 
-### Q) 수당(comm)을 받지 않는 모든 사원의 정보를 출력하세요.
+#### Q) 수당(comm)을 받지 않는 모든 사원의 정보를 출력하세요.
 ```sql
 select comm from emp where comm = null; -- 존재하지 않는 문법
 
@@ -171,7 +171,7 @@ select * from emp where comm is not null; -- 수당을 받는 사람들
 ```
 <br>
 
-### Q) 사원테이블에서 사번, 이름, 급여, 수당, 총급여(급여+수당)를 출력하세요.
+#### Q) 사원테이블에서 사번, 이름, 급여, 수당, 총급여(급여+수당)를 출력하세요.
 ```sql
 select empno, ename, sal, comm, sal + comm as"총급여"
 from emp;
