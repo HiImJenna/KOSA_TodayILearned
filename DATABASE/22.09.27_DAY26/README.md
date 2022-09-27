@@ -151,9 +151,9 @@ create table member(
 );
 ```
 
--DML(데이터 조작어) : insert, update, delete
--오라클 실제 반영을 위해서 개발자에게 : commit, rollback 강제
--Ms-sql, Mysql default commit >> begin 명시 DML 작업 ... 
+-DML(데이터 조작어) : insert, update, delete  
+-오라클 실제 반영을 위해서 개발자에게 : commit, rollback 강제  
+-Ms-sql, Mysql default commit >> begin 명시 DML 작업 ...   
 
 ```sql
 commit; --명령(insert, update, delete) 실제 반영
