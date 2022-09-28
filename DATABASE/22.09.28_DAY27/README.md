@@ -463,3 +463,111 @@ select * from emp where ename = 'KING';
 ```
 [출력값] :   
 ![image](https://user-images.githubusercontent.com/111114507/192711623-68d81239-cd44-40a7-b244-e8c916b83be8.png)
+<br>
+
+## 5. 문제풀이 ✔
+### Q1) 사원들의 이름, 부서번호, 부서이름을 출력하라.
+```sql
+select ename, e.deptno, dname
+from emp e join dept d
+on e.deptno = d.deptno;
+```
+[출력값] :  
+![image](https://user-images.githubusercontent.com/111114507/192769747-706a82cf-1503-46a7-bc20-3616ad61530a.png)
+<br>
+
+### Q2) DALLAS에서 근무하는 사원의 이름, 직종, 부서번호, 부서이름을 출력하라.
+```sql
+select ename, job, e.deptno, dname
+from emp e join dept d
+on e.deptno = d.deptno
+where d.loc = 'DALLAS';
+```
+[출력값] :  
+![image](https://user-images.githubusercontent.com/111114507/192770294-03f9b8f6-5bfa-4aab-b640-d772ec7621cc.png)
+<br>
+
+### Q3) 이름에 'A'가 들어가는 사원들의 이름과 부서이름을 출력하라.
+```sql
+select ename, dname
+from emp e join dept d
+on e.deptno = d.deptno
+where ename like '%A%';
+```
+[출력값] :   
+![image](https://user-images.githubusercontent.com/111114507/192770444-30dc9645-8278-42a0-95b1-c66afd915b81.png)
+<br>
+
+### Q4) 사원이름과 그 사원이 속한 부서의 부서명, 그리고 월급을 출력하는데 월급이 3000이상인 사원을 출력하라.
+```sql
+select ename, dname, sal
+from emp e join dept d 
+on e.deptno = d.deptno
+where e.sal >= 3000;
+```
+[출력값] :   
+![image](https://user-images.githubusercontent.com/111114507/192770603-ace46647-bf2e-464b-893c-377f2a8e654d.png)
+<br>
+
+### Q5) 사원이름과 그 사원이 속한 부서의 부서명, 그리고 월급을 출력하는데 월급이 3000이상인 사원을 출력하라.
+```sql
+select e.job, e.ename,d.dname
+from emp e join dept d
+on e.deptno = d.deptno
+where job = 'SALESMAN';
+```
+[출력값] :  
+![image](https://user-images.githubusercontent.com/111114507/192770755-8e8023a7-e73f-4423-a3a9-a1c6209c60a9.png)
+<br>
+
+### Q6) '커미션이 책정된' 사원들의 사원번호, 이름, 연봉, 연봉+커미션, 급여등급을 출력하되, 각각의 컬럼명을 '사원번호', '사원이름', '연봉','실급여', '급여등급'으로 하여 출력하라.
+```sql
+select e.ename as 사원번호, 
+       e.empno as 사원이름, 
+       e.sal as 연봉, 
+       e.sal + e.comm as 급여등급
+from emp e join dept d
+on e.deptno = d.deptno
+where e.comm is not null;
+```
+[출력값] :   
+![image](https://user-images.githubusercontent.com/111114507/192770945-6a5923a9-72c2-4b8d-bb54-fa5163a079e1.png)
+<br>
+
+#### Q7) 부서번호가 10번인 사원들의 부서번호, 부서이름, 사원이름, 월급, 급여등급을 출력하라.
+```sql
+select d.deptno, d.dname, e.ename, e.sal, e.sal + e.comm
+from emp e join dept d
+on e.deptno = d.deptno
+where d.deptno = 10;
+```
+[출력값] :   
+![image](https://user-images.githubusercontent.com/111114507/192771166-ad10c873-0b8e-400d-a8db-2de018e49658.png)
+<br>
+
+#### Q8) 부서번호가 10번, 20번인 사원들의 부서번호, 부서이름, 사원이름, 월급, 급여등급을 출력하라. 그리고 그 출력된 결과물을 부서번호가 낮은 순으로, 월급이 높은 순으로 정렬하라.
+```sql
+select e.deptno, d.dname, e.ename, e.sal, s.grade
+from emp e join dept d      on e.deptno = d.deptno
+           join salgrade s on e.sal between s.losal and s.hisal
+where e.deptno in (10, 20) --WHERE  E.DEPTNO <= 20
+order by e.deptno asc, e.sal desc;
+```
+[출력값] :   
+![image](https://user-images.githubusercontent.com/111114507/192771348-193b012e-2c2c-4d5f-8fb7-f040f3784ea6.png)
+<br>
+
+#### Q9) 사원번호와 사원이름, 그리고 그 사원을 관리하는 관리자의 사원번호와 사원이름을 출력하되  각각의 컬럼명을 '사원번호','사원이름', '관리자번호', '관리자이름'으로 하여 출력하라.
+```sql
+SELECT E.EMPNO, E.ENAME , M.EMPNO, M.ENAME
+FROM EMP E  left outer join EMP M
+on e.MGR = m.EMPNO;
+```
+[출력값] :   
+![image](https://user-images.githubusercontent.com/111114507/192771486-50adc9d1-91e8-4b7e-b3a8-1e28d3041e2d.png)
+
+
+
+
+
+
