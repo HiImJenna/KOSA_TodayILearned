@@ -151,3 +151,9 @@
 6. [합집합](https://github.com/HiImJenna/KOSA/tree/main/DATABASE/22.09.27_DAY26#6-%ED%95%A9%EC%A7%91%ED%95%A9-)
 7. [함수](https://github.com/HiImJenna/KOSA/tree/main/DATABASE/22.09.27_DAY26#7-%ED%95%A8%EC%88%98-)
 
+### DAY27
+1. [문자열타입](https://github.com/HiImJenna/KOSA/tree/main/DATABASE/22.09.28_DAY27#1-%EB%AC%B8%EC%9E%90%EC%97%B4-%ED%83%80%EC%9E%85-)
+2. [일반함수](https://github.com/HiImJenna/KOSA/tree/main/DATABASE/22.09.28_DAY27#2-%EC%9D%BC%EB%B0%98%ED%95%A8%EC%88%98-)
+3. [집계함수](https://github.com/HiImJenna/KOSA/tree/main/DATABASE/22.09.28_DAY27#3-%EC%A7%91%EA%B3%84%ED%95%A8%EC%88%98-)
+4. [JOIN](https://github.com/HiImJenna/KOSA/tree/main/DATABASE/22.09.28_DAY27#4-join-)
+5. [문제풀이](https://github.com/HiImJenna/KOSA/tree/main/DATABASE/22.09.28_DAY27#5-%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4-)
