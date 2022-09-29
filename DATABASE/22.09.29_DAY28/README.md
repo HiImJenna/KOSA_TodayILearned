@@ -279,3 +279,59 @@ values('아무개');          --id pk 제약 (null x)
 insert into temp(id, name)
 values(100, '개똥이');
 ```
+<br>
+
+### 🔔 대량데이터 삽입
+- insert into 테이블명(컬럼리스트) values
+- insert into 테이블명(컬림리스트) select 절
+```sql
+insert into temp5(num)
+select id from temp4;
+```
+[출력값] :   
+![image](https://user-images.githubusercontent.com/111114507/192946866-502e9aab-cd08-4823-821d-ee56907c8ba5.png)
+<br>
+
+### 🔔 대랑 insert
+- 담을 테이블이 없는 경우 >> 테이블 복제(구조:스키마 + 데이터삽입)
+- 단 제약정보는 복제하지 않음 (PK, FK)
+- 순수한 데이터 구조 복제 + 데이터 복사
+```sql
+create table copyemp
+as
+    select * from emp;
+```
+```sql
+create table copyemp2 
+as
+    select empno, ename, sal
+    from emp 
+    where deptno = 30;
+```
+<br>
+
+#### 틀(구조)만 복제하고 데이터는 복사하고 싶지 않다면
+```sql
+create table copytable3
+as
+    select * from emp where 1=2;
+```
+▶ where 1=2; : false이기 때문에
+<br>
+
+### 🔔 UPDATE
+<br>
+
+[형식] :  
+``sql
+update 테이블명
+set 컬럼명 = 값, 컬럼명2 = 값2 ...
+where 조건절
+```
+
+[형식] : 
+```sql
+update 테이블명
+set 컬럼 = (subquery)
+where 컬럼명 = (subquery)
+```
