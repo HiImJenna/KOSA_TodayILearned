@@ -2,7 +2,7 @@
 ----------------
 <br>
 
-## 1. subquery
+## 1. subquery ✔
 ----------------------
 <br>
 
@@ -334,4 +334,186 @@ where 조건절
 update 테이블명
 set 컬럼 = (subquery)
 where 컬럼명 = (subquery)
+```
+<br>
+
+### 🔔 delete
+```sql
+delete from copyemp;
+```
+```sql
+delete from copyemp where deptno = 10;
+```
+<br>
+
+## 3. DDB ✔
+----------------------
+<br>
+
+```sql
+create table vtable(
+no1 number,
+no2 number,
+no3 number GENERATED ALWAYS as (no1 + no2) VIRTUAL
+);
+
+select * from col where lower(tname) = 'vtable';
+insert into vtable(no1, no2) values(100,50);
+
+```
+▶ no1, no2만 넣으면 no3가 자동으로 생성되게!
+<br>
+
+```sql
+insert into vtable(no1, no2, no3) values(100,50, 10);
+```
+![image](https://user-images.githubusercontent.com/111114507/192957567-83678626-b8a1-47c4-a1a0-06f22ee048f5.png)
+▶ no3을 지정해준다면 생기는 오류   
+<BR>
+
+### 🔔 [예제] :   
+
+- 제품정보(입고) : 분기별 데이터 추출(4분기)
+- 입고일(2022-09-10)
+```sql
+create table vtable2(
+    no number, --순번
+    p_code char(4), --제품코드(A001, B002)
+    p_date char(8), --입고일(20220922)
+    p_qty number, --수량
+    p_bungi number(1)  GENERATED ALWAYS as (
+                         CASE WHEN substr(p_date,5,2) in ('01', '02', '03') THEN 1
+                              WHEN substr(p_date,5,2) in ('04', '05', '06') THEN 2
+                              WHEN substr(p_date,5,2) in ('07', '08', '09') THEN 3
+                              ELSE 4
+                         END ) VIRTUAL
+)
+```
+```sql
+insert into vtable2(p_date) values('20190101');
+insert into vtable2(p_date) values('20190501');
+insert into vtable2(p_date) values('20190601');
+insert into vtable2(p_date) values('20191101');
+insert into vtable2(p_date) values('20191201');
+commit;
+```
+```sql
+select* from vtable2;
+```
+[출력값] :    
+![image](https://user-images.githubusercontent.com/111114507/192960046-d80a4651-8e2b-4c94-9bc8-a1dcfbfaba05.png)
+<br>
+
+```sql
+select * from vtable2 where p_bungi = 1;
+```
+[출력값] :  
+![image](https://user-images.githubusercontent.com/111114507/192960173-1b55d944-2513-4c4c-bc3f-0f02fa886538.png)
+<br>
+
+### 🔔 DDL  테이블 만들고 수정, 삭제
+#### 1. 테이블 생성
+```sql
+create table temp6(id number);
+desc temp6;
+```
+<br>
+
+#### 2. 테이블 생성 후에 컬럼 추가하기
+```sql
+alter table temp6
+add ename varchar2(20);
+
+desc temp6;
+```
+<br>
+
+#### 3. 기존 테이블에 있는 커럼 이름 잘못 표기(ename -> username)
+```sql
+alter table temp6
+rename column ename to username;
+
+desc temp6;
+
+```
+<br>
+
+#### 4. 기존 테이블에 있는 기존 컬럼의 타입 크기 수정 (기억) : modify
+```sql
+alter table temp6
+modify (username varchar2(2000));
+```
+<br>
+
+#### 5, 기존 테이블에 있는 기존 컬럼 삭제
+```sql
+alter table temp6
+drop column username;
+
+desc temp6;
+```
+<br>
+
+#### 6. 테이블 전체가 필요 없음
+- 1) delete : 데이터만 삭제
+- 테이블 처음 만들면 처음 크기 -> 데이터 넣으면 데이터의 크기만큼 테이블 크기 증가
+- ex) 처음 1M >> 데이터 10만건 >> 100M >> delete 10만건 삭제 >> 테이블 크기 100M
+<br>
+
+- 2) truncate : 데이터와 공간 삭제
+- 단점 : where 사용 불가
+- ex) 처음 1M >> 데이터 10만건 >> 100M >> delete 10만건 삭제 >> 테이블 크기 1M
+<br>
+
+- 3) 테이블삭제
+```sql
+drop table temp6;
+```
+<br>
+
+### 🔔 insert 제약
+### PRIMARY KEY(PK) : 유일하게 테이블의 각행을 식별(NOT NULL 과 UNIQUE 조건을 만족)
+- 제약을 만드는 방법 (create table 안에서 생성)
+- 테이블이 생성된 다음 추가 (alter table add constraint ....) 많이 사용 >> 툴..
+```sql
+--TIP)
+--제약 정보 확인
+select * from user_constraints where table_name='EMP';
+
+create table temp7(
+    --id number primary key --권장하지 않아요(제약이름 자동생성>>SYS_C006997
+                          --제약 삭제시 수정시 찾기 어려움
+    id number constraint pk_temp7_id primary key, --pk_temp7_id 관용적
+    name varchar2(20) not null, -- constraint 표현 쓰지 마세ㅛ
+    addr varchar2(50)
+);
+select * from user_constraints where table_name='TEMP7';
+
+--PK(not null 하고 unique 제약)
+--PK 테이블 당 1개만 사용 (컬럼1개, 여러개의 컬럼을 묶어서 1개 : 복합키)
+
+insert into temp7(name, addr) values('홍길동', '서울시 강남구');
+--annot insert NULL into ("KOSA"."TEMP7"."ID")
+
+insert into temp7(id, name, addr) values(10, '홍길동', '서울시 강남구');
+select * from temp7;
+
+insert into temp7(id, name, addr) values(10, '아무개', '서울시 강남구');
+--unique constraint (KOSA.PK_TEMP7_ID) violated
+```
+<br>
+
+### UNIQUE key(UK) : 테이블의 모든 행을 유일하게 하는 값을 가진 열(NULL을 허용)
+- 컬럼 수만큼 생성 가능
+- null허용
+- not null, unique
+
+```sql
+create table temp8(
+    id number constraint pk_temp8_id primary key,
+    name nvarchar2(20) not null,
+    jumin nchar(6) constraint uk_temp8_jumin unique --null허용
+    addr nvarchar2(100)
+);
+select * from user_constraints where lower(table_name) = 'temp8';
 ```
