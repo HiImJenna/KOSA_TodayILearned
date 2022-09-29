@@ -157,3 +157,8 @@
 3. [집계함수](https://github.com/HiImJenna/KOSA/tree/main/DATABASE/22.09.28_DAY27#3-%EC%A7%91%EA%B3%84%ED%95%A8%EC%88%98-)
 4. [JOIN](https://github.com/HiImJenna/KOSA/tree/main/DATABASE/22.09.28_DAY27#4-join-)
 5. [문제풀이](https://github.com/HiImJenna/KOSA/tree/main/DATABASE/22.09.28_DAY27#5-%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4-)
+
+### DAY28
+1. [subquery](https://github.com/HiImJenna/KOSA/tree/main/DATABASE/22.09.29_DAY28#1-subquery-)
+2. [DML](https://github.com/HiImJenna/KOSA/tree/main/DATABASE/22.09.29_DAY28#2-dml-)
+3. [DDB](https://github.com/HiImJenna/KOSA/tree/main/DATABASE/22.09.29_DAY28#3-ddb-)
