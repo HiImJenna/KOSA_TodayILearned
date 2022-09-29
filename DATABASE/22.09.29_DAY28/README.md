@@ -222,6 +222,11 @@ on e.deptno = (select deptno from dept d where dname = 'SALES');
 
 #### Q9) 'KING'에게 보고하는 모든 사원의 이름과 급여를 출력하라. king 이 사수인 사람 (mgr 데이터가 king 사번)
 ```sql
+SELECT ENAME, SAL
+FROM EMP
+WHERE MGR=(SELECT EMPNO
+                FROM EMP
+                WHERE ENAME='KING');
 ```
 <br>
 
@@ -229,18 +234,37 @@ on e.deptno = (select deptno from dept d where dname = 'SALES');
 
 #### Q10) 자신의 급여가 평균 급여보다 많고, 이름에 'S'가 들어가는 사원과 동일한 부서에서 근무하는 모든 사원의 사원번호, 이름, 급여를 출력하라.
 ```sql
+SELECT ENAME, SAL
+FROM EMP
+WHERE MGR=(SELECT EMPNO
+                FROM EMP
+                WHERE ENAME='KING');
 ```
 <br>
 
 
 #### Q11) 커미션을 받는 사원과 부서번호, 월급이 같은 사원의 이름, 월급, 부서번호를 출력하라.
 ```sql
+SELECT ENAME, SAL
+FROM EMP
+WHERE MGR=(SELECT EMPNO
+                FROM EMP
+                WHERE ENAME='KING');
 ```
 <br>
 
 
 #### Q12) 30번 부서 사원들과 월급과 커미션이 같지 않은 사원들의 이름, 월급, 커미션을 출력하라.
 ```sql
+SELECT ENAME, SAL, COMM
+FROM EMP
+WHERE SAL NOT IN(SELECT SAL
+                        FROM EMP
+                        WHERE DEPTNO=30)
+AND COMM NOT IN(SELECT NVL(COMM, 0)
+                         FROM EMP
+                         WHERE DEPTNO=30 and comm is not null);
+ 
 ```
 <br>
 
