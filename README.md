@@ -162,3 +162,15 @@
 1. [subquery](https://github.com/HiImJenna/KOSA/tree/main/DATABASE/22.09.29_DAY28#1-subquery-)
 2. [DML](https://github.com/HiImJenna/KOSA/tree/main/DATABASE/22.09.29_DAY28#2-dml-)
 3. [DDB](https://github.com/HiImJenna/KOSA/tree/main/DATABASE/22.09.29_DAY28#3-ddb-)
+
+### DAY29
+1. [DDB](https://github.com/HiImJenna/KOSA/tree/main/DATABASE/22.09.30_DAY29#1-ddb-)
+2. [View](https://github.com/HiImJenna/KOSA/tree/main/DATABASE/22.09.30_DAY29#2-view-)
+3. [조별과제](https://github.com/HiImJenna/KOSA/tree/main/DATABASE/22.09.30_DAY29#3-%EC%A1%B0%EB%B3%84%EA%B3%BC%EC%A0%9C)
+
+### DAY30
+1. [Max](https://github.com/HiImJenna/KOSA/tree/main/DATABASE/22.10.04_DAY30#1-max-)
+2. [Sequence](https://github.com/HiImJenna/KOSA/tree/main/DATABASE/22.10.04_DAY30#2-sequence-)
+3. [rownum & Top-n query](https://github.com/HiImJenna/KOSA/tree/main/DATABASE/22.10.04_DAY30#3-rownum--top-n-query-)
+4. [PreparedStatement](https://github.com/HiImJenna/KOSA/tree/main/DATABASE/22.10.04_DAY30#-preparedstatement)
+5. [PreparedStatement로 데이터 실습](https://github.com/HiImJenna/KOSA/tree/main/DATABASE/22.10.04_DAY30#-preparedstatement%EB%A1%9C-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%8B%A4%EC%8A%B5)
