@@ -274,3 +274,4 @@ from departments d join (select department_id as di, avg(salary) as avgsal
 on d.department_id = A.di
 order by 평균연봉 desc;
 ```
+
