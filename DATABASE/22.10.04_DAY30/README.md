@@ -161,6 +161,10 @@ select *
 <br>
 
 ## 4. JDBC ✔
+<JDBC 기본구조> 
+
+![image](https://user-images.githubusercontent.com/92353613/193723288-3f5460fe-41af-4c51-b9cd-72c35cba7969.png)
+
 #### JDBC란?
 - 자바에서 데이터베이스에 접속할 수 있도록 하는 자바 API
 - Java 언어(APP)를 통해서 Oracle(소프트웨어) 연결해서 CRUD작업
