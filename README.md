@@ -174,3 +174,16 @@
 3. [rownum & Top-n query](https://github.com/HiImJenna/KOSA/tree/main/DATABASE/22.10.04_DAY30#3-rownum--top-n-query-)
 4. [PreparedStatement](https://github.com/HiImJenna/KOSA/tree/main/DATABASE/22.10.04_DAY30#-preparedstatement)
 5. [PreparedStatement로 데이터 실습](https://github.com/HiImJenna/KOSA/tree/main/DATABASE/22.10.04_DAY30#-preparedstatement%EB%A1%9C-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%8B%A4%EC%8A%B5)
+
+### DAY31
+1. [모델링 예제](https://github.com/HiImJenna/KOSA/tree/main/DATABASE/22.10.06_DAY32#1-%EB%AA%A8%EB%8D%B8%EB%A7%81-%EC%98%88%EC%A0%9C-)
+
+</details>
+
+<details>
+<summary>WEB</summary>
+
+1. [HTML](https://github.com/HiImJenna/KOSA/tree/main/DATABASE/22.10.06_DAY32#2-html-)
+
+
+</details>
