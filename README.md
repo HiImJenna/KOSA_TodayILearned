@@ -183,7 +183,7 @@
 <details>
 <summary>WEB</summary>
 
-1. [HTML](https://github.com/HiImJenna/KOSA/tree/main/DATABASE/22.10.06_DAY32#2-html-)
+1. [HTML](https://github.com/HiImJenna/KOSA/tree/main/WEB/22.10.06_DAY32#2-html-)
 
 
 </details>
