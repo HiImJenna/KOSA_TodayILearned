@@ -37,52 +37,13 @@
 ![image](https://user-images.githubusercontent.com/111114507/194275748-a2cb1850-bf17-4c55-9dae-30ed328ff7e4.png)
 
 
-### 🔔 HTML BASICS (feat.Attribute)
+### 🔔 HTML BASICS
 ### < Headings >
 ![image](https://user-images.githubusercontent.com/111114507/194248450-4cf8a562-721e-4440-9aae-d7829c83388d.png)
 -----------
 
 ### < Paragraphs > 
 ![image](https://user-images.githubusercontent.com/111114507/194278774-0ec94217-4a59-4af5-88e2-7176d515b833.png)
-```html
-<!DOCTYPE html>
-<html>
-<body>
-
-<p>
-This paragraph
-contains a lot of lines
-in the source code,
-but the browser 
-ignores it.
-</p>
-
-<p>
-This paragraph
-contains      a lot of spaces
-in the source     code,
-but the    browser 
-ignores it.
-</p>
-
-<p>
-The number of lines in a paragraph depends on the size of the browser window. If you resize the browser window, the number of lines in this paragraph will change.
-</p>
-
-</body>
-</html>
-```
-[출력값]
-```html
-This paragraph contains a lot of lines in the source code, but the browser ignores it.
-
-This paragraph contains a lot of spaces in the source code, but the browser ignores it.
-
-The number of lines in a paragraph depends on the size of the browser window. If you resize the browser window, the number of lines in this paragraph will change.
-```
-▶ new lines, spaces are ignored.  
-▶ 처음에는 그냥 br 쓰면 되는거 아닌가 했지만 긴 문장이나 여러 문장을 묶어서 구분하고 싶을 땐 p를 쑤는게 좋겠다고 생각했다.
-- hr : horizontal rule (구분선으로써 markdown에서 '------'과 같은 기능이라고 보면 됨)
 
 ----------------
 
@@ -124,4 +85,74 @@ defines some extra information about an element (마우스 가져다 두면 말�
 ```
 <br>
 
-### 🔔 Extra Attributes ... 
+### 🔔 Paragraghs
+```html
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>
+This paragraph
+contains a lot of lines
+in the source code,
+but the browser 
+ignores it.
+</p>
+
+<p>
+This paragraph
+contains      a lot of spaces
+in the source     code,
+but the    browser 
+ignores it.
+</p>
+
+<p>
+The number of lines in a paragraph depends on the size of the browser window. If you resize the browser window, the number of lines in this paragraph will change.
+</p>
+
+</body>
+</html>
+```
+[출력값]
+```html
+This paragraph contains a lot of lines in the source code, but the browser ignores it.
+
+This paragraph contains a lot of spaces in the source code, but the browser ignores it.
+
+The number of lines in a paragraph depends on the size of the browser window. If you resize the browser window, the number of lines in this paragraph will change.
+```
+▶ new lines, spaces are ignored.  
+▶ 처음에는 그냥 br 쓰면 되는거 아닌가 했지만 긴 문장이나 여러 문장을 묶어서 구분하고 싶을 땐 p를 쑤는게 좋겠다고 생각했다.
+- hr : horizontal rule (구분선으로써 markdown에서 '------'과 같은 기능이라고 보면 됨)
+<br>
+
+### 🔔 Styles
+- is used to add styles to an element, such as color, font, size, and more.
+```html
+<p>I am normal</p>
+<p style="color:red;">I am red</p>
+<p style="color:blue;">I am blue</p>
+<p style="font-size:50px;">I am big</p>
+
+```
+[출력값]  
+![image](https://user-images.githubusercontent.com/111114507/194284355-5196a75c-5445-4754-829a-46e1ddf40eca.png)
+- ';' 꼭 찍기
+<br>
+
+#### Background Color
+```html
+<body style="background-color:powderblue;">
+
+<h1>This is a heading</h1>
+<p>This is a paragraph.</p>
+```
+[출력값]  
+![image](https://user-images.githubusercontent.com/111114507/194284653-2503e04e-8e37-4d76-92ea-10f59c5a46cd.png)
+
+<br>
+
+## 3. CSS ✔ 
+- CSS stands for Cascading Style Sheets
+- Cascading Style Sheets (CSS) is used to format the layout of a webpage.
