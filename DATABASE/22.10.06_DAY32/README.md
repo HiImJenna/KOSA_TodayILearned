@@ -38,11 +38,11 @@
 
 
 ### 🔔 HTML BASICS (feat.Attribute)
-#### < Headings >
+### < Headings >
 ![image](https://user-images.githubusercontent.com/111114507/194248450-4cf8a562-721e-4440-9aae-d7829c83388d.png)
 -----------
 
-#### < Paragraphs > 
+### < Paragraphs > 
 ![image](https://user-images.githubusercontent.com/111114507/194278774-0ec94217-4a59-4af5-88e2-7176d515b833.png)
 ```html
 <!DOCTYPE html>
@@ -80,20 +80,20 @@ This paragraph contains a lot of spaces in the source code, but the browser igno
 
 The number of lines in a paragraph depends on the size of the browser window. If you resize the browser window, the number of lines in this paragraph will change.
 ```
-▶ new lines, spaces are ignored.
+▶ new lines, spaces are ignored.  
 ▶ 처음에는 그냥 br 쓰면 되는거 아닌가 했지만 긴 문장이나 여러 문장을 묶어서 구분하고 싶을 땐 p를 쑤는게 좋겠다고 생각했다.
 - hr : horizontal rule (구분선으로써 markdown에서 '------'과 같은 기능이라고 보면 됨)
 
 ----------------
 
-#### < Links >
+### < Links >
 ![image](https://user-images.githubusercontent.com/111114507/194248780-33cc317d-2ca3-4e9e-8790-7dc868bfacbd.png)
 - The <a> tag defines a hyperlink, which is used to link from one page to another.
 - The most important attribute of the <a> element is the href attribute, which indicates the link's destination.
 - href : specifies the URL of the page the link goes to
 ---------------
 
-#### < Images >
+### < Images >
 ![image](https://user-images.githubusercontent.com/111114507/194248873-53949459-6b1d-437b-a2df-2e63dbfdc2ae.png)
 - src : Specifies the path to the image
 - alt : Specifies an alternate text for the image, if the image for some reason cannot be displayed
@@ -119,12 +119,9 @@ defines some extra information about an element (마우스 가져다 두면 말�
 <!--The title Attribute에 마우스 대면 I'm a header가 뜬다 -->
 <p title="I'm a tooltip">Mouse over this paragraph, to display the title attribute as a tooltip.</p>
 
-
-
-
-
-
 </body>
 </html>
-
 ```
+<br>
+
+### 🔔 Extra Attributes ... 
