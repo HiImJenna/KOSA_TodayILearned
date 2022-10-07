@@ -184,6 +184,7 @@ p {
 
 <details>
 <summary>코드</summary>
+
 ```html
 <!DOCTYPE html>
 <html>
