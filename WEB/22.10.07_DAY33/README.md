@@ -592,3 +592,5 @@ p {
 <option value="Opera">
 <option value="Safari">
 ```
+
+출처 : https://www.w3schools.com/html/html_form_attributes.asp
