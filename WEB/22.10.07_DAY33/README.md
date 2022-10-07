@@ -478,29 +478,33 @@ p {
 ```
 [출력값]  
 ![image](https://user-images.githubusercontent.com/111114507/194483577-b248219d-6f03-4213-a234-dd62181ad6d9.png)
+
 <br>
 
-#### <select tag>
-```html
-<fieldset>
-                <legend> select 태그 (단일 선택(년월일))</legend>
-                <select name = "year">
-                    <option value="2022">2022년</option>
-                    <option value="2021">2021년</option>
-                    <option value="2020">2020년</option>
-                </select>
-                <!--
-                    register.jsp?year=2022 서버로 전송
-                    서버에서 받는 데이터는 문자열 데이터
-                    int year = Integer.parseInt(request.getParameter("year"));
-                    
-                -->
 
-</fieldset>
+#### <select tag>
+
+
+```html
+                <fieldset>
+                    <legend> select 태그 (단일 선택(년월일))</legend>
+                    <select name = "year">
+                        <option value="2022">2022년</option>
+                        <option value="2021">2021년</option>
+                        <option value="2020">2020년</option>
+                    </select>
+                    <!--
+                        register.jsp?year=2022 서버로 전송
+                        서버에서 받는 데이터는 문자열 데이터
+                        int year = Integer.parseInt(request.getParameter("year"));
+                        
+                    -->
+                </fieldset>
 ```
 [출력값]  
 ![image](https://user-images.githubusercontent.com/111114507/194485091-3157e625-92f0-4a5b-a3b2-b58408134322.png) 
 - muliple을 하면 다중 선택이 가능하지만 웹 접근성 문제로 사용하지 않는다.   
+<br>
 
 #### < radio >
 ```html
@@ -514,7 +518,6 @@ p {
     대<input type="radio" name="product" value="1"><br>
     중<input type="radio" name="product" value="2"><br>
     소<input type="radio" name="product" value="3"><br>
-
 </fieldset>
 ```
 - name = "x"에서 x가 다르면 다른 그룹으로 분류되어 다 선택이 가능하게 된다.
