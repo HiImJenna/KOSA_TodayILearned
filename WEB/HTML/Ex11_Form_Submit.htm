@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="EUC-KR">
+    <title>개발자 필수 태그(암기)</title>
+</head>
+
+<body>
+    <!-- 
+회원가입 페이지 만들기
+로그인 페이지 만들기
+게시판 글쓰기 만들기
+-->
+    <h3>로그인</h3>
+    <form action="Ex11_loginok.jsp" method="GET">
+        ID:<input type="text" name="id"><br>
+        PWD:<input type="password" name="pwd"><br>
+        <input type="submit" value="전송하기">
+        <input type="reset" value="입력값 취소하기">
+    </form>
+    
+    <!-- 
+        form 태그는 전송을 담당하는 태그 (클라이언트가 입력한 데이터를 가지고 서버로 가기)
+        
+        네이버 > 회원가입 요청 > 회원가입 페이지 전달 > 정보입력 (id,pwd,....) > 네이버 서버 (전송)
+        > 네이버는 전송받은 데이터 처리 > DB 연결 > 입력한 정보 > insert > 성공 > 결과 전달
+
+        form 전송수단(운송)
+        1. action="" 목적지 주소 >> JSP: action="loginok.jsp"
+                                >> servlet: action="login.do"
+        2. method="" 전송방식
+            2.1 method="GET"    배를 타고 가는 것 >> loginok.jsp
+            ex)http://192.168.0.10:8090/WebBasic/loginok.jsp?id=hong&pwd=1004
+                >> 서버가 정보를 받아서 처리
+                >> 주소에 입력한 정보가 노출
+
+                GET전송 방식을 사용 ...(링크를 타고 가는 전송)
+                >> 게시판 글 번호 클릭(상세보기로 가는 경우)
+                <a href="boardcontent.jsp?num=100&category=board">100번글</a>
+
+            2.2 method="POST" 비행기 타고 가는 것 >> loginok.jsp
+            ex)http://192.168.0.10:8090/WebBasic/loginok.jsp
+               http 프로토콜 내부에 (header) 숨겨서 데이터 전송 (id=hong&pwd=1004)
+
+            출발: 선장 (submit): 서버로 출발    reset: 데이터 초기화
+
+            1. input type = "submit" 전송
+            2. input type = "image" 내부적으로 전송기능 (sumnit 동일)
+            3. input type = "button" 디자인만 >> 별도의 javascript 사용
+               input type = "button" onclick = "call()"
+               function call(){document.form.submit();}
+
+     -->
+     <h3>GET 방식</h3>
+     <a href="Ex11_loginok.jsp?id=kglim&pwd=1004">GET방식 서버 전송</a>
+
+</body>
+
+</html>

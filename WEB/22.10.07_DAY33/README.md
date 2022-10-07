@@ -260,7 +260,227 @@ p {
 </html>
 ```
 </details>
+<br>
+
+## 3. HTML - List ✔
+```html
+<body>
+   <ul>
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Milk</li>
+   </ul>
+
+   <ul>
+      <li>Coffee</li>
+      <li>Tea
+         <ul>
+            <li>Black tea</li>
+            <li>Green tea</li>
+         </ul>
+      </li>
+      <li>Milk</li>
+   </ul>
+</body>
+
+```
+[출력값]  
+![image](https://user-images.githubusercontent.com/111114507/194451875-f5634743-5dba-4e30-9273-61f9a1d1d491.png)
+<br>
+
+## 4. HTML - Layout ✔
+![image](https://user-images.githubusercontent.com/111114507/194453856-97c5b2ca-f250-4491-bde9-a03054fe1d5f.png)
+<br>
+
+### 🔔 float
+
+<details>
+<summary>코드</summary>
+
+```html
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="EUR-KR">
+    <title>영역을 정의하는 div와 float</title>
+</head>
 
 
 
+<body>
+    <div style="width: 100px; height:100px; background-color: yellow;"></div>
+    <div style="width: 100px; height:100px; background-color: red;"></div>
+    <div style="width: 100px; height:100px; background-color: blue;"></div>
+    <hr>
+    <div style="width: 100px; height:100px; background-color: yellow; float: left"></div>
+    <div style="width: 120px; height:100px; background-color: red;"></div>
+    <div style="width: 100px; height:100px; background-color: blue;"></div>
+    <hr>
+    <div style="width: 100px; height:100px; background-color: yellow; float: left"></div>
+    <div style="width: 100px; height:100px; background-color: red; float: left"></div>
+    <div style="width: 100px; height:220px; background-color: blue;"></div>
+    <hr>
+    <div style="width: 100px; height:100px; background-color: yellow; float: left"></div>
+    <div style="width: 100px; height:100px; background-color: red; float: left"></div>
+    <div style="width: 100px; height:100px; background-color: blue; float: left"></div>
+    <hr>
+    <div style="width: 100px; height:100px; background-color: yellow; float: left"></div>
+    <div style="width: 100px; height:100px; background-color: red; float: left"></div>
+    <div style="width: 100px; height:100px; background-color: blue; clear:both"></div>
+</body>
 
+</html>
+```
+</details>
+
+### 🔔 div & float
+<details>
+<summary>코드</summary>
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="EUC">
+   <title>Insert title here</title>
+   <style type="text/css">
+      #wrap {width: 600px; margin: auto;}
+      #header {height: 50px; background: black;}
+      #main {margin-top: 10px;}
+      #left_main {
+         height: 300px; 
+         width: 100px; 
+         background-color: gray; 
+         margin-right: 10px; 
+         float: left;
+      }
+      #right_main{
+         height: 300px; 
+         width: 490px; 
+         background-color: gray; 
+         float: left;
+      }
+      #m {clear: both;}
+      #footer{
+         height: 50px; 
+         margin-top: 10px; 
+         background: black;
+      }
+        #down{
+            width: 100%;
+            height: 50px;
+            background-color: blue;
+        }
+   </style>
+</head>
+<body>
+
+   <div id="wrap">
+      <div id="header"></div>
+
+      <div id="main">
+         <div id="left_main">
+         
+         </div>
+         <div id="right_main">
+
+         </div>
+      </div>
+
+      <div id="m"></div>
+      
+      <div id="footer"></div>
+
+        <div id="down"></div>
+
+   </div>
+
+</body>
+</html>
+
+```
+</details>
+<br>
+
+## 5. HTML - Form ✔
+```html
+ form 태그는 전송을 담당하는 태그(클라이언트가 입력한 데이터를 가지고 서버로 가기)
+        네이버 > 회원가입 요청 > 회원가입 페이지 전달 > 정보입력(id, pwd, address ... ) > 네이버 서버로 전송
+        > 네이버는 전송받은 데이터를 처리 > DB 연결 > 입력한 정보를DB에 insert > 성공 > 결과전달
+
+        form 전송수단(운송) 
+        1. action =" " : 목적지 주소 >> JSP : action = "loginok.jsp"
+                                   >> servlet : action="login.do"
+        2. method ="" : 전송방식
+         - method ="GET" : 배를 타고 가는 것 > loginok.jsp
+                         ex) http://193.168.0.12:8090/WebBasic/loginok.jsp?id=hong&pwd=1004
+                         >> 서버가 정보를 받아서 처리
+                         >> 주소에 입력한 정보가 노출
+                        **GET 전송 방식을 사용 ... (링크를 타고 가는 전송)
+                        >> 게시판에 글 번호 클릭(상세보기로 가는 경우)
+                        <a href = "boardconctent.jsp?num=100&category=board">100번글</a>
+
+         - method ="POST" : 비행기 타고 가는 것 > loginok.jsp
+                         ex)  http://193.168.0.12:8090/WebBasic/loginok.jsp
+                              http 프로토콜 내부에 (header) 숨겨서 데이터 전송 (id=hong&pwd=
+```
+<br>
+
+<details>
+<summary>코드</summary>
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Form 태그 안에 구현하는 Input 태그들</title>
+</head>
+    <body>
+        <form action="">
+            <fieldset>
+                <legend>Text:Passord</legend>
+                Text: <input type="text" name="userid" id="userid"><br>
+                Password : <input type="password" name="pwd" maxlength="5"><br>
+                <hr>
+                Text : <input type="text" maxlength="10" value="기본값" size="100px">
+                <hr>
+                readonly(읽기전용 : 서버로 전송 가능)
+                Text: <input type="text" name="userid" id="userid" value="hong" readonly = "readonly"><br>
+                disabled(비활성화 : 서버 전송 불가능)
+                Text: <input type="text" name="userid" id="userid" value="hong" disabled = "disabled"><br>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>체크박스(다중선택)</legend>
+                당신의 취미는 <br>
+                농구: <input type="checkbox" name="sports_1" value="A" checked=""checked>
+                야구 : <input type="checkbox" name="sports_2" value="B">
+                축구 : <input type="checkbox" name="sports_3" value="C">
+            </fieldset>
+            <!--
+                get방식
+                register.jsp?sports_1=A&sports_2=B&sports_2=C >> 서버로 전송
+
+                String s = request.getParameter("sports_1");
+                String s2 = request.getParameter("sports_2");
+                String s3 = request.getParameter("sports_3");
+
+                String[] sportsarr = request.getParameterValues("sports")
+                sportsarr[0] = "A"
+                sportsarr[1] = "B"
+                sportsarr[2] = "C"
+            -->
+        </form>
+
+
+
+    </body>
+</html>
+```
+</details>
+
+[출력값]  
+![image](https://user-images.githubusercontent.com/111114507/194483577-b248219d-6f03-4213-a234-dd62181ad6d9.png)
