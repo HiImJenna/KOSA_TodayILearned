@@ -4,6 +4,7 @@
 
 ## 1. CSS ✔
 ### 🔔 padding
+- 박스 안!
 - The CSS padding property defines a padding (space) between the text and the border.
 ```html
 <!DOCTYPE html>
@@ -32,6 +33,7 @@ p {
 
 
 ### 🔔 margin
+- 박스 밖!
 - The CSS margin property defines a margin (space) outside the border.
 ```html
 <style>
@@ -87,3 +89,174 @@ p {
 
 [출력값]  
 ![image](https://user-images.githubusercontent.com/111114507/194443695-baeba570-2215-41f1-83de-e995485b5105.png)
+<br>
+
+## 2. HTML - Table ✔
+<details>
+<summary>코드</summary>
+```html
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="EUC-KR">
+    <title>Insert title here</title>
+    <style type="text/css">
+        table {
+            border-collapse: collapse;
+            width: 70%;
+        }
+
+        /* 붕괴하다 */
+        th, td {
+            border: 1px solid red;
+            text-align: center;
+            padding: 5px;
+        }
+        tr:nth-child(even) {/*짝수 */
+        background-color: gray;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h2>HTML Table</h2>
+
+    <table>
+        <tr>
+            <th>Company</th>
+            <th>Contact</th>
+            <th>Country</th>
+        </tr>
+        <tr>
+            <td>Alfreds Futterkiste</td>
+            <td>Maria Anders</td>
+            <td>Germany</td>
+        </tr>
+        <tr>
+            <td>Centro comercial Moctezuma</td>
+            <td>Francisco Chang</td>
+            <td>Mexico</td>
+        </tr>
+        <tr>
+            <td>Ernst Handel</td>
+            <td>Roland Mendel</td>
+            <td>Austria</td>
+        </tr>
+        <tr>
+            <td>Island Trading</td>
+            <td>Helen Bennett</td>
+            <td>UK</td>
+        </tr>
+        <tr>
+            <td>Laughing Bacchus Winecellars</td>
+            <td>Yoshi Tannamuri</td>
+            <td>Canada</td>
+        </tr>
+        <tr>
+            <td>Magazzini Alimentari Riuniti</td>
+            <td>Giovanni Rovelli</td>
+            <td>Italy</td>
+        </tr>
+    </table>
+
+</body>
+
+</html>
+```
+
+</details>
+
+[출력값]  
+![image](https://user-images.githubusercontent.com/111114507/194447953-9326987a-6764-40bd-97bd-ba48c9f4345a.png)
+- th : header (bold체)
+- td : cell
+- tr : row
+- border-collapse: collapse; : 선 두개 겹치게 하기 (간격 collapse시킴)
+<br>
+
+### 🔔 Table 병합하기
+- colspan ="x" : 가로방향으로 셀이 합쳐짐
+- rowspan ="x" : 세로방향으로 셀이 합쳐짐
+- 합치고 싶은 셀 수 만큼 x에 대입
+
+<details>
+<summary>코드</summary>
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>테이블 병합하기</title>
+
+    <style type="text/css">
+        table {border-collapse: collapse;}
+        th, td{border: 1px solid blue;}
+    </style>
+
+</head>
+
+<body>
+    <h3>일반테이블</h3>
+    <table>
+            <tr>
+                <td>가</td><td>나</td><td>다</td>
+            </tr>
+            <tr>
+                <td>라</td><td>마</td><td>바</td>
+            </tr>
+            <tr>
+                <td>사</td><td>아</td><td>자</td>
+            </tr>
+    </table>
+    <hr>
+
+    <h3>일반테이블2</h3>
+    <table style="height: 200x; width: 500px">
+            <tr>
+                <td>글번호</td><td>제목</td><td>조회수</td>
+            </tr>
+            <tr>
+                <td>1</td><td>방가방가</td><td>102</td>
+            </tr>
+            <tr>
+                <td>2</td><td>안녕</td><td>103</td>
+            </tr>
+
+    </table>
+    <hr>
+
+    <h3>일반테이블 병합</h3>
+   
+    <table style="height: 200x; width: 500px">
+            <tr>
+                <td colspan="2">가, 나</td><td>다</td>
+            </tr>
+            <tr>
+                <td>라</td><td>마</td><td>바</td>
+            </tr>
+            <tr>
+                <td colspan="3">사, 아, 자</td>
+            </tr>
+    </table>
+
+    <h3>일반테이블 병합2</h3>
+    <table style="height: 200x; width: 500px">
+            <tr>
+                <td colspan="2" rowspan="2">가, 나, 라, 마</td><td>다</td>
+            </tr>
+            <tr>
+                <td>바</td>
+            </tr>
+            <tr>
+                <td>사</td><td>아</td><td>자</td>
+            </tr>
+    </table>
+</body>
+</html>
+```
+</details>
+
+
