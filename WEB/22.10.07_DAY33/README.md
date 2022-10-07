@@ -94,6 +94,7 @@ p {
 ## 2. HTML - Table ✔
 <details>
 <summary>코드</summary>
+
 ```html
 <!DOCTYPE html>
 <html>
@@ -259,5 +260,7 @@ p {
 </html>
 ```
 </details>
+
+
 
 
