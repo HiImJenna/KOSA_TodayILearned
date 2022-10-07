@@ -507,6 +507,7 @@ p {
 <br>
 
 #### < radio >
+
 ```html
 <fieldset>
     <legend>라디오버튼(단일선택 : 남, 여) : name 같으면 하나의 그룹</legend>
@@ -532,15 +533,19 @@ p {
 1. 화면에 출력되지 않음 (소스는 가지고 있음)
 <input type="hidden" value = "1000" name = "데이터">
 <hr>
+
 2. 파일 업로드(클라이언트 파일 선택 가능
 <input type="file" name="imgup">
 <hr>
+
 3. 게시판 글 쓰기 (여러줄) : 초기 화면의 크기 (rows, cols-> 몇줄에 몇칸)
 <textarea rows="10" cols="50">기본크기</textarea>
 <hr>
+
 4. 각종 버튼들
 <input type="button" value="나 눌러봐" onclick="alert('쉬는시간')">
 <hr>
+
 <!--
     type = "image"
     type = "submit"
