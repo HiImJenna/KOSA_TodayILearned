@@ -427,9 +427,6 @@ p {
 ```
 <br>
 
-<details>
-<summary>코드</summary>
-
 ```html
 <!DOCTYPE html>
 <html>
@@ -452,7 +449,11 @@ p {
                 Text: <input type="text" name="userid" id="userid" value="hong" disabled = "disabled"><br>
 
             </fieldset>
+```
+<br>
 
+#### <checkbox>
+```html
             <fieldset>
                 <legend>체크박스(다중선택)</legend>
                 당신의 취미는 <br>
@@ -473,14 +474,121 @@ p {
                 sportsarr[1] = "B"
                 sportsarr[2] = "C"
             -->
-        </form>
-
-
-
-    </body>
-</html>
+        
 ```
-</details>
-
 [출력값]  
 ![image](https://user-images.githubusercontent.com/111114507/194483577-b248219d-6f03-4213-a234-dd62181ad6d9.png)
+<br>
+
+#### <select tag>
+```html
+<fieldset>
+                <legend> select 태그 (단일 선택(년월일))</legend>
+                <select name = "year">
+                    <option value="2022">2022년</option>
+                    <option value="2021">2021년</option>
+                    <option value="2020">2020년</option>
+                </select>
+                <!--
+                    register.jsp?year=2022 서버로 전송
+                    서버에서 받는 데이터는 문자열 데이터
+                    int year = Integer.parseInt(request.getParameter("year"));
+                    
+                -->
+
+</fieldset>
+```
+[출력값]  
+![image](https://user-images.githubusercontent.com/111114507/194485091-3157e625-92f0-4a5b-a3b2-b58408134322.png) 
+- muliple을 하면 다중 선택이 가능하지만 웹 접근성 문제로 사용하지 않는다.   
+
+#### < radio >
+```html
+<fieldset>
+    <legend>라디오버튼(단일선택 : 남, 여) : name 같으면 하나의 그룹</legend>
+    남<input type="radio" name="gender" value="1"><br>
+
+    여<input type="radio" name="gender" value="2"><br>
+    <br>
+
+    대<input type="radio" name="product" value="1"><br>
+    중<input type="radio" name="product" value="2"><br>
+    소<input type="radio" name="product" value="3"><br>
+
+</fieldset>
+```
+- name = "x"에서 x가 다르면 다른 그룹으로 분류되어 다 선택이 가능하게 된다.
+[출력값]  
+![image](https://user-images.githubusercontent.com/111114507/194486192-9880cf60-5705-42c7-87a2-dab0801fc8cd.png)
+<br>
+
+#### < Etc ... >
+```html
+<fieldset>
+<legend>기타 등등</legend>
+1. 화면에 출력되지 않음 (소스는 가지고 있음)
+<input type="hidden" value = "1000" name = "데이터">
+<hr>
+2. 파일 업로드(클라이언트 파일 선택 가능
+<input type="file" name="imgup">
+<hr>
+3. 게시판 글 쓰기 (여러줄) : 초기 화면의 크기 (rows, cols-> 몇줄에 몇칸)
+<textarea rows="10" cols="50">기본크기</textarea>
+<hr>
+4. 각종 버튼들
+<input type="button" value="나 눌러봐" onclick="alert('쉬는시간')">
+<hr>
+<!--
+    type = "image"
+    type = "submit"
+    type = "reset"
+-->
+
+</fieldset>
+```
+[출력값]  
+![image](https://user-images.githubusercontent.com/111114507/194487342-21862254-a14b-42f2-b4fd-3d064988f57d.png)
+<br>
+
+#### < HTML 5 >
+
+- Input Type Color
+```html
+<input type="color" id="favcolor" name="favcolor" value="#ff0000">
+```
+<br>
+
+- Input Type Date
+```html
+<input type="date" id="birthday" name="birthday">
+```
+<br>
+
+- Input Type Datetime-local
+```html
+<input type="datetime-local" id="birthdaytime" name="birthdaytime">
+```
+<br>
+
+- Input Type Number
+```html
+<input type="number" id="quantity" name="quantity" min="1" max="5">
+```
+<br>
+
+- Input Type Range
+```html
+ <input type="range" id="vol" name="vol" min="0" max="50">
+ ```
+<br>
+
+- The list Attribute
+```html
+<input list="browsers" name="browser">
+<datalist id="browsers">
+<option value="Internet Explorer">
+<option value="Firefox">
+<option value="Chrome">
+<option value="Opera">
+<option value="Safari">
+```
