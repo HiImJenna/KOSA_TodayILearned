@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Form 태그 안에 구현하는 Input 태그들</title>
+</head>
+    <body>
+        <form action="">
+            <fieldset>
+                <legend>Text:Passord</legend>
+                Text: <input type="text" name="userid" id="userid"><br>
+                Password : <input type="password" name="pwd" maxlength="5"><br>
+                <hr>
+                Text : <input type="text" maxlength="10" value="기본값" size="100px">
+                <hr>
+                readonly(읽기전용 : 서버로 전송 가능)
+                Text: <input type="text" name="userid" id="userid" value="hong" readonly = "readonly"><br>
+                disabled(비활성화 : 서버 전송 불가능)
+                Text: <input type="text" name="userid" id="userid" value="hong" disabled = "disabled"><br>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>체크박스(다중선택)</legend>
+                당신의 취미는 <br>
+                농구: <input type="checkbox" name="sports_1" value="A" checked=""checked>
+                야구 : <input type="checkbox" name="sports_2" value="B">
+                축구 : <input type="checkbox" name="sports_3" value="C">
+            </fieldset>
+            <!--
+                get방식
+                register.jsp?sports_1=A&sports_2=B&sports_2=C >> 서버로 전송
+
+                String s = request.getParameter("sports_1");
+                String s2 = request.getParameter("sports_2");
+                String s3 = request.getParameter("sports_3");
+
+                String[] sportsarr = request.getParameterValues("sports")
+                sportsarr[0] = "A"
+                sportsarr[1] = "B"
+                sportsarr[2] = "C"
+            -->
+        </form>
+
+
+
+    </body>
+</html>
