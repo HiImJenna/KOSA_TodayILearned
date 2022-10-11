@@ -68,3 +68,35 @@ input[type=button] {font-size:10px}
 - 디바이스 종류에 따라 웹페이지의 크기가 자동적으로 재조정 되는 것
 <br>
 
+### 🔔 position
+#### 1) static
+- Static positioned elements are not affected by the top, bottom, left, and right properties.
+<br>
+
+#### 2) relative
+- Setting the top, right, bottom, and left properties of a relatively-positioned element will cause it to be adjusted away from its normal position. Other content will not be adjusted to fit into any gap left by the element.
+- 원래 위치를 기준으로 상대적(relative)으로 배치해준다고 생각
+- top, bottom, left, right 속성을 이용해서, 요소가 원래 위치에 있을 때의 상하좌우로 부터 얼마나 떨어지게 할지를 지정할 수 있음!
+<br>
+
+#### 3) fixed
+- always stays in the same place even if the page is scrolled. The top, right, bottom, and left properties are used to position the element.
+-스크롤 내려도 같은 자리에 계속 있음
+<br>
+
+#### 4) absolute
+- An element with position: absolute; is positioned relative to the nearest positioned ancestor (instead of positioned relative to the viewport, like fixed).
+
+- However; if an absolute positioned element has no positioned ancestors, it uses the document body, and moves along with page scrolling.
+
+- Note: Absolute positioned elements are removed from the normal flow, and can overlap elements.
+
+#### 5) sticky
+- A sticky element toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed).
+- 스크롤 내리면 화면 맨 위에 걸려서 끈적하게 남아있음!
+![image](https://user-images.githubusercontent.com/111114507/195031102-a45570c1-f250-41cd-a130-02ded4a3a457.png)
+<br>
+
+
+
+
