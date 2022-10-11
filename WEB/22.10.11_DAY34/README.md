@@ -92,8 +92,8 @@ input[type=button] {font-size:10px}
 - Note: Absolute positioned elements are removed from the normal flow, and can overlap elements.
 
 #### 5) sticky
-- A sticky element toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed).
-- 스크롤 내리면 화면 맨 위에 걸려서 끈적하게 남아있음!
+- A sticky element toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed).  
+- 스크롤 내리면 화면 맨 위에 걸려서 끈적하게 남아있음!  
 ![image](https://user-images.githubusercontent.com/111114507/195031102-a45570c1-f250-41cd-a130-02ded4a3a457.png)
 <br>
 
