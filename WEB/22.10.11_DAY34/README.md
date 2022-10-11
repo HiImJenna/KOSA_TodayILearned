@@ -80,8 +80,8 @@ input[type=button] {font-size:10px}
 <br>
 
 #### 3) fixed
-- always stays in the same place even if the page is scrolled. The top, right, bottom, and left properties are used to position the element.
--스크롤 내려도 같은 자리에 계속 있음
+- always stays in the same place even if the page is scrolled. The top, right, bottom, and left properties are used to position the element.  
+- 스크롤 내려도 같은 자리에 계속 있음
 <br>
 
 #### 4) absolute
