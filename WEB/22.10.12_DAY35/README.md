@@ -179,7 +179,7 @@ console.log(v===v2) //=== : 값만 같은 것이 아니라 타입도 동일
 ![image](https://user-images.githubusercontent.com/111114507/195259378-05694a44-9f38-4693-b8ba-3a6087d8cd91.png)
 <br>
 
-## 5. JavaScript - function
+## 5. JavaScript - function ✔
 ```js
 /*
 < JAVA >
@@ -206,3 +206,73 @@ function callConfirm(){ //사용자 정의함수
 <br>
 ```
 - onclick"" : "" 안에 들어오는 메소드 실행 -> 버튼 누르면 그 메소드 실행!
+<br>
+
+## 6. JavaScript - pop up ✔
+- 팝업창 디자인 Sweetalert : https://sweetalert.js.org/guides/
+- window.open(URL, name, specs, replace)
+```js
+function showPopup() {
+window.open("Ex06_popup.html", "zipcode", "width=200, height=200") //내장함수
+}
+
+function myFunc(){
+let popupwindow = window.open("Ex06_popup.html", "zipcode", "width=200, height=200")
+//popupwindow가 팝업창이에요
+popupwindow.document.write("<p>this is zipcode window</p>");
+//새 창에 대한 제어 가능
+//JAVA: public void goUrlTime(String url){}
+function goUrlTime(url){
+window.setTimeout("location.href='" + url + "'", 3000);
+//setTimeout 내장함수
+//3초가 지나면 ... "location.href='"+ url + "'" 실행해라
+//location.href 이동
+//location.href'httl://www.daum.net'
+}
+
+//JAVA: public int myFunc(int i, int j, int k) {return i+j+k;}
+function myFunc(i,j,k){
+return i+j+k;
+}
+
+let result = myFunc(10,20,30);
+console.log("result: " + result);
+}
+
+</script>
+</head>
+<body>
+<hr3>내장함수, 사용자 정의 함수</hr3>
+<br>
+<button onclick="">클릭 사건 발생(함수(행위))호출</button>
+<br>
+<button onclick="showPopup()">팝업창</button>
+<br>
+<button onclick="">팝업 Object</button>
+<br>
+<button onclick="goUrlTime('http://www.daum.net')">3초후 이동</button>
+</body>
+```
+<br>
+
+### 🔔 익명함수
+- 일회성 함수
+- function(){}
+- callback함수(프로그램 논리(흐름)에 의해서 자동으로 호출되는 함수) -> 1초마다, 재호출, 익명함수가 ... 
+```js
+let mytime = window.setInterval(function(){  //익명(콜백)함수
+    let d = new Data(); //JAVA: Date d = new Date();
+    let t = d.toLacaleTimeString();
+    document.getElementById("time").innerHTML=t;
+}, 1000);
+
+//mytime == setInterval
+function myTimeStop(){
+    window.clearInterval(mytime);
+}
+```
+
+
+
+
+
