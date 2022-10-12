@@ -11,7 +11,7 @@
 - HTML to define the content of web page
 - CSS to specify the layout of web pages
 - JavaScript to program the behavior of web pages
-
+<br>
 
 ### 🔔 <Javascript 사용>
 - html 의 content , attribute 변경 , 삭제 , 추가 [동적]으로
@@ -64,7 +64,44 @@ document.write('</table>')
 [출력값]  
 ![image](https://user-images.githubusercontent.com/111114507/195234657-d10e8a9d-dea6-4ffb-84c5-3d4e51f18705.png)
 
-### 🔔 var, let, const
+## 2. Javascript 변수 ✔
+### 1) 변수 생성
+- var a; 정의 되지 x
+- let b; 정의 되지 x
+- a = 10; 타입설정 (num)
+- b = "A" 타입설정 (String)
+- Es5 이전 문법 (var) >> 2015 Es6(ECMA) let, const
+- let name = "kglim"; 페이지 전체(global : 전역)
+- 함수 안에 있는 let age=20; 함수 안에 유효 (local : 지역)
+```js
+let n; //초기화가 되어있지 않아요 (타입이 없어요)
+console.log(n); //undefined
+n = 100;
+//****javascript는 전역, 지역변수를 초기화하고 사용하자 ****//
+let i,j;
+i = 200;
+j = 300;
+let result = i + j;
+
+
+console.log(result);
+
+let intnum = 100; //정수
+let dnum = 12.345 //실수
+let flag = true; //boolean
+let str = null; //값이 없다
+let str2 = "ABC"; //문자열
+
+console.log(typeof(intnum));
+console.log(typeof(dnum));
+console.log(typeof(flag));
+console.log(typeof(str));
+console.log(typeof(str2));
+
+```
+[출력값]  
+![image](https://user-images.githubusercontent.com/111114507/195242058-d4bdcaa1-a956-4b60-83cb-7b59123b03e4.png)
+
 ```js
 var num; //타입이 정해지지 않아요 (정수, 문자, 날짜 올 수 있음)
 console.log(num); //undefined 정상 출력 ... 정의되지 않았음
@@ -77,5 +114,95 @@ console.log(typeof(num)); //number
 ```
 [출력값]  
 ![image](https://user-images.githubusercontent.com/111114507/195233200-a5da9ecd-8dbc-403f-8190-67d3e833e964.png)  
+<br>
 
 
+## 3. Javascript - DOM script  ✔
+![image](http://www.tcpschool.com/lectures/img_js_htmldom.png)
+```js
+문서가 실행되면 ... 웹 브라우저 메모리에 body 안에 요소가 로딩 ...
+메모리에 DOM tree 형태로... 필요에 따라서 접근
+DOM
+html
+|
+head - body
+
+DOM script : getElementById
+```
+<br>
+
+## 4. JavaScript - 연산자
+#### 1) 산술 (+,-,/,%)
+```js
+ let num1=10;
+let num2=3;
+document.write(num1/num2+"<br>");//실수
+document.write(num1%num2+"<br>");//나머지
+```
+#### 2) 관계 == (===(값과 타입 비교), !=, >= ... )
+```js
+let a = 3;
+let b = 5;
+console.log(a==b)
+console.log(a!=b)
+console.log(a>b)
+```
+#### 3) 논리 (&&, ||)
+```js
+console.log((10>5)&&(1!=3));
+console.log((10>5)||(1!=3));
+```
+#### 4) 삼항
+```js
+let result2 = (4%2 == 0) ? "짝수" : "홀수";
+console.log(result2);
+```
+#### 5) 대입 연산자 (+=, -=, *=, /=)
+```js
+let p = 10;
+let k = 5;
+p += k;
+console.log(p);
+
+let x = 5+5;
+let y ="5" + 5; //+ (산술, 결합)
+console.log(x);
+console.log(y);
+
+let v = "5";
+let v2 = 5;
+let v3 = 5;
+console.log(v==v2) //== : 값을 비교하는 연산자
+console.log(v===v2) //=== : 값만 같은 것이 아니라 타입도 동일
+```
+[출력값]  
+![image](https://user-images.githubusercontent.com/111114507/195259378-05694a44-9f38-4693-b8ba-3a6087d8cd91.png)
+<br>
+
+## 5. JavaScript - function
+```js
+/*
+< JAVA >
+public void print(){}
+public String print() {return ""}
+public int print(int num, int num2){return num + num2}
+
+< JS >
+function 함수명 () {}
+void(x), return type(x)
+*/
+function callConfirm(){ //사용자 정의함수
+    if(window.confirm("삭제하시겠습니까")){ //confirm() 내장함수 return true or false
+        alert("네");
+    } else {
+        alert("아니오")
+    }
+    }
+</script>
+</head>
+<body>
+<hr3>내장함수, 사용자 정의 함수</hr3>
+<button onclick="">클릭 사건 발생(함수(행위))호출</button>
+<br>
+```
+- onclick"" : "" 안에 들어오는 메소드 실행 -> 버튼 누르면 그 메소드 실행!

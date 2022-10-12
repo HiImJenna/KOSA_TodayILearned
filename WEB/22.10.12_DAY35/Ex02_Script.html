@@ -34,7 +34,18 @@
         console.log(typeof(num)); //number
 
         //javascript 순서대로 실행된다
-            //let element = window.document.forms[0].elements[0]
+          //let element = window.document.forms[0].elements[0];
+          //console.log(element);
+          // Uncaught TypeError: Cannot read properties of undefined (reading 'elements')
+          // at Ex02_Script.html:35:41
+
+          //순서에 상관없이 프로그래밍
+          //함수를 생성 ... 함수는 호출 의해서 실행 ...
+          function data() {
+            let element = window.document.forms[0].elements[0];
+            alert(element);
+          }
+
 
 
     </script>
@@ -45,9 +56,25 @@
         <input type="password" name="pwd" value="1004"><br>
         <input type="submit" name="전송"><br>
     </form>
+
+    <input type="button" name="클릭해봐" onclick="data()">
+</body>
+
 <script type="text/javascript">
-    let element = window.document.forms[0].elements[0]
+    let element = window.document.forms[0].elements[0];
+    console.log(element); //<input type="text" name="userid" value="hong"><br>
+    console.log(element.value);
+    console.log(element.value.length);
+
+    let value = window.document.myform.userid.value;
+    console.log("타입 : " + typeof(value)); //string
+
+    if(value.length<5) {
+        alert("다시 입력");
+        element.value="";
+    }
+    //element변수 : 
     
 </script>
-</body>
+
 </html>
