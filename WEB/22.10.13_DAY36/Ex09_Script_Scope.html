@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Scope</p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+</body>
+
+<script type="text/javascript">
+    //global variable (모든 함수에서 적용 가능(페이지 안에서))
+    var gname = "world";
+
+    function myFunction() {
+        aaa = "아무개"; //변수인정 (global)
+        console.log("aaa : " + aaa);
+
+        var carname = "Volvo"; //local ...
+        document.getElementById("demo1").innerHTML = typeof(carname) + " " + carname + "<hr>"
+        document.getElementById("demo").innerHTML = typeof(gname) + " " + carname + "<hr>"
+    }
+</script>
+</html>

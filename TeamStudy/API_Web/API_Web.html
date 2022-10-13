@@ -17,39 +17,101 @@
 
     <main>
         <section> 
-            <h3>GeoLocation </h3>
-            <button onclick="getLocation()">Try it</button>
-            
-            <script> 
-            var x = document.getElementById("demo");
+            <h3>GeoLocation</h3> 
+            <button onclick="getLocation()" style="margin-left: 10px;">where is Olaf?</button>
+            <div id="map" style="width:600px;height:400px; margin: 0 auto; r"></div>
+	        <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=7b6d49f208bc78af3be5ae7272a2b6ab"></script>
 
-            function getLocation() {
-            if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(showPosition);
-            } else { 
-                x.innerHTML = "Geolocation is not supported by this browser.";
-            }
-            }
-
-            function showPosition(position) {
-            x.innerHTML = "Latitude: " + position.coords.latitude + 
-            "<br>Longitude: " + position.coords.longitude;
-            }
-            </script>
-
+                <script>
+                  if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(showPosition);
+                  } else {
+                    alert('위치 정보를 가져올 수 없습니다.')
+                  }
+              
+                  function showPosition(position) {
+                    let latitude = position.coords.latitude;
+                    let longitude = position.coords.longitude;
+              
+                    var container = document.getElementById('map');
+                    var options = {
+                         center: new kakao.maps.LatLng(latitude, longitude),
+                      draggable: false, // 맵이 이동되지 않게 함
+                         level: 3 // 지도 확대 레벨
+                      };
+                    var map = new kakao.maps.Map(container, options);
+              
+                    var markerPosition = new kakao.maps.LatLng(latitude, longitude);
+              
+                    var marker = new kakao.maps.Marker({
+                      position: markerPosition
+                    });
+              
+                    marker.setMap(map);
+                  }
+                 </script>
+              
         </section>
         <section>
             <h3> Drag/Drop </h3>
+ 
+
+            <script>
+                function allowDrop(ev) {
+                  ev.preventDefault();
+                }
+                
+                function drag(ev) {
+                  ev.dataTransfer.setData("text", ev.target.id);
+                }
+                
+                function drop(ev) {
+                  ev.preventDefault();
+                  var data = ev.dataTransfer.getData("text");
+                  ev.target.appendChild(document.getElementById(data));
+                }
+            </script>
+            
+            <div id="div1"> <!--올라프 배경-->
+                <p style="font-family: Gungsuh, sans-serif; margin-top: 50px; margin-left: 50px;"> 내 코를 돌려죠 ... </p>
+                <div id="div0" ondrop="drop(event)" ondragover="allowDrop(event)"> <!--코 위치-->
+                </div>
+            </div>
+
+            <div id="div2" style="padding: 20px"> <!--코 원래 위치-->
+            <img id="drag1" src="nosenosepng.png" draggable="true" ondragstart="drag(event)" width="106" height="100">
+            </div>
+            <img src="cowpng.png" alt="Griddy Cow" width="250" height="180" style="float: right;">
         </section>
+
         <section>
             <h3>Local Storage</h3>
+
+            <script>
+                function clickCounter() {
+                  if (typeof(Storage) !== "undefined") {
+                    if (localStorage.clickcount) {
+                      localStorage.clickcount = Number(localStorage.clickcount)+1;
+                    } else {
+                      localStorage.clickcount = 1;
+                    }
+                    document.getElementById("result").innerHTML = "Warm hug " + localStorage.clickcount + " time(s).";
+                  } else {
+                    document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+                  }
+                  
+                }
+                </script>
+
+                <p><button onclick="clickCounter()" type="button" style="margin-left: 70px;">
+                    <img src="hugme-removebg-preview.png" alt="hug me" width="300" height="400" style="margin-left: 40px;">
+                </button></p>
+                <div id="result"></div>
+                
+
         </section>
     </main>
 
-    <footer>
-       <h4>
-        
-       </h4> 
     </footer>
 
     

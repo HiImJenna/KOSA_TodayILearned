@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        /*
+        javascript 다양한 내장 객체 제공 : new 통해서 .. 이미 생성된 객체
+        ex) Date(), Array()
+        */
+       let today = new Date();
+       console.log(today);
+       console.log(today.getFullYear());
+       console.log(today.getMonth() + 1);
+       console.log(today.getDate());
+       console.log(today.getHours());
+       console.log(today.getMinutes());
+       console.log(today.getSeconds());
+
+       console.log(Math.random()); //0<=범위<1
+       console.log(parseInt(Math.random)*45 + 1);
+       //javascript로 lotto program
+
+       console.log(Math.random(3.5678)); //4 반올림
+       console.log(Math.max(3, 8, 99, 55, 10));
+
+       //Point 문자열 관련 함수
+       let str = "ABCDEF";
+
+       //document.write()
+       with(document){
+        write(str + "<br>");
+        write(str.lenth+"<br>");
+        write(str.charAt(2)+"<br>");
+        write(str.indexOf("D")+"<br>");
+        write(str.concat("홍길동")+"<br>")
+       }
+
+       //slice(start,end)
+       //substring(start,end)
+       //substr(start, length)
+
+       let str2 = str.replace("E", "zzz");
+       write(str2 +"<br>");
+       //str="ABCDE"
+       write(Str.substring(2,4)+"<br>"); //CD
+       write(Str.substring(1,1)+"<br>"); //
+       write(Str.substring(1,2)+"<br>"); //자기자신 B
+       write(Str.substring(2,4)+"<br>"); //BCDEF
+
+       let strarr = "A B C D";
+       let arr = strarr.split(" ");
+       write(arr); //toString() 재정의 -> javascript Array가
+
+       //Today's point
+       //JAVA : 개선된 for문
+       //for(String s : arr){s값 출력}
+
+       //MS(c#), JavaScript >> in
+       //javascript : for(let s in arr){ }
+       //배열에서 index값을 return
+       write("<br>");
+       for(let index in arr) { //약속 개선된 for문 변수명 : index
+        write(index+"<br>");
+        write(arr[index+"<br>"])
+       }
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
