@@ -99,7 +99,7 @@ document.write(isNaN('12345') + "<br>"); //false
 ```
 <br>
 
-## 3. Javascript - 내장 객체
+## 3. Javascript - 내장 객체 ✔
 ### 🔔 Date()
 ```js
  let today = new Date();

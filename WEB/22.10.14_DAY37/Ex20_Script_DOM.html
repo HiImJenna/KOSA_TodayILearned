@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        .democlass {color:red;}
+    </style>
+</head>
+<body>
+    <div id = "div">
+        <h1 class = "democlass">Hello World 1</h1>
+        <h1 class = "democlass">Hello World 2</h1>
+        <h1 class = "democlass">Hello World 3</h1>
+        
+    </div>
+</body>
+    <script type="text/javascript">
+       //document.getElementsByTagName("h1")[0].removeAttribute("class");
+       /*
+       let harr = document.getElementsByTagName("h1");
+       console.log(harr);
+       for(let i = 0; i < harr.length; i++){
+        harr[i].removeAttribute("class");
+       }
+       */
+
+       /* <삭제 원인 파악>
+       let arr = document.getElementByTagName("h1");
+       for(let index in arr) {
+        console.log(arr[index]);
+        document.getElementById("div").removeChild(arr[index]);
+        //삭제순서 : 0-1-2
+        //Hello Word 2 남아있네 why?
+
+        //[0][1][2]
+        //[Hello Word 1][Hello Word 2][Hello Word 3]
+
+        //[0][1]
+        //[Hello Word 2][Hello Word 3] >> 비워진 방을 채워서 >> index[1]
+
+        //[0]
+        //Hello word2 >> index2 삭제
+       }
+       */
+
+       //예외가 발생하지 않고 자식 모두 삭제
+       //개선된for
+
+       let arr = document.getElementsByTagName("h1");
+
+       for(let index in arr){
+        //console.log("index : " + index + "-length : " + arr.length);
+        document.getElementById("div").removeChild(arr[arr.length-1]);
+       }
+       /*
+       [2] => [1] -> [0]
+       
+       */
+    
+    </script>
+</html>

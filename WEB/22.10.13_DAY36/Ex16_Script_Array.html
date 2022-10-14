@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        //while
+        let i = 1;
+        let sum = 0;
+        while(i<=10){
+            //명시적인 증가감
+            sum += i;
+            i++
+        }
+
+        console.log("sum : " + sum);
+        console.log("i : " + i);
+
+        //for
+        let sum2 = 0;
+        for(let i = 0; i <=10; i++) {
+            if(i % 3 === 0) {
+                console.log("i : " + i);
+                //continue;
+                break;
+            }
+            console.log("for i : " + i);
+            sum2 += i;
+        }
+
+        /////////////////////////////////////////////////////////
+        //Array//
+        /*
+        JAVA : 정적(Array) >> 배열방 크기 고정 : 동적(Collection) >> 다양한 class
+        int[] arr = new int[3];
+        int[] arr = new int []{1,2,3}
+        int[] arr = {11,2,33}; //key point
+
+        List<String> li = new ArrayList<String>();
+        li.add("A");
+        li.add("B");
+
+        JavaScript >> 정적 + 동적 >> 동적 (Array)
+        선언방법
+        let arr=[]; //best 코드
+        arr.push();
+        arr.pop();
+        */
+       let arr = [10,20,30]; //좋은 냄새가 나는 코드
+       for(let i = 0; i<arr.length; i++){
+        document.write(arr[i] + "<br>");
+       }
+       
+        //BEST
+       // let arr2 = [];
+
+       let eng = new Array(3); //나쁜냄새 bad
+       for(let i = 0; i<eng.length; i++){
+        document.write(eng[i] + "<br>");
+        //각각의 방은 값의 정보를 가지고 있지 않음
+        //undefined
+        //undefined
+        //undefined
+       }
+
+       eng[0] = 100;
+       eng[1] = 200;
+       eng[2] = 300;
+       document.write("<hr>");
+
+       for(let i = 0; i < eng.length; i++){
+        document.write(eng[i] + "<BR>");
+       }
+
+       //good (Best)
+       //JavaScript Array > 자료구조 >> stack(LIFO)
+       let arr2 = [];
+       arr2.push(10);
+       arr2.push(20);
+       document.write(arr2.pop());
+
+       //1. 배열 기본 생성 방법
+       //Bad
+       let array = new Array(5);//bad
+
+       //Bad
+       let array2 = new Array(10,20,30);
+
+       //good
+       let array3 = [1,2,3];
+       let array4 = [];
+       array4.push(10);
+       array4.push(11);
+       document.write(array4.pop());
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

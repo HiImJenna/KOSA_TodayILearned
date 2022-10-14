@@ -5,34 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- 
+        함수를 생성하시고 onclick="" 함수 호출시
+        value="200-300 서울시 강남구 역삼동" 값을 가지고 와서
+        우편번호와 주소 분리
+        200-300
+        서울시 강남구 역삼동
+        부모창에 : window.opener 통해서 zipcode, addr에 값을 전달하세요
+        그리고 현재 창을 닫으세요.
+     -->
+    
+    <script>
+        function onclick_address(obj){
+            console.log(obj);
+
+            let zipcode = obj.substring(0,7);
+            let address = obj.substring(8);
+            console.log(zipcode);
+            console.log(address);
+
+            opener.document.mainform.zipcode.value = zipcode;
+            opener.document.mainform.addr.value = address;
+
+            close();
+        }
+    </script>
+
 </head>
-<script>
-    function postcode() {
-        write(button.substring(0,6));
-    }
-
-
-</script>
 <body>
     <h3>DB연결 검색한 결과 출력된 화면(선택)</h3>
-	<form action="" name="zipform">
-		<input type="button" value="200-300 서울시 강남구 역삼동" name="btn" onclick="postcode()"><br>
-		<input type="button" value="200-400 경기도 성남시 삼평동" name="btn" onclick="postcode()"><br>
-		<input type="button" value="300-500 제주시 서귀포동"     name="btn" onclick="postcode()"><br>	
-	</form>
+   <form action="" name="zipform">
+      <input type="button" value="200-300 서울시 강남구 역삼동" name="btn" onclick="onclick_address(this.value)"><br>
+      <input type="button" value="200-400 경기도 성남시 삼평동" name="btn" onclick="onclick_address(this.value)"><br>
+      <input type="button" value="300-500 제주시 서귀포동"     name="btn" onclick="onclick_address(this.value)"><br>   
+   </form>
 
-
-
+    
 </body>
-
-/* 함수 생성하고 onclick =""함수 호출시
-value="200-300 서울시 강남구 역삼동"값을 가지고 와서
-우편번호와 주소 분리
-200-300
-서울시 강남구 역삼동
-부모창에 : window.opener 통해서 zip code,addr값을 전달하세요 
-그리고 현재창을 닫ㅇ세요
- */
-
 </html>
-

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+   <script>
+      let name="";
+      let email=false;
+
+      function initValue(frm){
+         name = frm.username.value;
+         email= frm.checkmail.checked;
+      }
+
+
+
+      function copySend(obj){
+         console.log(obj);
+         console.log(obj.username.value);
+         console.log(obj.checkmail.checked); //true, false
+         
+         
+         if (obj.copy.checked){
+            initValue(obj);
+            obj.copyname.value = name;
+            obj.copymail.checked = email;
+            // obj.copyname.value = obj.username.value;
+            // obj.copymail.checked = obj.checkmail.checked;
+         }else{
+            alert("선택해지");
+            obj.copyname.value = "";
+            obj.copymail.checked = false;
+         }
+      }
+   </script>
+</head>
+<body>
+    <form>
+      <fieldset>
+         <legend>주문정보</legend>
+         이름:<input type="text" name="username"><br> 
+             <input type="checkbox" name="checkmail">배송정보 Email수신<br>
+         <hr>
+         <input type="checkbox" name="copy" onclick="copySend(this.form)">
+         주문자 정보와 배송지 정보 동일
+      </fieldset>
+      <hr>
+      <fieldset>
+         <legend>배송지 정보</legend>
+         이름:<input type="text" name="copyname"><br> 
+                <input type="checkbox" name="copymail">배송정보 Email수신<br>
+      </fieldset>
+   </form>
+</body>
+</html>
