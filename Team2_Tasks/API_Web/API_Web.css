@@ -11,7 +11,7 @@ header {
 
 main {
     width: 100%;
-    /* height: 1200px; */
+    height: 1600px;
 
     margin: 0 auto;
     background-image: url(back.jpg);
@@ -31,8 +31,8 @@ section {
 footer {
     width: 800px;
     height: 30px;
-    background-color: blanchedalmond;
-    background-image: url("gggg.jpg");
+    background-color: #ffffff;
+    background-image: ursl("gggg.jpg");
 }
 
 .clear {
@@ -57,7 +57,7 @@ h3 {
 h4 {
     text-align: right;
     font-family: Times ;
-    color: rgb(154, 158, 157);
+    color: rgb(70, 80, 213);
 }
 
 #div0{
