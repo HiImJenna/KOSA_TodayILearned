@@ -23,7 +23,6 @@
             <h3>GeoLocation</h3>  <br>
             
             <img src="mynose.png" alt="olaf" width="300px" height="370px" style="margin-top: 50px; margin-left: 80px; margin-bottom: 100px;">
-            <img src="bb.png" alt="bb" width="00px" height="300px" style="margin-bottom: 40px; margin-left: 20px;">
             <div id="map" style="width:600px;height:400px; float: right; margin-right:150px ;"></div>
 
 	          <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=7b6d49f208bc78af3be5ae7272a2b6ab"></script>
@@ -122,7 +121,7 @@
                               map: map, // 선을 표시할 지도입니다 
                               path: [clickPosition], // 선을 구성하는 좌표 배열입니다 클릭한 위치를 넣어줍니다
                               strokeWeight: 3, // 선의 두께입니다 
-                              strokeColor: '#db4040', // 선의 색깔입니다
+                              strokeColor: '#6600ff', // 선의 색깔입니다
                               strokeOpacity: 1, // 선의 불투명도입니다 0에서 1 사이값이며 0에 가까울수록 투명합니다
                               strokeStyle: 'solid' // 선의 스타일입니다
                           });
@@ -130,7 +129,7 @@
                           // 선이 그려지고 있을 때 마우스 움직임에 따라 선이 그려질 위치를 표시할 선을 생성합니다
                           moveLine = new kakao.maps.Polyline({
                               strokeWeight: 3, // 선의 두께입니다 
-                              strokeColor: '#db4040', // 선의 색깔입니다
+                              strokeColor: '#3333ff', // 선의 색깔입니다
                               strokeOpacity: 0.5, // 선의 불투명도입니다 0에서 1 사이값이며 0에 가까울수록 투명합니다
                               strokeStyle: 'solid' // 선의 스타일입니다    
                           });
