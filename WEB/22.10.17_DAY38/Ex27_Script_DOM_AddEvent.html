@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+</head>
+<body>
+    <button id="mybtn">클릭</button>
+    <p id="demo"> </p>
+</body>
+    <script>
+        /*
+            1. 하나의 요소는 여러개의 event를 가질 수 있다.
+            2. 이벤트가 더 이상 필요하지 않다면 removeEventListner() 제거 가능 (단 addEvent 추가)
+        */
+        document.getElementById("mybtn").addEventListener("click",displayText);
+
+        function  displayText(){
+                document.getElementById("demo").innerHTML = "hello world";
+        }
+    </script>
+</html>
