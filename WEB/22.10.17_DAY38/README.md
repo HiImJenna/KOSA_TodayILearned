@@ -82,3 +82,96 @@
  
 - #### 버블링  
 ![image](https://joshua1988.github.io/images/posts/web/javascript/event/event-bubble.png)
+<br>
+
+## 4. JavaScript - Object ✔
+### 🔔 <클래스 정의 3가지 방법>
+#### 1) 프로토타입 방식 :  일반적인 클래스 제작 방법
+-  인스턴스마다 공통된 메서드를 공유해서 사용하는 장점 
+```js
+function 클래스이름() {
+    this.프로퍼티1 = 초기값;
+    this.프로퍼티2 = 초기값;
+}
+
+클래스이름.prototype.메서드1 = function() {
+
+}
+
+클래스이름.prototype.메서드2 = function() {
+
+}
+
+​var 인스턴스 = new 클래스이름(); 
+var carObj = new Car();
+var carObj2 = new Car();
+var carObj3 = new Car();
+ ```
+ <br>
+
+
+#### 2) 함수 방식 : 간단한 클래스 제작 시 사용 
+- 인스턴스마다 메서드가 독립적으로 만들어지는 단점
+- 클래스 :  function Car(){ this.name = , this.age=}
+- 함수 :   function car(){}
+```js
+function 클래스이름() {
+    this.프로퍼티1 = 초기값;
+    this.프로퍼티2 = 초기값;
+        this.메서드1 = function() {
+        }
+
+    this.메서드2 = function() {
+
+    }
+
+}
+
+​var 인스턴스 = new 클래스이름(); 
+var carObj = new Car();
+var carObj2 = new Car();
+var carObj3 = new Car();
+```
+<br>
+
+#### 3) 리터럴 방식 : 
+- 클래스 만드는 용도는 아니며 주로 여러개의 매개변수를 그룹으로 묶어 함수의 매개변수로 보낼때 정의와 함께 인스턴스가 만들어지는 장점이 있음           
+- 단 인스턴스는 오직 하나
+```js
+{"a" : 데이터}
+```
+<br>
+
+### 4) ECMA6 버전부터 : class 키워드 제공
+```js
+class Person {
+    constructor(name) {
+        this._name = name;
+    }
+
+    sayHi() {
+
+    console.log(`Hi! ${this._name}`);
+    }
+}
+```
+<br>
+
+### 🔔 <javascript 객체 생성>
+- 오브젝트 리터럴 방식 (객체를 만드는 방법): 클래스 생성과  동시에 객체가 만들어진다
+- -> 리터럴 방식 >> 제일 간단한 방법 > var obj = {}; //var objarr = [] 배열 
+- -> JSON 표기 : {} >> JSON: JavaScript Object Notation
+-        ​        ex) var myObj = { "name":"John", "age":31, "city":"New York" };
+<br>
+
+```js
+//class Product {public String 제품명 = "사과"}
+//Product p = new Product();
+//System.out.Println(p.제품명);
+
+let product = {제품명: '사과', 년도 : '2000', 원산지 : '대구'};
+console.log(product);
+console.log(product.제품명);
+console.log(product.원산지);
+console.log(product.toString());
+```
