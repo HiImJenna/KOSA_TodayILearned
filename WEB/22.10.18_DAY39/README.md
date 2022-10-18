@@ -40,6 +40,40 @@
 ![image](https://user-images.githubusercontent.com/111114507/196324437-b09660e1-a7ba-4dec-a6e1-76c1e89725c4.png)
 <br>
 
+## 2. JSON ✔
+- 자바스크립트로 객체를 표기하는 방법
+```js
 
+    let product = {제품명: '사과', 년도 : '2000', 원산지 : '대구'};
+    console.log(product);
+    console.log(product.제품명);
+    console.log(product.원산지);
+    console.log(product.toString());
 
+    //객체 {} >> 리터럴 >>JSON
+    let Person = {
+        name:"홍길동",
+        addr:"서울시 강남구 역삼동",
+        eat: function(){
+            document.write(this.name + "/" + this.addr + "/" + food + "냠냠")
+        }
+    };
+
+    document.write("<hr>");
+    Person.eat("사과"); //eat함수 호출
+
+    //1. 속성 제거 기능
+    delete(product.년도);
+    console.log(product);
+
+    for (let key in product) { //변수명 key
+        console.log("key : " + key);
+        console.log(product[key]);
+    }
+
+    for(let key in person){
+        console.log("key : " + key + "=" + Person[key]);
+    }
+    
+```
 
