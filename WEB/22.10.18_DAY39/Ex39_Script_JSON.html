@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javaScript">
+        let MyObj = {name:"john", age:30, city:"seoul"};
+
+        console.log(MyObj);
+
+        //[객체 데이터]를 [문자열 데이터]로
+        //login.jsp?name = json&age = 30 & city = seoul
+        let stringobj = JSON.stringify(MyObj); //POINT
+        console.log(stringobj); //'name:"john", age:30, city:"seoul"'
+        console.log(typeof(stringobj));
+
+        //[문자열 데이터를] [객체 데이터로]로
+        let stringstr = '{"name":"john", "age":30, "city":"seoul"}';
+        console.log(stringstr);
+        console.log(typeof(stringstr));
+
+        let Myjson = JSON.parse(stringstr);
+        console.log(Myjson);
+
+        //POINT
+        console.log(Myjson.name); //접근: 객체 속성명
+        console.log(Myjson["name"]); //접근 : 객체["속성명"] 암기
+
+        /*
+        index.htm, index.html
+        css > common.css
+        javascript > common.js
+        json>common.json >> 형식(웹 타입)MINE >> application/json
+        xml > common.xml 
+        */
+
+        let MyCars;
+        MyCars = {"name": "john", "age": 30, "cars": [
+                                                     {"name":"Ford", "model":["Fiesta", "Focus", "Mustang"]},
+                                                     {"name":"BMW", "model":["420", "x4", "x5"]},
+                                                     {"name":"Fiat", "model":["500", "panda"]}
+                                                     ]
+        };
+
+        //신입개발자 업무
+        //JSON데이터 원하는 값을 추출, 화면 이쁘게 출력
+        console.log(MyCars);
+
+        //차량 이름과 모델명 추출
+        //Ford - Fiesta Focus Mustang
+        //BMW - ...
+        //Fiat - ...
+        //개선된 for 문으로 작업
+        //자료형 변수명 : 배열명
+        
+        console.log("--------------" + MyCars.cars);
+
+        for(let index in MyCars.cars) {
+           // console.log(MyCars.cars[index]);
+           document.write("차량이름 : " + MyCars.cars[index].name + " / ");
+           for(let i in MyCars.cars[index].model){
+             document.write("차량모델 : " + MyCars.cars[index].model[i]);
+           }
+           document.write("<hr>")
+        }
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

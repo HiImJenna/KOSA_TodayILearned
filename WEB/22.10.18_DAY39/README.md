@@ -76,4 +76,64 @@
     }
     
 ```
+```js
+<script type="text/javascript">
+    //1. 배열 >> [] >> let arr=[]; >> push(), pop()
+    //2. JSON >> {} >> let obj = {}; >>obj.속성명, obj.함수명
+
+    //우리가 원하는 데이터는 단순하지 않아요
+    //날씨, 영화 정보, 지하철 정보 데이터, 원하는 정보를 추출(OPEN API) >> xml, json
+    //이런 데이터 객테와 객체, 객체안에 배열, 배열안에 객체가 혼재 ... 원하는 값만 추출
+
+    let students = [];
+    students.push({이름:"홍길동", 국어:80, 영어: 60}); //배열의 0번째 방에 객체 (JSON)
+    students.push({이름:"아무개", 국어:100, 영어: 50}); //배열의 0번째 방에 객체 (JSON)
+    students.push({이름:"이순신", 국어:10, 영어: 100}); //배열의 0번째 방에 객체 (JSON)
+
+    //[{}{}{}]
+    //기존에 만들어진 객체에 함수 추가
+    for(let index in students) {
+        //students[index] >> {이름:"홍길동", 국어:80, 영어: 60}
+        students[index].getSum = function() {return this.국어 + this.영어}
+        students[index].getAvg = function() {return this.getSum()/2}
+    }
+
+    //{이름:"홍길동", 국어:80, 영어: 60, getSum:function ... , getAvg:function}
+    console.log(students);
+
+    for(let index in students) {
+        console.log(students[index].이름);
+        console.log(students[index].getSum());
+        console.log(students[index].getAvg());
+    }
+
+</script>
+```
+<br>
+
+### 🔔 [객체 데이터]를 [문자열 데이터]로
+```js
+//login.jsp?name = json&age = 30 & city = seoul
+let stringobj = JSON.stringify(MyObj); //POINT
+console.log(stringobj); //'name:"john", age:30, city:"seoul"'
+console.log(typeof(stringobj));
+```
+<br>
+
+### 🔔 [문자열 데이터를] [객체 데이터로]로
+```js
+let stringstr = 'name:"john", age:30, city:"seoul"';
+console.log(stringstr);
+console.log(typeof(stringstr));
+
+let Myjson = JSON.parse(stringstr);
+console.log(Myjson);
+```
+<br>
+
+### 🔔 POINT
+```js
+console.log(Myjson.name); //접근: 객체 속성명
+console.log(Myjson["name"]); //접근 : 객체["속성명"] 암기
+```
 
