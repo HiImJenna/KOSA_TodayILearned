@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id = "demo"></p>
+    <p id = "demo2"></p>
+
+    <script type="text/javascript">
+       // https://www.w3schools.com/js/js_arrow_function.asp
+       //일반함수
+       //function foo() { }
+
+       //익명함수
+       let foo = function() {
+        console.log("foo...");
+       }
+       foo();
+
+       //ES6(2015) .. 함수의 줄임 표현 .. Arrow Function 이름으로
+       //매개변수 없는 함수 구현
+       let bar = () => console.log("bar ..");
+       bar();
+
+       //매개변수 1개
+       //let foo2= function(x) {return x}
+       let foo2 = x => x;
+       let data = foo2(100);
+       console.log(data);
+
+       let hello;
+       //hello = (val) => "hello" + val;
+
+       hello = val => "hello" + val;
+       let v = hello("aaaa");
+       console.log(v);
+       document.getElementById("demo").innerHTML = hello("방가방가");
+
+       //매개변수가 2개 이상인 경우
+       //function call(a, b){}
+       let foo3 = (a,b) =>{return a + b};
+       let v2 = foo3(10,20);
+       console.log(v2);
+
+       //함수에 여러개의 논리가 필요하다면 {구현}
+       let foo4 = (a,b) => {let c = 100; return a+b+c};
+       let v3 = foo4(100,200);
+       console.log(v3);
+
+       //함수 객체 return >> { json }
+       let foo5 = () => ({a:1, b:2, c:3});
+       let vobj = foo5();
+       console.log(vobj);
+
+       //즉시 실행 함수 (암기)
+       //jquery 활용
+       (
+        function(){
+            console.log("즉시 실행 함수 ...");
+            //함수는 호출에 의해서 실행
+        } ()
+       );
+       //위 코드를 화살표 표현식으로 바꾸어 보세요
+       (
+        ( )=> {console.log("즉시 실행 함수 ...")}
+        //함수는 호출에 의해서 실행
+       ) ();
+
+    </script>
+</body>
+</html>
