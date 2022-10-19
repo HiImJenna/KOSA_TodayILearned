@@ -34,7 +34,7 @@
 
 
 <script>
-// ************** 데이터
+// ************** 데이터**************
     let data =
 
     {
@@ -245,24 +245,28 @@
             ]
         }
     }
-// **************
+// ***********************************
     
 window.onload = function(){
 
         let table = document.getElementById('table'); 
 
-    for( let i = 0; i < 10; i++ ) {
-        // let resultBody = document.createElement('resultBody');
+
+// ***********************************
+
+    let list = data.boxOfficeResult.dailyBoxOfficeList;
+
+    list.forEach(element => {
+        console.log(element);
+
         let tr = document.createElement("tr");
         let td = [document.createElement('td'), document.createElement('td'), document.createElement('td'), document.createElement('td'), document.createElement('td')];
-        
 
-
-        td[0].appendChild(document.createTextNode(data.boxOfficeResult.dailyBoxOfficeList[i].rank));
-        td[1].appendChild(document.createTextNode(data.boxOfficeResult.dailyBoxOfficeList[i].movieNm));
-        td[2].appendChild(document.createTextNode(data.boxOfficeResult.dailyBoxOfficeList[i].openDt));
-        td[3].appendChild(document.createTextNode(data.boxOfficeResult.dailyBoxOfficeList[i].audiChange));
-        td[4].appendChild(document.createTextNode(data.boxOfficeResult.dailyBoxOfficeList[i].audiInten));
+        td[0].appendChild(document.createTextNode(element.rank));
+        td[1].appendChild(document.createTextNode(element.movieNm));
+        td[2].appendChild(document.createTextNode(element.openDt));
+        td[3].appendChild(document.createTextNode(element.audiChange));
+        td[4].appendChild(document.createTextNode(element.audiInten));
 
         tr.appendChild(td[0]);
         tr.appendChild(td[1]);
@@ -273,10 +277,33 @@ window.onload = function(){
         console.log(tr);
         console.log(table);
         table.appendChild(tr);
-    }
-}
+    })
 
-    
+//     for( let i = 0; i < 10; i++ ) {
+//         // let resultBody = document.createElement('resultBody');
+//         let tr = document.createElement("tr");
+//         let td = [document.createElement('td'), document.createElement('td'), document.createElement('td'), document.createElement('td'), document.createElement('td')];
+
+//         td[0].appendChild(document.element.rank);
+//         td[1].appendChild(document.element.movieNm);
+//         td[2].appendChild(document.element.openDt);
+//         td[3].appendChild(document.element.audiChange);
+//         td[4].appendChild(document.element.audiInten);
+
+//         tr.appendChild(td[0]);
+//         tr.appendChild(td[1]);
+//         tr.appendChild(td[2]);
+//         tr.appendChild(td[3]);
+//         tr.appendChild(td[4]);
+        
+//         console.log(tr);
+//         console.log(table);
+//         table.appendChild(tr);
+//     }
+ }
+
+// ***********************************
+   
 </script>
 
 

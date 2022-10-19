@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	
+</head>
+<body>
+	<!-- <p id="demo"></p> -->
+	<input type="text" id="demo">
+	<button onclick="myFunc()">TEST INPUT</button>
+	<p id="p01"></p>
+</body>
+<script type="text/javascript">
+		/*
+		try{
+			add("welcome!!");
+		}catch(err){
+			document.getElementById("demo").innerHTML = err.message;
+		}
+		*/
+		function myFunc(){
+			let message , x;
+			message = document.getElementById("p01");
+			message.innerHTML="";
+			
+			x = document.getElementById("demo").value;
+			
+			try{
+				if(x == "") throw "empty";	
+				if(isNaN(x)) throw "not a number";
+				X = Number(x);
+				if(x < 5) throw "too low";
+				if(x > 10) throw "too high";
+			}catch(err){ //내부적으로 생성된 예외 객체의 주소를 받는다 
+				message.innerHTML = "input is " + err;
+			}finally{
+				document.getElementById("demo").value="";
+			}
+		}
+	</script>
+</html>
+
