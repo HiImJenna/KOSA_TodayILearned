@@ -41,7 +41,7 @@
   --bs-danger: #dc3545;
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
-  --bs-primary-rgb: 29, 128, 159;
+  --bs-primary-rgb: 96, 164, 124;
   --bs-secondary-rgb: 236, 184, 7;
   --bs-success-rgb: 25, 135, 84;
   --bs-info-rgb: 13, 202, 240;
@@ -11343,7 +11343,8 @@ html {
   height: 100%;
   transition: all 0.4s ease 0s;
   transform: translateX(250px);
-  background: #1D809F;
+  background: #71b570;
+  opacity: 87%;
   border-left: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -11564,7 +11565,7 @@ footer.footer .social-link:hover {
   }
 }
 
-/* .service-icon {
+.service-icon {
   background-color: #fff;
   color: #1D809F;
   height: 7rem;
@@ -11573,4 +11574,4 @@ footer.footer .social-link:hover {
   line-height: 7.5rem;
   font-size: 2.25rem;
   box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
-} */
+}
