@@ -70,6 +70,55 @@
         //함수는 호출에 의해서 실행
        ) ();
 
+
+       /*
+     암기!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+     1. for(let i = 0; i < 10; ++i) {}
+     2. for(let index in Array) { Array[index] }
+     2.1 for(let value of Array) { value }
+
+     객체도 (json) 배열 (JAVA : Map)
+     JSON : {a : 1, b : 2, c : 3} >> for 문 사용 가능
+     3. for(let key in Object) { key }
+     3.1 객체 접근 : let obj = {a:1} >> obj.a >> 1
+
+     // 추가적으로...
+     // Array.isArray()
+     4. Array.forEach(function(value, index, array){})
+     5. Array.map()
+    */
+
+    function myFunc() {
+      let data = ["A", "B", "C", "D"];
+      let x = document.getElementById("demo2");
+      x.innerHTML = Array.isArray(data);
+    }
+    // 함수 호출
+    myFunc(); // true!
+
+    let txt = "";
+    let numbers = [45, 4, 9, 16, 25];
+    // array.forEach(function(currentValue, index, arr), thisValue)
+
+    //니가 가지고 있는 배열의 개수만큼 반복할거야
+    //호출 되었을 때 PARAMETER를 통해서 정보 얻음
+    //array.forEach(function(curentValue, index, arr), thisValue)
+    function myFunc2(value, index, array) {
+        txt = "(" + value + ")" + "[" + index + "]" + "[" + array + "]";
+        console.log(txt);
+    }
+
+    numbers.forEach(myFunc2) //callback, 재귀
+    numbers.forEach(myFunc3())
+    
+    //let numbers = [45,4,9,16,25];
+    //https://www.w3schools.com/jsref/jsref_map.asp
+
+    function myFunc3(){
+        console.log()
+    }
+
+
     </script>
 </body>
 </html>

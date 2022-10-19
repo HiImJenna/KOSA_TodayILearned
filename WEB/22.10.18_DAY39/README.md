@@ -136,4 +136,51 @@ console.log(Myjson);
 console.log(Myjson.name); //접근: 객체 속성명
 console.log(Myjson["name"]); //접근 : 객체["속성명"] 암기
 ```
+<br>
 
+### Q) JSON으로 이미지 슬라이드 만들기
+[문제]  
+```js
+"m" 값을 가지고 와서 https:\/\/live.staticflickr.com\/65535\/52421936483_165a532d02_m.jpg
+배열에 넣으세요
+let images = [];
+슬라이드 만들기
+```
+```js
+<script>
+window.onload=function(){
+    let images= [];
+
+    for(let index in data.items) {
+        images.push(data.items[index].media.m);
+    }
+
+    
+    let index = 1;
+
+    document.getElementById("prv").addEventListener("click", function(){
+        if(index == 1) {
+            index = images.length;
+        }
+
+        document.getElementById("imgs").src = images[--index];
+    });
+
+    document.getElementById("next").addEventListener("click", function(){
+        if(++index == images.length){ 
+            index = 0;
+        }
+
+        document.getElementById("imgs").src = images[index];
+    });
+}
+</script>
+```
+</head>
+<body>
+    <h3>JSON API 슬라이드</h3>
+    <img src="anna.png" alt="이미지를 로드하는데에 실패했습니다." id="imgs" width="300" height="300">
+    <hr>
+    <a href="#" id="prv">이전</a>||<a href="#" id="next">다음</a>
+</body>
+</html>
