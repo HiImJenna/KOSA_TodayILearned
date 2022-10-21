@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+
+        <h3> Drag/Drop </h3>
+         <p style="text-align: center;"></p>
+
+        <script>
+            function allowDrop(ev) {
+              ev.preventDefault();
+            }
+            
+            function drag(ev) {
+              ev.dataTransfer.setData("text", ev.target.id);
+            }
+            
+            function drop(ev) {
+              ev.preventDefault();
+              var data = ev.dataTransfer.getData("text");
+              ev.target.appendChild(document.getElementById(data));
+            }
+          </script>
+
+        <div id="div1"> <!--올라프 배경-->
+            <p style="font-family: Gungsuh, sans-serif; margin-top: 50px; margin-left: 50px;"> my nose ... </p>
+            <div id="div0" ondrop="drop(event)" ondragover="allowDrop(event)"> <!--코 위치-->
+            </div>
+        </div>
+
+
+</main>
+
+</body>
+</html>
+
+    <div id="div2" style="padding: 20px"> <!--코 원래 위치-->
+    <img id="drag1" src="nose.png" draggable="true" ondragstart="drag(event)" width="106" height="100">
+    </div>
