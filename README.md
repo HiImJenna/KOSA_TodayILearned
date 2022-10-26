@@ -186,5 +186,71 @@
 ### DAY32
 1. [HTML](https://github.com/HiImJenna/KOSA/tree/main/WEB/22.10.06_DAY32#2-html-)
 
+### DAY33
+1. [CSS](https://github.com/HiImJenna/KOSA/tree/main/WEB/22.10.07_DAY33#1-css-)
+2. [HTML-table](https://github.com/HiImJenna/KOSA/tree/main/WEB/22.10.07_DAY33#2-html---table-)
+3. [HTML - List](https://github.com/HiImJenna/KOSA/tree/main/WEB/22.10.07_DAY33#3-html---list-)
+4. [HTML - Layout ](https://github.com/HiImJenna/KOSA/tree/main/WEB/22.10.07_DAY33#4-html---layout-)
+5. [HTML - Form](https://github.com/HiImJenna/KOSA/tree/main/WEB/22.10.07_DAY33#5-html---form-)
+
+### DAY34
+1. [데이터 모델링](https://github.com/HiImJenna/KOSA/tree/main/WEB/22.10.11_DAY34#1-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EB%AA%A8%EB%8D%B8%EB%A7%81-)
+2. [CSS](https://github.com/HiImJenna/KOSA/tree/main/WEB/22.10.11_DAY34#2-css-)
+
+### DAY35
+1. [Javascript](https://github.com/HiImJenna/KOSA/tree/main/WEB/22.10.12_DAY35#1-javascript-)
+2. [Javascript 변수](https://github.com/HiImJenna/KOSA/tree/main/WEB/22.10.12_DAY35#2-javascript-%EB%B3%80%EC%88%98-)
+3. [Javascript - DOM script](https://github.com/HiImJenna/KOSA/tree/main/WEB/22.10.12_DAY35#3-javascript---dom-script--)
+4. [JavaScript - 연산자](https://github.com/HiImJenna/KOSA/tree/main/WEB/22.10.12_DAY35#4-javascript---%EC%97%B0%EC%82%B0%EC%9E%90)
+
+5. [JavaScript - function](https://github.com/HiImJenna/KOSA/tree/main/WEB/22.10.12_DAY35#5-javascript---function-)
+6. [JavaScript - pop up](https://github.com/HiImJenna/KOSA/tree/main/WEB/22.10.12_DAY35#6-javascript---pop-up-)
+
+### DAY36
+1. [Javascript - Function](https://github.com/HiImJenna/KOSA/tree/main/WEB/22.10.13_DAY36#1-javascript---function-)
+2. [Event](https://github.com/HiImJenna/KOSA/tree/main/WEB/22.10.13_DAY36#2-event-)
+3. [Javascript - 내장 객체](https://github.com/HiImJenna/KOSA/tree/main/WEB/22.10.13_DAY36#3-javascript---%EB%82%B4%EC%9E%A5-%EA%B0%9D%EC%B2%B4-)
+
+### DAY37
+1. [DOM](https://github.com/HiImJenna/KOSA/tree/main/WEB/22.10.14_DAY37#1-dom-)
+
+### DAY38
+1. [Javascript - DOM 계층트리](https://github.com/HiImJenna/KOSA/tree/main/WEB/22.10.17_DAY38#1-javascript---dom-%EA%B3%84%EC%B8%B5%ED%8A%B8%EB%A6%AC-)
+2. [Javascript - event](https://github.com/HiImJenna/KOSA/tree/main/WEB/22.10.17_DAY38#2-javascript---event-)
+3. [ JavaScript - Object](https://github.com/HiImJenna/KOSA/tree/main/WEB/22.10.17_DAY38#4-javascript---object-)
+
+
+### DAY39
+1. [데이터 모델링 - 정규화](https://github.com/HiImJenna/KOSA/tree/main/WEB/22.10.18_DAY39#1-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EB%AA%A8%EB%8D%B8%EB%A7%81---%EC%A0%95%EA%B7%9C%ED%99%94-)
+2. [JSON](https://github.com/HiImJenna/KOSA/tree/main/WEB/22.10.18_DAY39#2-json-)
+
+### DAY40
+1. [오전 조별 과제 ](https://github.com/HiImJenna/KOSA/tree/main/WEB/22.10.19_DAY40#1-%EC%98%A4%EC%A0%84-%EC%A1%B0%EB%B3%84-%EA%B3%BC%EC%A0%9C-)
+1. [ETC Try](https://github.com/HiImJenna/KOSA/tree/main/WEB/22.10.19_DAY40#2-etc-try-)
+1. [Arrow Function](https://github.com/HiImJenna/KOSA/tree/main/WEB/22.10.19_DAY40#3-arrow-function-)
+
+### DAY41
+1. [MVC](https://github.com/HiImJenna/KOSA/tree/main/WEB/22.10.20_DAY41#1-mvc-)
+
+### DAY42
+
+### DAY43
+1. [JSP 기본 개체와 영역](https://github.com/HiImJenna/KOSA/tree/main/WEB/22.10.24_DAY43#1--jsp-%EA%B8%B0%EB%B3%B8-%EA%B0%9C%EC%B2%B4%EC%99%80-%EC%98%81%EC%97%AD)
+2. [Cookie](https://github.com/HiImJenna/KOSA/tree/main/WEB/22.10.24_DAY43#2--cookie-)
+3. [Session](https://github.com/HiImJenna/KOSA/tree/main/WEB/22.10.24_DAY43#3--session-)
+
+### DAY44
+1. [Tomcat제공(WAS)](https://github.com/HiImJenna/KOSA/tree/main/WEB/22.10.25_DAY44#1-tomcat%EC%A0%9C%EA%B3%B5was-)
+2. [Servlet](https://github.com/HiImJenna/KOSA/tree/main/WEB/22.10.25_DAY44#2-servlet-)
+
+### DAY45
+
+### DAY46
+
+
+
+
+
+
 
 </details>
