@@ -1,0 +1,22 @@
+1.Model2 기반의 MVC 채턴 적용 웹 프로젝트
+
+
+Model11>> 요청을 jsp받아서 처리
+Model2 >> 요청을 servlet이 받아서 처리
+
++MVC
+
+Model : JAVA class > DTO. DAO(JDBC)
+View : html or JSP(EL & JSTL)
+Controller : Servlet(웹용 자바파일)
+--------------------------------------------
+JSP 없던 시절
+
+create table memo{
+    id varchar2(20) not null,
+    email varchar2(20) not null,
+    contents varchar2(100)
+};
+
+1. 드라이버 : ojdbc6.jar
+2. 
