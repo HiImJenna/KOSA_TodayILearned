@@ -2,14 +2,14 @@
 ----------------
 <br>
 
-## 1. EMP 과제 refactoring ✔
-[문제]  
+## 1. EMP 과제  ✔
+### [문제]  
 ```
 ajax : Ex06_Emp_Search를 통해서 사번을 제공해서 비동기 UI 디자인된 페이지를 받아서 화면에 출력
 
 1. EmpSearch.jsp(비동기로 요청 보냄) -> servlet -> forward(ui.jsp) -> 비동기 responseText -> EmpSea
 ```
-[결과]  
+### [결과]  
 - 조회 전!
 ![image](https://user-images.githubusercontent.com/111114507/198520206-6d49d4ab-90a2-4d9a-a249-9d1c4aa70d49.png)
 <br>
@@ -18,7 +18,7 @@ ajax : Ex06_Emp_Search를 통해서 사번을 제공해서 비동기 UI 디자�
 ![image](https://user-images.githubusercontent.com/111114507/198528319-6fd15d6e-a236-4629-a6e9-2f8aa0d844b8.png)
 <br>
 
-[나의 풀이 과정]  
+## 1. EMP 과제 refactoring ✔
 ### 🔔 1. DAO, DTO, 기존 부트스트랩 자료 등등을 새로운 Dynamic Web Project에 세팅해줌
 ![image](https://user-images.githubusercontent.com/111114507/198530203-31f8b0e2-f675-4164-bb36-0925bb5a2bfe.png)
 <br>
@@ -111,7 +111,7 @@ ajax : Ex06_Emp_Search를 통해서 사번을 제공해서 비동기 UI 디자�
 - 처음에는 EMP 목록을 top에 생성해서 클릭시 비동기로 데이터를 불러오려 했지만 번거로운 것 같아, bootstrap 메인 소스에 바로 비동기 소스를 가져와서 가공했음!
 <br>
 
-#### < 비동기 - window.onload = function() >
+### < 비동기 - window.onload = function() >
 [before]  
 ```javascript
 window.onload = function(){
@@ -136,7 +136,7 @@ window.onload = function(){
 - data 받아오는 액션이 있을 때(검색, 옵션 선택 등등)에는 [before]처럼 .value, data 받기를 해주는 코드가 필요함
 <br>
 
-#### < 비동기 - function handlerStateChange() >
+### < 비동기 - function handlerStateChange() >
 ```javascript
 function handlerStateChange(){
     if(httpReq.readyState == 4){
@@ -157,7 +157,7 @@ function handlerStateChange(){
 - 두 코드의 연관성을 잘 모르겠음..
 <br>
 
-#### < 비동기 - function sendData(data) >
+### < 비동기 - function sendData(data) >
 [before]  
 ```javascript
 httpReq = getInstance();
