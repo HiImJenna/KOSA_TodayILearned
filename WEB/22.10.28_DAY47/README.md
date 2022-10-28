@@ -18,7 +18,7 @@ ajax : Ex06_Emp_Search를 통해서 사번을 제공해서 비동기 UI 디자�
 ![image](https://user-images.githubusercontent.com/111114507/198528319-6fd15d6e-a236-4629-a6e9-2f8aa0d844b8.png)
 <br>
 
-## 1. EMP 과제 refactoring ✔
+## 2. EMP 과제 refactoring ✔
 ### 🔔 1. DAO, DTO, 기존 부트스트랩 자료 등등을 새로운 Dynamic Web Project에 세팅해줌
 ![image](https://user-images.githubusercontent.com/111114507/198530203-31f8b0e2-f675-4164-bb36-0925bb5a2bfe.png)
 <br>
