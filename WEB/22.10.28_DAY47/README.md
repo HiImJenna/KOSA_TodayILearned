@@ -23,6 +23,8 @@ ajax : Ex06_Emp_Search를 통해서 사번을 제공해서 비동기 UI 디자�
 ![image](https://user-images.githubusercontent.com/111114507/198530203-31f8b0e2-f675-4164-bb36-0925bb5a2bfe.png)
 <br>
 
+<br>
+
 ### 🔔 2. Main 파일 작업
 <details>
 <summary>Main code</summary>
@@ -111,7 +113,7 @@ ajax : Ex06_Emp_Search를 통해서 사번을 제공해서 비동기 UI 디자�
 - 처음에는 EMP 목록을 top에 생성해서 클릭시 비동기로 데이터를 불러오려 했지만 번거로운 것 같아, bootstrap 메인 소스에 바로 비동기 소스를 가져와서 가공했음!
 <br>
 
-### < 비동기 - window.onload = function() >
+### < window.onload = function() >
 [before]  
 ```javascript
 window.onload = function(){
@@ -136,7 +138,7 @@ window.onload = function(){
 - data 받아오는 액션이 있을 때(검색, 옵션 선택 등등)에는 [before]처럼 .value, data 받기를 해주는 코드가 필요함
 <br>
 
-### < 비동기 - function handlerStateChange() >
+### < function handlerStateChange() >
 ```javascript
 function handlerStateChange(){
     if(httpReq.readyState == 4){
@@ -157,7 +159,7 @@ function handlerStateChange(){
 - 두 코드의 연관성을 잘 모르겠음..
 <br>
 
-### < 비동기 - function sendData(data) >
+### < function sendData(data) >
 [before]  
 ```javascript
 httpReq = getInstance();
@@ -181,3 +183,168 @@ function sendData(){
 - "Servlet?EMP=" + data => 마찬가지인 이유로 전체조회이기에 필요 없음
 <br>
 
+<br>
+
+### 🔔 3. Servlet 파일 작업
+<details>
+<summary>Servlet code</summary>
+
+```java
+package com;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.List;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import DAO.EmpDAO;
+import DTO.Emp;
+@WebServlet("/Servlet")
+public class Servlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    public Servlet() {
+        super();
+    }
+
+    private void doProcess(HttpServletRequest request, HttpServletResponse response , String method) throws ServletException, IOException {
+    	//1. 한글처리
+    	request.setCharacterEncoding("UTF-8");
+        response.setContentType("text/html;charset=UTF-8"); // 클라언트에게 전달한 페이지의 정보 구성
+        PrintWriter out = response.getWriter();
+        
+    	//2. 요청받기 (데이터) request
+    	String data = request.getParameter("EMP");
+    	System.out.println(data);
+    	
+    	//->여기 필요 없어짐
+    	
+    	//3. 요청판단
+		 String msg="";
+
+		 //java 파일 용이 (DAO , DTO)
+		 EmpDAO edao = new EmpDAO();
+		 Emp emp = new Emp();
+		 
+		 
+		 List<Emp> list = edao.getEmpAllList();
+		 System.out.println(list);
+
+		//4. 데이터 저장
+		 request.setAttribute("emplist", list);
+		 
+		//5. view 페이지 설정
+		//뷰 지정하기 (Dispatcher)
+		RequestDispatcher dis = request.getRequestDispatcher("/Team2_Main_EMP.jsp");
+		 
+		 
+		//6. view 데이터 전달(forward)
+		 dis.forward(request, response);
+
+		 }
+    
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		doProcess(request, response, "GET");
+	}
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		doProcess(request, response, "POST");
+	}
+
+}
+```
+</details>
+<br>
+
+### < doProcess(...) >
+[before]
+```java
+//2. 요청받기 (데이터) request
+String data = request.getParameter("EMP");
+System.out.println(data);
+ ```
+
+ [after]
+ ```java
+ 아예 필요가 없어짐!
+ ```
+- 비동기의 function sendData(data)에서 'httpReq.open("POST","Servlet?EMP=" + data);'을 'httpReq.open("POST","Servlet");'으로 수정하며 'EMP'를 뺐기에 요청받을 데이터가 사라짐
+<br>
+
+<hr>
+
+```java
+//3. 요청판단
+    String msg="";
+    //java 파일 용이 (DAO , DTO)
+    EmpDAO edao = new EmpDAO();
+    Emp emp = new Emp();
+    
+    List<Emp> list = edao.getEmpAllList();
+    System.out.println(list);
+
+//4. 데이터 저장
+    request.setAttribute("emplist", list);
+```
+- 3번에서 DAO, DTO를 생성해서 SQL에 있는 EMP 테이블 불러옴
+- 그 다음 DAO에 있던 getEmpAllList()를 통해 전체 리스트 데이터를 'list'에 저장
+- 3번에서 생성된 'list'를 setAttribute로 "emplist"에 저장시켜줌
+<br>
+
+```java
+//5. view 페이지 설정
+//뷰 지정하기 (Dispatcher)
+RequestDispatcher dis = request.getRequestDispatcher("/Team2_Main_EMP.jsp");
+```
+- 화면에 띄워줄 파일 'Team2_Main_EMP.jsp' 을 생성하고 Dispatcher으로 연결해줌
+<br>
+
+<br>
+
+### 🔔 4. Team_Main_EMP 파일 작업
+<details>
+<summary>Team_Main_EMP</summary>
+
+```java
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">empno</th>
+      <th scope="col">ename</th>
+      <th scope="col">job</th>
+      <th scope="col">mgr</th>
+      <th scope="col">hiredate</th>
+      <th scope="col">sal</th>
+      <th scope="col">comm</th>
+      <th scope="col">deptno</th>
+    </tr>
+  </thead>
+  
+  <tbody>
+  <c:forEach var="emplist" items="${emplist}" varStatus="status">
+      <tr>
+	      <td>${emplist.empno }</td>
+	      <td>${emplist.ename }</td>
+	      <td>${emplist.job }</td>
+	      <td>${emplist.mgr }</td>
+	      <td>${emplist.hiredate }</td>
+	      <td>${emplist.sal }</td>
+	      <td>${emplist.comm }</td>
+	      <td>${emplist.deptno }</td>
+    </tr>
+
+  </c:forEach>
+  </tbody>
+</table>
+```
+</details>
