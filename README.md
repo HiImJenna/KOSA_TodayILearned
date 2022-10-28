@@ -244,12 +244,16 @@
 2. [Servlet](https://github.com/HiImJenna/KOSA/tree/main/WEB/22.10.25_DAY44#2-servlet-)
 
 ### DAY45
+1. [EL 출력식](https://github.com/HiImJenna/KOSA/tree/main/WEB/22.10.26_DAY45#1-el-%EC%B6%9C%EB%A0%A5%EC%8B%9D-)
+2. [조별 과제](https://github.com/HiImJenna/KOSA/tree/main/WEB/22.10.26_DAY45#3-%EC%A1%B0%EB%B3%84-%EA%B3%BC%EC%A0%9C-)
 
 ### DAY46
+1. [JSTL](https://github.com/HiImJenna/KOSA/tree/main/WEB/22.10.27_DAY46#1-jstl-)
+2. [비동기](https://github.com/HiImJenna/KOSA/tree/main/WEB/22.10.27_DAY46#2-%EB%B9%84%EB%8F%99%EA%B8%B0-)
 
-
-
-
+### DAY47
+1. [EMP 과제](https://github.com/HiImJenna/KOSA/tree/main/WEB/22.10.28_DAY47#1-emp-%EA%B3%BC%EC%A0%9C--)
+2. [EMP 과제 refactoring](https://github.com/HiImJenna/KOSA/tree/main/WEB/22.10.28_DAY47#2-emp-%EA%B3%BC%EC%A0%9C-refactoring-)
 
 
 
