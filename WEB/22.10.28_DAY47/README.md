@@ -157,7 +157,7 @@ function handlerStateChange(){
     <p id="EMP"></p>
 ```
 - document.getElementById("EMP").innerHTML = httpReq.responseText;
-- '<p id="EMP"></p>'
+- \'<p id="EMP"></p>\'
 - httpReq.responseText : 화면에 출력되는 모든 텍스트 (${})를 낚아채서 여기에 저장.
 - 그 저장한 텍스트들을 "EMP"에 저장하고, 그것의 innerHTML 속성값을 httpReq.responseText 값으로 덮어씌움
 - 그래서 p 태그에 아이디값으로 EMP 묶어줘서 출력할 수 있게 -> p 뿐이 아니라 다른것도 적용 가능!!
