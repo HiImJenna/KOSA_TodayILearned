@@ -282,7 +282,6 @@ System.out.println(data);
 - 비동기의 function sendData(data)에서 'httpReq.open("POST","Servlet?EMP=" + data);'을 'httpReq.open("POST","Servlet");'으로 수정하며 'EMP'를 뺐기에 요청받을 데이터가 사라짐
 <br>
 
-<hr>
 
 ```java
 //3. 요청판단
@@ -339,15 +338,15 @@ RequestDispatcher dis = request.getRequestDispatcher("/Team2_Main_EMP.jsp");
   
   <tbody>
   <c:forEach var="emplist" items="${emplist}" varStatus="status">
-      <tr>
-	      <td>${emplist.empno }</td>
-	      <td>${emplist.ename }</td>
-	      <td>${emplist.job }</td>
-	      <td>${emplist.mgr }</td>
-	      <td>${emplist.hiredate }</td>
-	      <td>${emplist.sal }</td>
-	      <td>${emplist.comm }</td>
-	      <td>${emplist.deptno }</td>
+    <tr>
+        <td>${emplist.empno }</td>
+        <td>${emplist.ename }</td>
+        <td>${emplist.job }</td>
+        <td>${emplist.mgr }</td>
+        <td>${emplist.hiredate }</td>
+        <td>${emplist.sal }</td>
+        <td>${emplist.comm }</td>
+        <td>${emplist.deptno }</td>
     </tr>
 
   </c:forEach>
@@ -355,3 +354,4 @@ RequestDispatcher dis = request.getRequestDispatcher("/Team2_Main_EMP.jsp");
 </table>
 ```
 </details>
+- <c:forEach>로 배열을 돌면서 출력하도록!
