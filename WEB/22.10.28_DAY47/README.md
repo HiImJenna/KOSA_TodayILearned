@@ -25,6 +25,8 @@ ajax : Ex06_Emp_Search를 통해서 사번을 제공해서 비동기 UI 디자�
 
 <br>
 
+<hr>
+
 ### 🔔 2. Main 파일 작업
 <details>
 <summary>Main code</summary>
@@ -185,6 +187,9 @@ function sendData(){
 
 <br>
 
+<hr>
+
+
 ### 🔔 3. Servlet 파일 작업
 <details>
 <summary>Servlet code</summary>
@@ -306,6 +311,8 @@ RequestDispatcher dis = request.getRequestDispatcher("/Team2_Main_EMP.jsp");
 <br>
 
 <br>
+
+<hr>
 
 ### 🔔 4. Team_Main_EMP 파일 작업
 <details>
