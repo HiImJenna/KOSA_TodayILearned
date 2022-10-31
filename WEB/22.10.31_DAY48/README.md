@@ -55,7 +55,7 @@ desc mvcregister;
 -   1) write > /write > ServletWrite
 -   2) list > /list > ServletList
 - 요청마다 Controller 생성하지 말고 1개 (servlet 생성)
--   1) FrontController >> servet 1개 (모든요청판단) > 판단근거
+-   1) FrontController >> servet 1개 (모든요청판단) > 판단근거<br>
      ❕ 판단의 근거
       - command 방식 : 글쓰기(servlet.do?cmd=write), 글목록보기(servlet.do?cmd=list)
       				   if{cmd.equals("write")(글쓰기 작업 수행)}
