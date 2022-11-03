@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+	<script type="text/javascript">
+	/*
+	http://api.flickr.com/services/feeds/photos_public.gne?tags=raccoon&tagmode=any&format=json&jsoncallback=?
+	getJSON 비동기 요청보내세요
+	
+	요청 주소 : http://api.flicker.com/services/feeds/photos_public.gne?jsoncallback=?
+	
+	JSON객체 가공 		
+	tags=[input 태그에서 값을 가지고 오세요]&tagmode=any&format=json		
+    
+	받은데이터는 <img> 태그를 동적으로 생성하고 src 속성에 사진을 넣고 
+	id="images" 인 div에 append 하세요
+	
+	*/
+	$(function(){
+		  $('#btn').click(function(){
+			 const flickerAPI = "https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?" 
+			 //tags=raccoon&tagmode=any&format=json
+			 const a={tags:$('#search').val() ,tagmode:"any" ,format:"json"}
+			 console.log(data);
+			 $.getJSON(flickerAPI,a,function(data,textStatus,xhr){
+				  //console.log(data);
+				  //console.log(textStatus);
+				  //console.log(xhr.readyState);
+				  
+				  $('#images').empty();
+				  $.each(a.items, function(index,obj){
+					 $('<img>').attr("src",obj.media.m).appendTo("#images");
+					 //img 태그를 생성하고 src 속성에 이미지 경로 설정 div append
+				  });
+			 });
+		  });
+	  });	
+	</script>
+</head>
+<body>	
+		<input type="text" id="search">
+		<input type="button" value="검색하기" id="btn">
+		<div id="images"></div>
+</body>
+</html>

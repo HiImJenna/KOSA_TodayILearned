@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			//jQuery.getJSON( url [, data ] [, success ] )
+			//기본 옵션 : dataType >> JSON 설정되어 있어요
+			//dataType:"JSON", 
+			$('#btn .btnload').click(function(){
+				$.getJSON("Ex06_json.json",function(data){
+					//응답이 왔고 응답이 정상이라면
+					console.log(data);
+					//$.each(data,function(index ,obj){
+						  //마음대로 가공
+					//})
+				});
+			});
+		});
+	</script>
+</head>
+<body>
+		<div id="btn">
+			<div class="btnload">JSON DATA LOAD</div>
+		</div>
+		<div id="display"></div>
+</body>
+</html>

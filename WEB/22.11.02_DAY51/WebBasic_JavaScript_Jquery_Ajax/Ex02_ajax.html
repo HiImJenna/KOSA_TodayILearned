@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script type="text/javascript">
+   /*
+         low-lever interface 비동기 함수 (jquery.ajax() , $.ajax())
+         $.ajax(url,[settings]);
+   
+         https://api.jquery.com/jQuery.ajax/ API 문서를 통해서 다양한 옵션 확인(구글)
+   
+         url : 요청주소
+         [settings] > 여러가지 옵션 >   {json객체 표현}
+         
+         옵션
+         dataType : 서버가 클라이언트에게 응답하는 데이터 형식 정의
+         Text : json , script , html , text >> responseText
+         xml : xml(responseXml)
+   */
+   $(function(){
+      $('#message').click(function(){
+         //비동기 함수 호출
+         $.ajax(
+               {
+                  url:"Ex02_Server_menu.html",
+                  dataType:"html", //서버가 클라이언트에 응답하는 데이터는 순수한 html형식
+                  success:function(responsetext){//응답이 왔고 .. 그 응답이 정상건이라면 자동호출 콜백
+                     $('#menudiv').html($(responsetext).find('li'));   
+                  }
+               }         
+         );
+      });
+   });
+
+</script>
+</head>
+<body>
+      <div id="menudiv">
+            <a href="#" id="menu1">클릭</a>
+      </div>
+      <span id="message">클릭하세요</span>
+</body>
+</html>

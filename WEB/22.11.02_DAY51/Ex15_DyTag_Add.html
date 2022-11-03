@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="UTF-8">
+   <title>Insert title here</title>
+   <style type="text/css">
+      .my{background-color : tomato}
+   </style>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <script type="text/javascript">
+      $(function(){ //모든 요소가 로딩되고 나서
+         $('#btn1').on('click',function(){
+            ptag = $('<p></p>', {
+                            'class' : 'my',
+                            'text' : '동적추가',
+                            'click' : function(){ $(this).css('background','lime');
+                            }
+            });
+            $(ptag).appendTo($('#result1')); //appendTo(target)
+         });
+      
+         $('#btn2').on('click',function(){
+            ptag = $('<img>', { 'src' : 'images/당근.jpg',
+                           'alt' : '이미지',
+                           'width' : '150',
+                           'height' : '150',
+                           'click' : function(){ $(this).css('background','lime');
+                          }
+            });
+            $(ptag).appendTo($('#result2')); //appendTo(target)
+         });
+      });
+   </script>
+</head>
+<body>
+   <div>
+      <h3>버튼 클릭시 동적태그 생성 추가하기</h3>
+      <input type="button" value="확인" id="btn1">
+      <div id="result1"></div>
+   </div>
+   <div>
+      <h3>버튼 클릭시 동적태그 생성 추가하기</h3>
+      <input type="button" value="확인" id="btn2">
+      <div id="result2"></div>
+   </div>
+   
+</body>
+</html>

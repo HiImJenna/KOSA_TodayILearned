@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Document</title>
+    <script>
+        $(function () {
+            $('#btn').click(function () {
+                $.get(
+                    "Ex04_Company.xml",
+                    function (data) { // 응답이 왔고.. 그 응답이 정상
+                        // 정상이라면
+                        console.log(data);
+                        $('#display').empty();
+                        //console.log($(data).find('Company'));
+                        //return Array
+                        // 여러개 $.each() $().each
+                        $(data).find('Company').each(function(){
+                            console.log("this : " + this);
+                            console.log(this);
+                            let entry = $(this);
+                            let html = "<div>" + entry.attr('CompanyType') + "</div>";
+                                html += "<div>" + entry.find('CompanyName').text() + "</div>";
+                                html += "<div>" + entry.find('CompanyNumber').text() + "</div>";
+                                html += "<div>" + entry.find('CompanyAddress').text() + "</div>";
+                                html += "<div>" + entry.find('Name').text() + "</div>";
+                            $('#display').append(html);
+                        })
+                    }
+                )
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <input type="button" id="btn" value="회사소개">
+    <div id="display" style="background-color: gray;">DATA</div>
+</body>
+
+</html>
