@@ -194,8 +194,57 @@ $('input').blur(function(){ //커서가 나갔을 때
 <br>
 
 ## 4. jQuery method ✔
+- addClass() - Adds one or more classes to the selected elements
+- removeClass() - Removes one or more classes from the selected elements
+- toggleClass() - Toggles between adding/removing classes from the selected elements
+- css() - Sets or returns the style attribute
+```javascript
+$('#btnclick').on('mouseover',function(){
+    document.getElementById("btnclick").style.backgroundColor="red";
+});
+
+$('#btnclick').on('mouseout',function(){
+    document.getElementById("btnclick").style.backgroundColor="white";
+});
+
+$('#btnclick2').on('click',function(){
+    $('#btnclick').off('click');
+});
+
+//jquery 좋아하는 코드 parameter 객체(json)
+$('#stylediv').on(
+    {
+        mouseover:function(){ $('#stylediv').addClass('greencolor');  },
+        mouseout:function(){
+            $('#stylediv').removeClass('greencolor');
+            $('#stylediv').addClass('bluecolor');  
+        }
+    }		
+)
+
+```
+<br>
 
 ## 5. jQuery content ✔
+```javascript
+$(function(){
+    $('#btn1').click(function(){
+        alert("text : " + $('#test').text()); //getter
+    });
+    
+    $('#btn2').click(function(){
+        alert("html : " + $('#test').html()); //getter (태그인정)
+    });
+    
+    $('#btn3').click(function(){
+        //$('#test').html("<div>AAAAA</div>");
+        $('#test').html("<div>AAAAA</div>");
+        $('#test').text("<div>AAAAA</div>");
+    });
+});
+
+```
+<br>
 
 ## 6. jQuery Form ✔
 ```javascript
@@ -230,7 +279,6 @@ isF2 태그에 선택된 요소의 값들을 모두 출력 (hint : array)
 ```
 
 ```javascript
-<script>
 console.log(data);
 $('#btnok').click(function(){
     const data = $('#isF2').val();
@@ -239,6 +287,43 @@ $('#btnok').click(function(){
     console.log("value : " + data[index]);
     }
 }
-</script>
-
 ```
+<br>
+
+## 7. jQuery each ✔
+### 🔔 [javascript]
+1. for(let index in Arrays){Array[index]}
+2. Object(JSON) : for(let key in jsonObj){jsonobj[key]}
+3. array.forEach(function(value,index,array){})     추가) array.map()...
+<br>
+
+### 🔔[jQuery] $().each() 반복문 //선택된 요소를 반납하겠다.
+1. $(selector).each(function(){});  >> ex) $('p').each(function(){ this활용 });
+2. $(selector).each(function(index){ this활용 });
+3. $(selector).each(function(index, element){ element });  <- 제일 많이 쓰이는것 ^^
+<br>
+
+### 🔔[jquery] $.each()
+1. $.each(Array or Object, function(){ this 활용 });
+2. $.each(Array or Object, function(index){ this 활용 });
+3. $.each(Array or Object, function(index, element){ this 활용 });
+<br>
+
+### 🔔parameter JSON 객체라면
+```javascript
+let obj = {name :"홍길동", age : 100};
+$(obj).each(function(key, value){value});
+$.each(obj, function(key, value){value};  
+```
+<br>
+
+## 7. jQuery Append ✔
+- append() - Inserts content at the end of the selected elements
+- prepend() - Inserts content at the beginning of the selected elements
+- after() - Inserts content after the selected elements
+- before() - Inserts content before the selected elements
+<br>
+
+## 8. jQuery Append ✔
+- remove() - Removes the selected element (and its child elements) 자기자신삭제(자식제거)
+- empty() - Removes the child elements from the selected element 자식제거
