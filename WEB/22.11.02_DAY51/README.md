@@ -14,8 +14,6 @@ $(function(){
     //특정이벤트를 실행할때 순간 객체를 찾아서 연결 메서드를..
 });
 ```
-<hr>
-
 ```javascript
 <head>
     <meta charset="UTF-8">
@@ -349,8 +347,8 @@ $(function(){
 ```
 - API 제공 사이트에서 key값 발급 받기
 - 필수로 포함되어야하는 키값들 확인, ? 포함 형식이면 Q1처럼, 아니라면 구분이 불가능하기에 Q2 풀이처럼
-1) /1/ : 이게 필수로 포함되어야하는 START_INDEX 값인데 이걸 바로 링크에 적어줌
-2) /" + $('#search').val(); : 검색한 값이 END_INDEX가 되도록
+- /1/ : 이게 필수로 포함되어야하는 START_INDEX 값인데 이걸 바로 링크에 적어줌
+- /" + $('#search').val(); : 검색한 값이 END_INDEX가 되도록
 - url값을 data에 저장하고, 그 data의 SearchParkInfoService, row로
 - console.log(this.MAIN_PLANTS) : this는 ata.SearchParkInfoService.row, 이것의 MAIN_PLANTS를 콘솔에 출력하기
 
