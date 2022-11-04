@@ -8,11 +8,29 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 	<script type="text/javascript">
 
+    $(function(){
+        $('#btn').click(function(){
+            const url = "http://openapi.seoul.go.kr:8088/6d466751426b6b6938366d4c6d7842/json/SearchParkInfoService/1/" + $('#search').val(); 
+          
+            $.getJSON(url,function(data){
+                //console.log(data.SearchParkInfoService.row[0].MAIN_PLANTS)
 
+                $('#result').empty();
 
+                $.each(data.SearchParkInfoService.row, function(){
+					console.log(this.MAIN_PLANTS);
+                });
+            });
+        });
+    });
     </script>
+
 </head>
 <body>
-    
+
+    <input type="text" id="search">
+    <input type="button" value="api" id="btn">
+    <div id="result"></div>
 </body>
+
 </html>
