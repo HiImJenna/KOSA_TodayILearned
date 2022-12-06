@@ -94,3 +94,25 @@ MyBean m3 = context.getBean("mybean", MyBean.class);
     - return type Object (타입에 맞는 casting) <br>
     - 스프링 컨테이너 안에 객체들은 default로 singleton 가짐 <br>
     - 예외적으로 getbean() 이 new라는 작업을 할 수도 있음 (거의 사용하지 않음) <br>
+
+## 2. Annotation ✔
+- 클래스 , 필드 , 메서드 과 같은 프로그램 요소에 다양한 종류의 정보를 주는 방법
+- 장점 : 코드량 감소 
+- 단점 : 가독성 
+<br>
+
+### 💡 @Autowired 
+- Type 기반
+- 목적 : 의존관계를 자동설정할 때 사용하며 [타입을 이용]하여 의존하는 객체를 삽입해 준다. 
+- 그러므로 (IOC Container) 해당 타입의 빈객체가 존재하지 않거나 또는 2개 이상 존재할 경우 스프링은 예외를 발생시키게 된다.
+- 옵션 : required - @Autowired어노테이션을 적용한 프로퍼티에 대해 굳이 설정할 필요가 없는 경우에 false값을 주며 이때 해당 프로퍼티가 존재하지 않더라도 스프링은 예외를 발생시키지 않는다. (디폴트값은 true)
+<br>
+
+### 💡 @Qualifier
+- 목적 : @Autowired의 목적에서 동일 타입의 빈객체가 존재시 특정빈을 삽입할 수 있게 설정한다. 
+- 설정위치 : @Autowired 어노테이션과 함께 사용된다.
+- 추가설정 : 동일타입의 빈객체 설정에서 <qualifier value="[alias명]" />를 추가하여 준다.
+- 옵션 : name - alias명
+
+
+
