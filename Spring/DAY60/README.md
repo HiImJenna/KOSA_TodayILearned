@@ -90,7 +90,7 @@ MyBean m3 = context.getBean("mybean", MyBean.class);
 ```
 - 위의 getbean들은 모두 같은 주소값을 가져옴
 - <h3> getbean() </h3>
-    - 컨테이너 안에 있는 객체를 리턴 (new가 아님) 
-    - return type Object (타입에 맞는 casting) 
-    - 스프링 컨테이너 안에 객체들은 default로 singleton 가짐
-    - 예외적으로 getbean() 이 new라는 작업을 할 수도 있음 (거의 사용하지 않음)
+    - 컨테이너 안에 있는 객체를 리턴 (new가 아님) <br>
+    - return type Object (타입에 맞는 casting) <br>
+    - 스프링 컨테이너 안에 객체들은 default로 singleton 가짐 <br>
+    - 예외적으로 getbean() 이 new라는 작업을 할 수도 있음 (거의 사용하지 않음) <br>
