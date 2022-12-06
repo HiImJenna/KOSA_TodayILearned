@@ -106,13 +106,23 @@ MyBean m3 = context.getBean("mybean", MyBean.class);
 - 목적 : 의존관계를 자동설정할 때 사용하며 [타입을 이용]하여 의존하는 객체를 삽입해 준다. 
 - 그러므로 (IOC Container) 해당 타입의 빈객체가 존재하지 않거나 또는 2개 이상 존재할 경우 스프링은 예외를 발생시키게 된다.
 - 옵션 : required - @Autowired어노테이션을 적용한 프로퍼티에 대해 굳이 설정할 필요가 없는 경우에 false값을 주며 이때 해당 프로퍼티가 존재하지 않더라도 스프링은 예외를 발생시키지 않는다. (디폴트값은 true)
-<br>
+- 추가설정 : AutowiredAnnotationBeanPostProcessor 클래스를 빈으로 등록시켜줘야 한다. 
+- 해당 설정 대신에 <context:annotation-config> 태그를 사용해도 된다.
+ ```java
+<context:annotation-config>
+```
+- Annotation 사용에 필요한 모든 클래스를 한방에 객체로 만들어서 컨테이너에 올려 주는 역할
+- 장점 : 각각의 Annotation 사용시 별도의 빈객체 설명 할 필요 없다.
+- 단점 : 사용하지 않는 bean 자동 생성 된다
+ ```java
+    @Autowired 정상 동작 되지 않는 경우
+ ```
+1. injection 되는 타입 객체가 (bean) IOC 컨테이너 안에 없는 경우
+2. IOC 컨테이너 안에 같은 타입의 객체 여러개 존재하는 경우
+3. IOC 컨테이너 안에 같은 타입의 객체 여러개 존재 하더라도 bean 객체의 id 값이 setter 함수의 parameter 명과 동일하면 자동 주입 성공
+4. 반대 : @Resource (by name)
 
-### 💡 @Qualifier
-- 목적 : @Autowired의 목적에서 동일 타입의 빈객체가 존재시 특정빈을 삽입할 수 있게 설정한다. 
-- 설정위치 : @Autowired 어노테이션과 함께 사용된다.
-- 추가설정 : 동일타입의 빈객체 설정에서 <qualifier value="[alias명]" />를 추가하여 준다.
-- 옵션 : name - alias명
+<br>
 
 
 
