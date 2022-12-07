@@ -2,7 +2,41 @@
 ----------------
 <br>
 
-## 1. Spring 문법 ✔
+## 1. Spring 사용법 ✔
+
+### 스프링 사용법!
+
+스프링에 필요한 라이브러리 필요
+
+- beans
+- core
+- context
+- expression
+
+---
+
+1. 내가 필요한 클래스를 설계한다
+2. 스프링에필요한 객체들이 필요한 설정
+    - xml 파일 설정 (DIConfig.xml)
+    - annotation 설정
+3. xml 파일에 bean 만들고 필요한곳에서 getBean으로 가져오기
+
+---
+
+## 결론) 개발자가 NEW를 하지 않고 생성자가 꺼내서 쓰는 방식!
+
+```
+기존)
+어떤 객체가 필요하면 직접
+Emp emp = enw Emp() 사용
+
+스프링)
+xml 또는 annotation을 통해서 미리 객체를 생성해 놓고 사용하기
+
+>> 미리 모든 부품을 만들고 놓고 조립만 해라 그리고 사용해라 (스프링)
+```
+<br>
+
 ### 💡 Implement - MessageBean.java
 ```java
 public interface MessageBean {
@@ -95,7 +129,41 @@ MyBean m3 = context.getBean("mybean", MyBean.class);
     - 스프링 컨테이너 안에 객체들은 default로 singleton 가짐 <br>
     - 예외적으로 getbean() 이 new라는 작업을 할 수도 있음 (거의 사용하지 않음) <br>
 
-## 2. Annotation ✔
+## 2. IOC/DI ✔
+
+### IOC)
+
+IOC 컨테이너 (제어의 역전)
+내가 주도했던 코드에서 Spring 이 주체 .....
+
+- 작은 단위의 부품을 만들고 놓고 그 것을 조립하는 행위 (레고블럭)
+
+### DI)
+
+[DI개념]_1 : 의존성 주입 (의존 객체 주입)
+
+xml 설정에서 타입을 명시하지 않은 값은: 문자열
+
+```java
+기존)
+어떤 객체가 필요하면 직접
+Emp emp = enw Emp() 사용
+
+스프링)
+xml 또는 annotation을 통해서 미리 객체를 생성해 놓고 사용하기
+
+>> 미리 모든 부품을 만들고 놓고 조립만 해라 그리고 사용해라 (스프링)
+```
+
+## 3. Lombok
+```
+@getter/setter 등을 입력하고 컨트롤 + 스페이스바를 눌러 적용한다.
+
+@Data를 쓰면 getter/setter toString 등등 다 설정을 해준다.
+```
+<br>
+
+## 4. Annotation ✔
 - 클래스 , 필드 , 메서드 과 같은 프로그램 요소에 다양한 종류의 정보를 주는 방법
 - 장점 : 코드량 감소 
 - 단점 : 가독성 
