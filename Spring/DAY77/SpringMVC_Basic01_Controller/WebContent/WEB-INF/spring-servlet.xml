@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+<!-- bean 객체의 생성과 조립 -->
+<!-- id="" 객체의 이름 => Web에서는 url경로로 바뀜 -->
+
+<!-- 
+1. Tomcat 실행
+2. 클라이언트 요청 hello.do ....
+3. Spring 에서 <url-pattern>*.do</url-pattern> 설정에 따라서
+ 3.1 DispatcherServlet 객체 생성 >> KEY Spring이 DispatcherServlet 가지고 놀 수 있는 IOC컨테이너가 자동 생성
+ 3.2 spring-servlet.xml read 해서  >> IOC컨테이너 안에 >> 빈 객체를 생성하고 조립
+ 3.3 약속 (*-servlet.xml) 으로 >> spring-servlet.xml >> <servlet-name>spring</servlet-name>
+4. 컨테이너 안에 객체가 생성되고 주입이 되어 있어요 ...
+5. hello.do에 대해서 mapping 작업 >> 실행할 객체를 찾아요 >> id="/hello.do" >> handleRequest 함수 자동 실행
+6. handleRequest return >> ModelaANDD
+ -->
+
+
+
+
+
+	<bean id="/hello.do" class="kr.or.kosa.HelloController"></bean>
+	<bean id="/intro.do" class="kr.or.kosa.IntroController"></bean>
+	
+	<bean id="internalResourceViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+			<property name="prefix">
+				<value>/WEB-INF/views/</value>
+			</property>
+			<property name="suffix">
+				<value>.jsp</value>
+			</property>
+	</bean>
+</beans>
+
+
