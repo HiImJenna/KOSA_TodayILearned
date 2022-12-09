@@ -262,13 +262,14 @@
 <summary>Spring</summary>
 
 ### DAY75
-()
+(https://github.com/HiImJenna/KOSA/tree/main/TIL(Today_I_Learned)/Spring/DAY75#20221205-mon-)
 ### DAY76
-()
+(https://github.com/HiImJenna/KOSA/tree/main/TIL(Today_I_Learned)/Spring/DAY76#20221206-tue-)
 ### DAY77
-()
+(https://github.com/HiImJenna/KOSA/tree/main/TIL(Today_I_Learned)/Spring/DAY77#20221207-wed-)
 ### DAY78
-()
+(https://github.com/HiImJenna/KOSA/tree/main/TIL(Today_I_Learned)/Spring/DAY78#20221208-thu-)
 ### DAY79
-()
+(https://github.com/HiImJenna/KOSA/tree/main/TIL(Today_I_Learned)/Spring/DAY79#20221209fri-)\
+
 </details>
