@@ -143,8 +143,14 @@
 <br>
 
 
-## 3. AOP ✔
+## 2. AOP ✔
 ![image](https://user-images.githubusercontent.com/111114507/206629125-7b5d72d6-4f5b-4752-929e-e7c79f2dac58.png)
+<br>
+
+#### 보조업무(공통업무) cross-cutting-concern
+![image](https://user-images.githubusercontent.com/111114507/206650526-2b413c3d-6857-4481-b03a-bd1fa24f0e0f.png)
+<br>
+
 ### 💡 AOP 용어
 - 조인포인트(Joinpoint) : 횡단관심 모듈의 기능이 삽입되어 동작될 수 있는 위치 
 - 포인트컷(PointCut) : 어떤 클래스의 조인 포인트를 사용할 것인지 결정 
@@ -193,7 +199,20 @@
 	}
 ```
 - 만약 이런 함수가 100개라면 100개를 일일이 수정해야함 -> 불편
-#### [Java로 AOP]
+### 💡 JAVA로 AOP 적용시켜보기 예제
+#### [Calc.java]
+```java
+public interface Calc {
+	int ADD(int x, int y);
+	int MUL(int x, int y);
+	int SUB(int x, int y);
+
+}
+```
+- 인터페이스 (interface) : 이런 함수를 꼭 만들어라!라고 강제하는거임
+<br>
+
+#### [NewCalc.java]
 ```java
 
 public class NewCalc implements Calc {
@@ -224,7 +243,9 @@ public class NewCalc implements Calc {
 
 }
 ```
-- 훨씬 간단해짐
+- Calc를 implements 함
+- 공통업무를 제외한 기능만을 남겨둠, 그럼 그 공통 업무는 어디에서?
+- 'LogPrintHandler'에서!! 
 <br>
 
 #### [LogPrintHandler]
@@ -239,9 +260,8 @@ public class LogPrintHandler implements InvocationHandler {
       this.target = target;
    }
    
-   
    //invoke 함수가(ADD MUL SUB) 함수를 대리합니다.
-   //마치 진짜처럼 
+   //마치 진짜처럼
    @Override
    public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
    //보조 업무를 가지고 있다
@@ -266,8 +286,10 @@ public class LogPrintHandler implements InvocationHandler {
       log.info("[Time Log Method : ]" +sw.getTotalTimeMillis());
       return null;
    }
+}
 ```
 - 겹치는 부분을 처리하는 클래스를 따로 빼놓는다고 생각하면 될 듯
+- AOP 그림에서 노란 부분이 이 LogPrintHandler, 이 LogPrintHandler를 감싸는게 주황색 Proxy 객체임
 <br>
 
 #### [Program.java (메인)]
@@ -295,7 +317,7 @@ public class Program {
 ## 3. Maven ✔
 - new -> Spring Legacy Project
 ![image](https://user-images.githubusercontent.com/111114507/206641152-1581c93f-e7a7-4503-a321-995bb12dfc30.png)
-#### 만약 엑박이 뜬다면)
+#### 만약 엑박이 뜬다면?)
 ```
 * 상황 - Spring 실습 중에 프로젝트 새로 생성했는데 프로젝트 아이콘과 pom.xml 파일의 아이콘에 빨간 X 표시 발견.
 * 원인 - pom.xml에 새로운 dependency를 넣고 실행하면서 오래 걸리는 거 생각 못하고 다른 실행 흐름을 실행하다가 새로운 라이브러리를 다운로드 받지 못함.
