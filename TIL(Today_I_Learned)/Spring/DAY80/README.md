@@ -2,7 +2,7 @@
 ----------------
 <br>
 
-## 1. Container ✔
+# 1. Container ✔
 - 자바 객체(Bean)를 관리해주는 역할
 - Bean의 생성부터 소멸까지를 개발자 대신 관리해주는 곳
 - BeanFactory와 ApplicationContextfh 두 종류
@@ -86,7 +86,7 @@ ContextLoaderListener 가 생성한 컨텍스트가 root 컨텍스트가 되고 
 ```
 <br>
 
-## 2. JDBC API ✔
+# 2. JDBC API ✔
 ```
 기존 : Model2 기반의 MVC 패턴 : JDBC API 사용 (Connection , Statement , PrepareStatement ,ResultSet..)
 함수 사용 실행 : ResultSet rs = st.executeQuery();
@@ -122,10 +122,10 @@ public class MemberDAOImpl implements MemberDAO{
 <br>
 
 
-## 3. JDBC Template ✔
+# 3. JDBC Template ✔
 ![image](https://user-images.githubusercontent.com/111114507/207038949-214e1458-3f48-43bf-b819-83c039b4e3ab.png)<br>
 
-### 🔔 기본 Template 사용법!
+
 #### [web.xml]
 ```xml
   <welcome-file-list>
@@ -232,6 +232,14 @@ public class MemberDAOImpl implements MemberDAO{
 <bean id="" class="com.controller.LogoutController"></bean>
 <bean id="" class="com.controller.MemberSearchController"></bean>
 ```
+#### 편한 방식✨
+```xml
+<!-- 모든 컨트롤러가 공통 사용 DAO 빈 객체  참조-->
+<context:annotation-config />
+<context:component-scan base-package="ncontroller"  />
+<context:component-scan base-package="dao"  />
+```
+
 - bean으로 controller 생성. 하지만 이마저도 안할거임!!
 <br>
 
@@ -383,5 +391,3 @@ public class MemberDAOImpl implements MemberDAO{
 ```
 - new BeanPropertyRowMapper< MemberVO>(MemberVO.class) : 위의 예시(Object[] params = {id,name,pwd,email,age})처럼 하나씩 적어줘도 되지만 테이블의 한 줄을 통채로 가져올 경우에는 VO를 통채로 가져오는 것도 가능!!
 <br>
-
-
