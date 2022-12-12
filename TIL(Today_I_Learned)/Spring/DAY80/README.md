@@ -19,6 +19,7 @@ ContextLoaderListener 가 생성한 컨텍스트가 root 컨텍스트가 되고 
 ```
 <br>
 
+### 🔔 상위 컨테이너
 #### [web.xml]
 ```xml
   <listener>
@@ -33,7 +34,7 @@ ContextLoaderListener 가 생성한 컨텍스트가 root 컨텍스트가 되고 
 - ContextLoaderListener 생성하고 /WEB-INF/applicationContext.xmlfh 파일 지정 해주면 그 파일이 root container를 담는 곳이 됨
 <br>
 
-```xml
+### 🔔 상위 컨테이너```xml
   <servlet>
   	 <servlet-name>dispatcher</servlet-name>
   	 <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
@@ -53,6 +54,7 @@ ContextLoaderListener 가 생성한 컨텍스트가 root 컨텍스트가 되고 
 - 하위 Container 생성
 <br>
 
+### 🔔 하위컨테이너에서 한글필터 생성
 ```xml
   	<filter-name>Encoding Filter</filter-name>
   	<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
@@ -65,4 +67,22 @@ ContextLoaderListener 가 생성한 컨텍스트가 root 컨텍스트가 되고 
 - 모든 요청을 거쳐가게 해서 ... 한글 적용!
 <br>
 
+### 🔔 상위 컨테이너 applicationContext.xml
+```xml
+<!-- 공통 DB작업  -->
+  <bean id = "DriverManagerDataSource" class = "org.springframework.jdbc.datasource.DriverManagerDataSource">
+  	<property name = "driverClassName" value = "oracle.jdbc.driver.OracleDriver"></property>
+	<property name = "url" value = "jdbc:oracle:thin:@localhost:1521:xe"></property>
+	<property name = "username" value = "springuser"></property>
+	<property name = "password" value = "1004"></property>
+  </bean>
+```
+```xml
+<!-- JDBC Template -->
+  <bean id ="" class = "org.springframework.jdbc.core.JdbcTemplate">
+  	<property name = "dataSource" ref = "driverManagerDataSource"/>
+  </bean>
+```
+```xml
 
+```
