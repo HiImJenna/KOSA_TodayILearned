@@ -241,6 +241,7 @@ public class MemberDAOImpl implements MemberDAO{
 <context:component-scan base-package="ncontroller"  />
 <context:component-scan base-package="dao"  />
 ```
+- ncontroller 패키지 안에 있는 모든 Controller를 읽겠다! 하나하나 생성해줄 필요 없음
 <br>
 
 ```java
