@@ -232,6 +232,8 @@ public class MemberDAOImpl implements MemberDAO{
 <bean id="" class="com.controller.LogoutController"></bean>
 <bean id="" class="com.controller.MemberSearchController"></bean>
 ```
+- bean으로 controller 생성. 하지만 이 마저도 안할거임!!
+
 #### 편한 방식✨
 ```xml
 <!-- 모든 컨트롤러가 공통 사용 DAO 빈 객체  참조-->
@@ -239,8 +241,6 @@ public class MemberDAOImpl implements MemberDAO{
 <context:component-scan base-package="ncontroller"  />
 <context:component-scan base-package="dao"  />
 ```
-
-- bean으로 controller 생성. 하지만 이마저도 안할거임!!
 <br>
 
 ```java
@@ -322,10 +322,9 @@ public class JoinController {
 		}
 		
 		return view;
-
 	}
 }
- ```
+```
 - @RequestParam : RequestParam(가져올 변수의 이름) 데이터 타입, 가져온 데이터를 담을 변수
 ```java	
     private MemberDAO memberdao;
@@ -347,7 +346,6 @@ public class MemberDAOImpl implements MemberDAO{
    JdbcTemplate template = new JdbcTemplate();
    public void m() { template.execute("select...");}
    IOC 컨테이너 안에 Bean 으로 생성 되어 있어요
-   
    
    MemberDAOImpl 객체 JdbcTemplate 객체에 의존한다
    */
