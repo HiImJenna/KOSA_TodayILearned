@@ -135,6 +135,41 @@ password=1004
  	</insert>
  </sqlMap>
 ```
+```xml
+*** KEY POINT ***
+    select * from guest where name like '%hong%'
+  1) # [타입]에 대한 처리 : where name=#name# > name='김유신' (DB 쿼리가 실행시 'name')
+     >>ibatis >> #name#
+     >>Mybatis >> #{name}
+
+    # [타입]에 대한 처리 : where age=#age# > age=100
+
+  2) $ 있는 그래로 출력 : where name=$name$ > name=김유신 
+    >>Mybatis >> ${name}  >> #{name}
+
+    parameterClass="String" > #name# > 홍길동 > 결과 : '홍길동'
+    >where ename like '%#name#%' > '%'홍길동'%'  (x)
+    
+    parameterClass="String" > $name$ > 홍길동 > 결과 : 홍길동
+    >where ename like '%$name$%' > '%홍길동%'
+    
+    >> int >> #a# >> 100
+    >> String >> #a# >> '100'
+    
+    >> input 100
+    >> int >> $a$ >> 100
+    >> String >> $a$ >> 100
+
+    컬럼명 , 테이블명 > $컬럼명$
+    
+    select #{ename}  >> select 'ename'
+    
+    select ${ename}  >>  select ename ...
+    
+      <select id="getGuestSearch" resultMap="guestResult">
+	  	select * from guest where name like '%$value$%' 
+	  </select>
+```
 - id : DAO에서 불러올 메소드에서 지정해준 값과 같아야함
 - parameterClass="java.lang.String" : 문자열화, 인트화 (java.lang.int)
 - resultClass="Ibatis.dto.Emp" : 불러올 DTO의 경로
