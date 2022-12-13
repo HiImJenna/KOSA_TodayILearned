@@ -135,6 +135,15 @@ password=1004
  	</insert>
  </sqlMap>
 ```
+- id : DAO에서 불러올 메소드에서 지정해준 값과 같아야함
+- parameterClass="java.lang.String" : 문자열화, 인트화 (java.lang.int)
+- resultClass="Ibatis.dto.Emp" : 불러올 DTO의 경로
+- '#' : Ibatis를 사용하겠음, '' 붙여주겠음
+```xml
+<!-- 가명칭을 부여해서 객체의 별칭을 부여  -->
+<typeAlias alias="user" type="kosta.ibatis.dto.UserDto"/>
+```
+- 만약 DTO 이름이 너무 길 때는 위 코드처럼 겹치는 부분을 빼서 alias= " "으로 저장해 아래 친구들의 resultClass를 간단하게 적어줄 수 있음 (개발자는 귀찮다)
 ```xml
 *** KEY POINT ***
     select * from guest where name like '%hong%'
@@ -170,15 +179,7 @@ password=1004
 	  	select * from guest where name like '%$value$%' 
 	  </select>
 ```
-- id : DAO에서 불러올 메소드에서 지정해준 값과 같아야함
-- parameterClass="java.lang.String" : 문자열화, 인트화 (java.lang.int)
-- resultClass="Ibatis.dto.Emp" : 불러올 DTO의 경로
-- '#' : Ibatis를 사용하겠음, '' 붙여주겠음
-```xml
-<!-- 가명칭을 부여해서 객체의 별칭을 부여  -->
-<typeAlias alias="user" type="kosta.ibatis.dto.UserDto"/>
-```
-- 만약 DTO 이름이 너무 길 때는 위 코드처럼 겹치는 부분을 빼서 alias= " "으로 저장해 아래 친구들의 resultClass를 간단하게 적어줄 수 있음 (개발자는 귀찮다)
+- query문에서 like 쓸 때 주의하기 ❗
 <br>
 
 ### [DAO.java]
