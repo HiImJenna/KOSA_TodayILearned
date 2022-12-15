@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 
+	//게시물 개수
+	int getCount(String field, String query) throws ClassNotFoundException, SQLException;
+	
+	//전체 게시물
+	List<Notice> getNotices(int page, String field, String query) throws ClassNotFoundException, SQLException;
+	
+	//게시물 삭제
+	int delete(String seq) throws ClassNotFoundException, SQLException;
+	
+	//게시물 수정
+	int update(Notice notice) throws ClassNotFoundException, SQLException;
+	
+	//게시물 상세
+	Notice getNotice(String seq) throws ClassNotFoundException, SQLException;
+	
+	//게시물 입력
+	int insert(Notice n) throws ClassNotFoundException, SQLException;
+ -->
+
+<mapper namespace="dao.NoticeDao">
+	<!-- 게시물개수
+		int getCount(String field, String query) 
+	
+		1. parameter 1개 - 생략 / parameterType = "int"
+		2. parameter DTO 객체 : ParameterType= "vo.notice"
+		3. parameter DTO 아니고 2개 이상인 경우
+			3.1 hashMap >> map.put(key,value) >> parameterType = "hashMap"
+			3.2 mybatis는 parameter 값을 read할 때 param1, param2, param3 >> mybatis가 제공하는 키워드
+			
+			ex)getCount(String field, String query)
+			   param1 > filed
+			   param2 > query
+			   
+			   parameter 1개는 param 키워드 사용 불가
+	-->
+	
+	<select id = "getCount" resultType = "int">
+		SELECT COUNT(*) CNT FROM NOTICES WHERE ${param1} LIKE '%${param2}%'
+	</select>
+	
+	
+	<!-- 전체보기
+		List<Notice> getNotices(int page, String field, String query)
+		
+		int page 	 >> param1
+		String field >> param2
+		String query >> param3
+		
+		int srow = 1 + (page-1)*5;
+		int erow = 5 + (page-1)*5; 
+		
+	 -->
+	 
+	 <select id = "getNotices" resultType = "vo.Notice">
+	   SELECT * FROM
+	   (SELECT ROWNUM NUM, N.* FROM (
+	   SELECT * FROM NOTICES
+	   WHERE ${param2} LIKE '%${param3}%' ORDER BY REGDATE DESC) N);
+	   WHERE NUM BETWEEN 1+(${param1}-1)*5 AND (${param1}-1)*5 
+	 </select>
+	
+	<!-- 상세보기
+		Notice getNotice(String seq)
+		parameter 1개 생략 가능
+	 -->
+	  <select id = "getNotice" resultType = "vo.Notice">
+	  	  select seq, title, writer, content, regdate, hit, fileSrc, fileSrc2
+	  	  from notices
+	  	  where seq=#{seq}
+	  </select>
+	
+	<!-- 삭제
+		int delete(String seq)	
+	 -->
+	 <select id = "delete" resultType = "int">
+	 	delete from notices where seq=#{seq}
+	 </select>
+	 
+	 <!-- 수정
+	 	int update(Notice notice)
+	 	
+	 	게시물 수정
+	 	파일 수정 : null, null
+	 	1개 수정 : 1.jpg, null
+	 	특정한 값이 넘어오지 않으면 null값으로 처리하는 방법!! >> filesrc = #{fileSrc, jdbcType = VARCHAR}
+	  -->
+	  <update id = "update" parameterType = "vo.Notice">
+	  	update notices
+	  	set title = #{title},
+		  	content = #{content},
+		  	filesrc = #{fileSrc, jdbcType = VARCHAR},
+		  	filesrc2 = #{fileSrc2, jdbcType = VARCHAR}
+	  	where seq = ${seq}
+	  </update>
+	 
+	 <!-- 추가
+	 int insert(Notice n) 
+	  -->
+	 <insert id="insert" parameterType="vo.Notice">
+	 	<selectKey order = "BEFORE" keyProperty = "seq" resultType="String">
+	 		select max(to_number(seq))+1 from notices
+	 	</selectKey>
+	 		insert into notices(seq, title, content, writer, regdate, hit, filesrc, filesrc2)
+	 		values(#{seq}, #{title}, #{content}, 'kosauser', sysdate, 0, #{filesrc}, #{filesrc2})
+	 
+	 </insert>
+	 
+	 
+	 
+	 
+	 
+</mapper>
