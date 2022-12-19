@@ -73,7 +73,35 @@
  xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
   http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security.xsd">
 </beans>
+
+ <security:http auto-config="true">
+		<security:csrf disabled="true" />
+		<security:form-login 
+		                     login-page="/joinus/login.htm" 
+		                     default-target-url="/index.htm"  
+		                     authentication-failure-url="/joinus/login.htm?error" />
+		<security:logout 
+		                     logout-success-url="/index.htm" />
+		<security:intercept-url pattern="/customer/noticeDetail.htm" access="hasRole('ROLE_USER')"  />
+		<security:intercept-url pattern="/customer/noticeReg.htm"  access="hasRole('ROLE_ADMIN')" />
+		<!-- <security:access-denied-handler error-page="/login/accessDenied.do"/> -->
+	</security:http>
+	<security:authentication-manager>
+		<security:authentication-provider>
+			<security:user-service>
+					<security:user name="hong"  password="1004" authorities="ROLE_USER"/>
+					<security:user name="admin" password="1004" authorities="ROLE_USER,ROLE_ADMIN"/>
+			</security:user-service>
+			
+		</security:authentication-provider>
+		
+	</security:authentication-manager>
+
+</beans>
 ```
+- login-page : login 요청 시
+- default-target-url : login 성공 시
+- authentication-failure-url : login 실패 시
 <br>
 
 ### 3) web.xml에 필터 추가
@@ -88,7 +116,31 @@
      <url-pattern>/*</url-pattern>
    </filter-mapping>
 ```
+```xml
+<!-- The definition of the Root Spring Container shared by all Servlets and Filters -->
+<context-param>
+    <param-name>contextConfigLocation</param-name>
+    <param-value>
+    /WEB-INF/spring/root-context.xml
+   ******* /WEB-INF/spring/appServlet/security-context.xml  ****** >> 이거 추가해줌!!
+    </param-value>
+</context-param>
+```
 <br>
 
 # 3. Security 예제 ✔
+```jsp
+<se:authorize access="hasAnyRole('ROLE_ADMIN','ROLE_USER')" ><!-- if문 -->
+    <li>
+        <a href="${pageContext.request.contextPath}/logout">${loginuser}:로그아웃</a>
+        </li>
+</se:authorize>
+```
+- se:authorize : if문이라고 생각하면 됨
+<br>
 
+```java
+    //글 쓰기 Service
+   public String noticeReg(Notice n , HttpServletRequest request, Principal principal) {
+```
+- Principal : Session과 비슷...? 내일 추가 학습 필요!
