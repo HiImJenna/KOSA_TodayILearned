@@ -1,4 +1,4 @@
-# 2022.12.19.MON 📅
+# 2022.12.20.TUE 📅
 ----------------
 <br> 
 
@@ -206,7 +206,6 @@ public class MypageController {
 <br>
 
 #### 2) 회원정보 수정
-
 ```java
 @GetMapping("memberupdate.htm") 
 public String memberUpdate(Model model, Principal principal) {
