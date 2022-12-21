@@ -92,3 +92,51 @@ $('#ajaxBtn').click(function(){
    }
 ```
 ![image](https://user-images.githubusercontent.com/111114507/208804699-e4d8a04d-b18b-45ae-8773-f275c05b0db4.png)
+<br>
+
+# 2. Ajax - ResponseBody ✔
+#### [AjaxController.java]
+```java
+@RequestMapping("response3.kosa")
+public @ResponseBody Map<String, Object> add() {
+    
+    Map<String, Object> map = new HashMap<String, Object>();
+    map.put("result", "data");
+    map.put("hello", "world");
+    
+    return map;
+}
+```
+- 1 방식에서는 jsonview를 리턴하면 알아서 json객체로 바꿔줬다면, 2 방식에서는 @ResponseBody를 걸어주고 객체를 return 하면 그 return 값을 알아서 json으로 바꿔줌
+- 다른 방식이라고 생각하자
+<br>
+
+# 3. Ajax - RestController ✔
+#### [AjaxController.java]
+```java
+
+@RestController   //얘가 가진 모든 함수는 비동기 ResponseBody인 거야
+public class AjaxController {
+	@RequestMapping("restcon.ajax")
+	public List<Emp> ajaxResponseBody(){
+		
+		List<Emp> list = new ArrayList<Emp>();
+		
+		Emp e = new Emp();
+		e.setEmpno(9999);
+		e.setEname("손정원");
+		e.setJob("IT");
+		e.setSal(10000);
+		list.add(e);
+		
+		return list;
+	}
+	
+	@RequestMapping("view.ajax")
+	public String ViewPage() {
+		System.out.println("view.ajax");
+		return "view.ajax 문자열의 반환";
+	}
+} 
+```
+- @RestController 걸어주면 그 컨트롤러에 있는 모든 메소드를 Ajax로 처리하겠다는 뜻!
