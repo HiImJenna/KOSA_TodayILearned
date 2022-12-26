@@ -104,10 +104,6 @@ let [title, setTitle] = useState(["혜화 서커스", "강남 서커스", "홍�
 let [like, setLike] = useState([0,0,0,0]);
 let [count, setCount] = useState(0);
 
-// function change() {
-//   console.log(1);
-// }
-
 return (
   <div className="App">
   <div onClick={()=>{ setCount(count = count+1) 
