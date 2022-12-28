@@ -66,7 +66,6 @@ function Card(props){
 ### [Termimal]
 ```
  npm i react-router-dom@6
-
 ```
 <br>
 
@@ -93,3 +92,30 @@ root.render(
 </Routes>
 ```
 - url 뒤에가 path 값이면 ...
+
+## 💡 Route 안에 Route & Outlet
+### [App.js]
+```js
+<Route path='/event' element={<Event/>}>
+    <Route path='one' element={<div>1+1</div>}/>
+    <Route path='two' element={<div>포인트</div>}/>
+</Route>
+```
+- /event/one
+- /event/two
+<br>
+
+### [components/Event.js]
+```js
+import { Outlet } from "react-router-dom";
+function Event() {
+    return(
+        <>
+            <h1>Event page</h1>
+            <Outlet></Outlet>
+        </>
+    )
+}
+export default Event;
+```
+- Outlet : App.js에서 넘겨준 element 값을 받아주는 역할
