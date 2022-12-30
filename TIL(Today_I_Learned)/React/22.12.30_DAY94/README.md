@@ -28,35 +28,14 @@ root.render(
 ### [store.js]
 - 한 개의 프로젝트는 한개의 스토어만 가질 수 있다.
 ```js
-// createSlice( {  
-//     name :  변수 이름,
-//     initialState : 초기값
-//  } )
-
-// export default configureStore({
-//     reducer : {
-// 	상태변수 등록하는 부분
-//     }
-// })
-
-//{name : 'state Name', initialState : 'state value'}
-
-let user = createSlice({
-    name : 'user',
-    initialState : 'jw'
-})
-
-let peple = createSlice({
-    name : 'peple',
-    initialState : 200
-
-})
-
-export default configureStore({ //상태변수 등록하는 부분
-    reducer : {
-        user : user.reducer,
-        peple : peple.reducer
-    }
+let user =  createSlice( {  
+        name :  'user',
+        initialState : 'yuna',
+        reducers: {
+            changeName(state){
+                return 'doteon ' + state;
+            }
+        }
 })
 ```
 <br>
@@ -67,3 +46,7 @@ export default configureStore({ //상태변수 등록하는 부분
 ```
 - useSelector : State에 있는 값을 전부 가져온다.
 - 그 값들을 변수 value에 넣어준다.
+```js
+<button className="btn btn-dark" onClick={() => dispatch(changeCnt())}>+</button>
+
+```
