@@ -206,3 +206,5 @@ useEffect(() => {
 ```
 setTimeout(function() { // Code here }, delay);
 ```
+<br>
+
