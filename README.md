@@ -1,6 +1,8 @@
 ## '한국소프트웨어산업협회(KOSA) 대보정보통신&날리지큐브&헬스허브 채용확정형 SW개발자 양성과정 과정'
 을 수강하며 기록하는 공간입니다 :exclamation:
 
+##  'Korea Software Industry Association(KOSA) SW developer Training Course' journey :exclamation:
+
 ## 💙 Daily Study
 ---------------------
 
