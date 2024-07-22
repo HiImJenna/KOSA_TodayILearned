@@ -8,7 +8,7 @@
 <summary>JAVA</summary>
 
 ###  DAY1
-1. [DAY1](https://github.com/HiImJenna/KOSA/tree/main/JAVA/22.08.19_DAY1)  
+1. [DAY1](https://github.com/HiImJenna/KOSA_TodayILearned/tree/main/TIL(Today_I_Learned)/JAVA/22.08.19_DAY1)  
 
 ###  DAY2
 1. [DAY2](https://github.com/HiImJenna/KOSA/tree/main/JAVA/22.08.22_DAY2#20220822mon-)
